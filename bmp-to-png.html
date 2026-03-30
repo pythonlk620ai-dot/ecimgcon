@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Free Online BMP to PNG Converter - Easy Img Converter</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Best free online BMP to PNG converter. Convert BMP images to PNG format with transparency support. Fast, secure, and no file size limits. Perfect for image conversion needs.">
+    <meta name="keywords" content="bmp to png converter, free online converter, best bmp to png, online image converter, convert bmp to png, image converter, png converter, free image tool, online photo converter, best converter, Easy Img Converter">
+    <meta name="author" content="Easy Img Converter">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://easyimgconverter.com/bmp-to-png.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://easyimgconverter.com/bmp-to-png.html">
+    <meta property="og:title" content="Best Free Online BMP to PNG Converter - Easy Img Converter">
+    <meta property="og:description" content="Convert BMP images to PNG format with transparency support. Fast, secure, and no file size limits.">
+    <meta property="og:image" content="http://easyimgconverter.com/images/bmp-to-png.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://easyimgconverter.com/bmp-to-png.html">
+    <meta property="twitter:title" content="Best Free Online BMP to PNG Converter - Easy Img Converter">
+    <meta property="twitter:description" content="Convert BMP images to PNG format with transparency support. Fast, secure, and no file size limits.">
+    <meta property="twitter:image" content="http://easyimgconverter.com/images/bmp-to-png.jpg">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "BMP to PNG Converter",
+        "description": "Free online BMP to PNG converter that converts BMP images to PNG format with transparency support. Fast, secure, and no file size limits.",
+        "applicationCategory": "WebApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "Easy Img Converter"
+        },
+        "featureList": "Convert BMP to PNG, Batch conversion, Transparency support, Lossless quality, No file size limits, Secure processing"
+    }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Arial Rounded MT Bold', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #0288d1;
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 900;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .description {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #01579b;
+            font-weight: 600;
+        }
+        
+        .supported-formats {
+            margin: 20px 0;
+            font-size: 1.1em;
+            color: #0288d1;
+        }
+        
+        .supported-formats a {
+            color: #0288d1;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        .supported-formats a:hover {
+            text-decoration: underline;
+        }
+        
+        .converter-section {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .upload-area {
+            border: 4px dashed #0288d1;
+            border-radius: 25px;
+            padding: 50px;
+            text-align: center;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-bottom: 25px;
+        }
+        
+        .upload-area.dragover {
+            background: linear-gradient(135deg, #b3e5fc 0%, #81d4fa 100%);
+            border-color: #01579b;
+            transform: scale(1.02);
+        }
+        
+        .upload-area:hover {
+            background: linear-gradient(135deg, #b3e5fc 0%, #81d4fa 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(2, 136, 209, 0.2);
+        }
+        
+        .select-btn {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            padding: 18px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 700;
+            box-shadow: 0 6px 15px rgba(2, 136, 209, 0.3);
+        }
+        
+        .select-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(2, 136, 209, 0.4);
+        }
+        
+        .drop-text {
+            color: #01579b;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        
+        .file-list {
+            margin-top: 25px;
+        }
+        
+        .file-item {
+            background: white;
+            border: 3px solid #e0f7fa;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s;
+        }
+        
+        .file-item:hover {
+            border-color: #0288d1;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(2, 136, 209, 0.15);
+        }
+        
+        .file-info {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+        
+        .file-icon {
+            font-size: 2em;
+            margin-right: 15px;
+        }
+        
+        .file-name {
+            font-weight: 700;
+            color: #0277bd;
+            font-size: 1.1em;
+        }
+        
+        .file-size {
+            color: #01579b;
+            font-size: 0.95em;
+            margin-left: 10px;
+            font-weight: 600;
+        }
+        
+        .file-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .action-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+            font-weight: 700;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .remove-btn {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+        }
+        
+        .remove-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(255, 107, 107, 0.4);
+        }
+        
+        .convert-btn {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(2, 136, 209, 0.3);
+        }
+        
+        .convert-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(2, 136, 209, 0.4);
+        }
+        
+        .convert-all-section {
+            margin-top: 25px;
+            text-align: center;
+        }
+        
+        .convert-all-section button {
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            font-weight: 700;
+            box-shadow: 0 6px 15px rgba(2, 136, 209, 0.3);
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .convert-all-section button:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(2, 136, 209, 0.4);
+        }
+        
+        .convert-all-section button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .status-container {
+            margin-top: 30px;
+            padding: 30px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            display: none;
+            border: 3px solid #e0f7fa;
+        }
+        
+        .status-text {
+            font-weight: 700;
+            color: #0277bd;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 25px;
+            background-color: #e0f7fa;
+            border-radius: 50px;
+            overflow: hidden;
+            border: 2px solid #b3e5fc;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            width: 0%;
+            transition: width 0.4s ease;
+            border-radius: 50px;
+        }
+        
+        .download-section {
+            margin-top: 25px;
+            text-align: center;
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-weight: 700;
+            box-shadow: 0 6px 15px rgba(2, 136, 209, 0.3);
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(2, 136, 209, 0.4);
+        }
+        
+        .privacy-note {
+            color: #01579b;
+            text-align: center;
+            font-size: 1em;
+            font-weight: 600;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 20px;
+        }
+        
+        .info-section {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .info-section h2 {
+            text-align: center;
+            font-size: 3em;
+            color: #0288d1;
+            margin-bottom: 40px;
+            font-weight: 900;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite;
+        }
+        
+        .info-section h3 {
+            color: #0288d1;
+            font-size: 2em;
+            margin: 30px 0 20px;
+            font-weight: 700;
+        }
+        
+        .info-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border: 3px solid #e0f7fa;
+            transition: all 0.3s;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: #0288d1;
+            box-shadow: 0 12px 30px rgba(2, 136, 209, 0.2);
+        }
+        
+        .info-card h3 {
+            color: #0288d1;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .info-card p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .info-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .info-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .info-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #0288d1;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .info-text {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            border: 3px solid #e0f7fa;
+        }
+        
+        .info-text h3, .info-text h4 {
+            color: #0288d1;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .info-text p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .info-text ul, .info-text ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .info-text li {
+            margin-bottom: 10px;
+            color: #666;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+        
+        .benefit-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+        
+        .benefit-icon {
+            font-size: 2em;
+        }
+        
+        .benefit-item h4 {
+            color: #0288d1;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        
+        .benefit-item p {
+            color: #666;
+            margin: 0;
+            font-size: 0.95em;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        
+        .comparison-table {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 40px;
+            border: 3px solid #e0f7fa;
+        }
+        
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .comparison-cell {
+            padding: 25px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-cell:last-child {
+            border-bottom: none;
+        }
+        
+        .comparison-cell ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        
+        .comparison-cell li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .comparison-cell li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #0288d1;
+            font-weight: bold;
+        }
+        
+        .steps-list {
+            counter-reset: step-counter;
+        }
+        
+        .steps-list li {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 20px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .steps-list li::before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 35px;
+            height: 35px;
+            background: #0288d1;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .faq-section {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-top: 40px;
+            border: 3px solid #e0f7fa;
+        }
+        
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .faq-item h4 {
+            color: #0288d1;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .faq-item p {
+            color: #666;
+            line-height: 1.7;
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .info-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefit-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-section h2 {
+                font-size: 2em;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BMP TO PNG 🎨</h1>
+            <p class="description">Convert BMP images to PNG format. Fast, free, and secure online conversion. PNG supports transparency and lossless quality! ✨</p>
+            <p class="supported-formats">
+                Convert BMP to: 
+                <a href="#">PNG</a>
+            </p>
+        </header>
+        
+        <div class="converter-section">
+            <div class="upload-area" id="uploadArea">
+                <label for="file-input" class="select-btn">📂 Select BMP files</label>
+                <input type="file" id="file-input" accept="image/bmp" multiple>
+                
+                <p class="drop-text">or drop BMP files here 📥</p>
+            </div>
+            
+            <div class="file-list" id="fileList"></div>
+            
+            <div class="convert-all-section" id="convertAllSection">
+                <button class="convert-all-btn" id="convertAllBtn">✨ Convert All</button>
+            </div>
+            
+            <div class="status-container" id="statusContainer">
+                <div class="status-text" id="statusText">Converting... ⏳</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+            
+            <div class="download-section" id="downloadSection"></div>
+        </div>
+        
+        <p class="privacy-note">🔒 Your files are processed securely in your browser. No data is sent to our servers!</p>
+        </div>
+        
+        <section class="info-section">
+            <h2>Understanding BMP and PNG Formats 📚</h2>
+            
+            <div class="info-content">
+                <div class="info-card">
+                    <h3>What is BMP? 🖼️</h3>
+                    <p>BMP (Bitmap Image File) is a <strong>device-independent bitmap</strong> format developed by Microsoft. It stores uncompressed raster images with high fidelity but large file sizes.</p>
+                    <ul>
+                        <li><strong>Best for:</strong> Windows applications, high-fidelity images, printing</li>
+                        <li><strong>File size:</strong> Very large (uncompressed)</li>
+                        <li><strong>Transparency:</strong> Limited support</li>
+                        <li><strong>Quality:</strong> Lossless - no quality loss</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3>What is PNG? 📷</h3>
+                    <p>PNG (Portable Network Graphics) uses <strong>lossless compression</strong>, meaning no image data is lost during compression. It's perfect for images requiring transparency and sharp graphics.</p>
+                    <ul>
+                        <li><strong>Best for:</strong> Logos, icons, graphics with text, images requiring transparency</li>
+                        <li><strong>File size:</strong> Moderate (lossless compression)</li>
+                        <li><strong>Transparency:</strong> Fully supported (alpha channel)</li>
+                        <li><strong>Quality:</strong> Always lossless - no quality loss</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>Why Convert BMP to PNG? 🤔</h3>
+            
+            <div class="info-text">
+                <p>There are several reasons why you might need to convert BMP images to PNG format:</p>
+                
+                <div class="benefit-list">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">📦</span>
+                        <div>
+                            <h4>Smaller File Size</h4>
+                            <p>PNG uses lossless compression, making files 50-70% smaller than uncompressed BMP while maintaining the same quality!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🌐</span>
+                        <div>
+                            <h4>Web Compatibility</h4>
+                            <p>PNG is web-optimized and supported by all browsers. BMP files are not natively supported by most web browsers.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✨</span>
+                        <div>
+                            <h4>Transparency Support</h4>
+                            <p>PNG fully supports transparency with alpha channels, while BMP has limited transparency capabilities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span class="benefit-icon">💾</span>
+                        <div>
+                            <h4>Storage Efficiency</h4>
+                            <p>PNG's compression reduces storage space requirements significantly compared to large BMP files.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>When Should You Use BMP vs PNG? 📊</h3>
+            
+            <div class="comparison-table">
+                <div class="comparison-row">
+                    <div class="comparison-cell">
+                        <strong>Use BMP when:</strong>
+                    </div>
+                    <div class="comparison-cell">
+                        <strong>Use PNG when:</strong>
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell">
+                        <ul>
+                            <li>High-fidelity printing</li>
+                            <li>Windows applications</li>
+                            <li>Editing workflows</li>
+                            <li>Maximum quality needed</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-cell">
+                        <ul>
+                            <li>Web graphics and logos</li>
+                            <li>Images with transparency</li>
+                            <li>Icons and buttons</li>
+                            <li>Graphics with text</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>How to Convert BMP to PNG? 🛠️</h3>
+            
+            <ol class="steps-list">
+                <li>Click the "Select BMP files" button or drag and drop BMP files into the upload area</li>
+                <li>Wait for files to be uploaded and displayed in the file list</li>
+                <li>Click "Convert All" to convert all BMP files to PNG format</li>
+                <li>Download your converted PNG files individually or all together</li>
+            </ol>
+            
+            <div class="faq-section">
+                <h3>Frequently Asked Questions ❓</h3>
+                
+                <div class="faq-item">
+                    <h4>Is BMP to PNG conversion free? 💰</h4>
+                    <p>Yes! Our BMP to PNG converter is completely free to use with no file size limits or hidden fees. Convert as many files as you need!</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Does PNG maintain BMP quality? 🎨</h4>
+                    <p>Absolutely! PNG uses lossless compression, so your images maintain the same quality as the original BMP files. No quality loss!</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Can I convert multiple BMP files at once? ⚡</h4>
+                    <p>Yes! You can upload and convert multiple BMP files simultaneously. Just select all the files you want to convert at once!</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Are my files secure? 🔒</h4>
+                    <p>Yes! All conversions happen in your browser. Your files are never sent to our servers, ensuring complete privacy and security.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        let files = [];
+        
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('file-input');
+        const fileList = document.getElementById('fileList');
+        const convertAllBtn = document.getElementById('convertAllBtn');
+        const statusContainer = document.getElementById('statusContainer');
+        const statusText = document.getElementById('statusText');
+        const progressFill = document.getElementById('progressFill');
+        const downloadSection = document.getElementById('downloadSection');
+        
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+        
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+        
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            handleFiles(e.dataTransfer.files);
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+        });
+        
+        function handleFiles(newFiles) {
+            const bmpFiles = Array.from(newFiles).filter(file => file.type === 'image/bmp' || file.name.toLowerCase().endsWith('.bmp'));
+            
+            if (bmpFiles.length > 0) {
+                bmpFiles.forEach(file => {
+                    if (!files.find(f => f.name === file.name && f.size === file.size)) {
+                        files.push(file);
+                        renderFileList();
+                    }
+                });
+            } else {
+                alert('Please select BMP files only! 📸');
+            }
+        }
+        
+        function renderFileList() {
+            fileList.innerHTML = '';
+            
+            files.forEach((file, index) => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `
+                    <div class="file-info">
+                        <span class="file-icon">🖼️</span>
+                        <div>
+                            <div class="file-name">${file.name}</div>
+                            <div class="file-size">${(file.size / 1024).toFixed(2)} KB</div>
+                        </div>
+                    </div>
+                    <div class="file-actions">
+                        <button class="action-btn remove-btn" onclick="removeFile(${index})">❌ Remove</button>
+                    </div>
+                `;
+                fileList.appendChild(fileItem);
+            });
+            
+            convertAllBtn.disabled = files.length === 0;
+        }
+        
+        window.removeFile = function(index) {
+            files.splice(index, 1);
+            renderFileList();
+        };
+        
+        convertAllBtn.addEventListener('click', async () => {
+            if (files.length === 0) return;
+            
+            statusContainer.style.display = 'block';
+            statusText.textContent = 'Converting... ⏳';
+            progressFill.style.width = '0%';
+            
+            const totalFiles = files.length;
+            const convertedFiles = [];
+            
+            for (let i = 0; i < totalFiles; i++) {
+                try {
+                    const file = files[i];
+                    const arrayBuffer = await file.arrayBuffer();
+                    const bitmap = createBitmapFromBMP(arrayBuffer);
+                    
+                    if (bitmap) {
+                        const canvas = document.createElement('canvas');
+                        canvas.width = bitmap.width;
+                        canvas.height = bitmap.height;
+                        const ctx = canvas.getContext('2d');
+                        ctx.putImageData(bitmap, 0, 0);
+                        
+                        const pngBlob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+                        const pngFile = new File([pngBlob], file.name.replace('.bmp', '.png'), { type: 'image/png' });
+                        convertedFiles.push(pngFile);
+                    }
+                } catch (error) {
+                    console.error('Error converting file:', file.name, error);
+                }
+                
+                const progress = ((i + 1) / totalFiles) * 100;
+                progressFill.style.width = `${progress}%`;
+                statusText.textContent = `Converting ${i + 1} of ${totalFiles}... ⏳`;
+            }
+            
+            statusText.textContent = 'Conversion Complete! ✅';
+            
+            setTimeout(() => {
+                showDownloadOptions(convertedFiles);
+            }, 500);
+        });
+        
+        function createBitmapFromBMP(arrayBuffer) {
+            const dataView = new DataView(arrayBuffer);
+            
+            if (dataView.getUint16(0, true) !== 0x4D42) {
+                return null;
+            }
+            
+            const pixelOffset = dataView.getUint32(10, true);
+            const width = dataView.getUint32(18, true);
+            const height = dataView.getUint32(22, true);
+            const bitsPerPixel = dataView.getUint16(28, true);
+            
+            if (bitsPerPixel !== 24 && bitsPerPixel !== 32) {
+                return null;
+            }
+            
+            const bytesPerPixel = bitsPerPixel / 8;
+            const rowSize = Math.ceil((width * bytesPerPixel) / 4) * 4;
+            const imageData = new Uint8ClampedArray(width * height * 4);
+            
+            const pixels = new Uint8Array(arrayBuffer, pixelOffset);
+            
+            for (let y = 0; y < height; y++) {
+                for (let x = 0; x < width; x++) {
+                    const pixelIndex = (y * rowSize + x * bytesPerPixel);
+                    const imageIndex = ((height - 1 - y) * width + x) * 4;
+                    
+                    const b = pixels[pixelIndex];
+                    const g = pixels[pixelIndex + 1];
+                    const r = pixels[pixelIndex + 2];
+                    const a = bytesPerPixel === 4 ? pixels[pixelIndex + 3] : 255;
+                    
+                    imageData[imageIndex] = r;
+                    imageData[imageIndex + 1] = g;
+                    imageData[imageIndex + 2] = b;
+                    imageData[imageIndex + 3] = a;
+                }
+            }
+            
+            return new ImageData(imageData, width, height);
+        }
+        
+        function showDownloadOptions(convertedFiles) {
+            downloadSection.innerHTML = '';
+            
+            const downloadAllBtn = document.createElement('button');
+            downloadAllBtn.className = 'download-btn';
+            downloadAllBtn.textContent = '📥 Download All';
+            downloadAllBtn.onclick = () => downloadAllFiles(convertedFiles);
+            downloadSection.appendChild(downloadAllBtn);
+            
+            convertedFiles.forEach((file, index) => {
+                const downloadBtn = document.createElement('button');
+                downloadBtn.className = 'download-btn';
+                downloadBtn.textContent = `📥 Download ${file.name}`;
+                downloadBtn.style.marginTop = '10px';
+                downloadBtn.onclick = () => downloadFile(file);
+                downloadSection.appendChild(downloadBtn);
+            });
+        }
+        
+        function downloadFile(file) {
+            const url = URL.createObjectURL(file);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = file.name;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        
+        function downloadAllFiles(files) {
+            const zip = new JSZip();
+            
+            files.forEach(file => {
+                zip.file(file.name, file);
+            });
+            
+            zip.generateAsync({ type: 'blob' }).then(content => {
+                const url = URL.createObjectURL(content);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'converted-files.zip';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+        }
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</body>
+</html>
