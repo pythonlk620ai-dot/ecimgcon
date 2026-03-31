@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Converter - Easy Img Converter</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Image converter. Convert images between different formats like JPG, PNG, PDF, SVG, BMP, WEBP, and more. Fast, secure, and no file size limits. Perfect for image conversion needs.">
+    <meta name="keywords" content="image converter, online converter, image format converter, image tool, photo converter, converter, image conversion tool, Easy Img Converter">
+    <meta name="author" content="Easy Img Converter">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://easyimgconverter.com/en/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://easyimgconverter.com/en/">
+    <meta property="og:title" content="Image Converter - Easy Img Converter">
+    <meta property="og:description" content="Convert images between different formats like JPG, PNG, PDF, SVG, BMP, WEBP, and more. Fast, secure, and no file size limits.">
+    <meta property="og:image" content="http://easyimgconverter.com/images/landing.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://easyimgconverter.com/en/">
+    <meta property="twitter:title" content="Image Converter - Easy Img Converter">
+    <meta property="twitter:description" content="Convert images between different formats like JPG, PNG, PDF, SVG, BMP, WEBP, and more. Fast, secure, and no file size limits.">
+    <meta property="twitter:image" content="http://easyimgconverter.com/images/landing.jpg">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Easy Img Converter - Image Converter",
+        "description": "Image converter that converts images between different formats like JPG, PNG, PDF, SVG, BMP, WEBP, and more. Fast, secure, and no file size limits.",
+        "applicationCategory": "WebApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "Easy Img Converter"
+        },
+        "featureList": "Convert images online, Batch conversion, Multiple format support, Lossless quality, No file size limits, Secure processing, ZIP download"
+    }
+    </script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔄</text></svg>">
+    <link rel="alternate" hreflang="zh-TW" href="http://easyimgconverter.com/zh-tw/">
+    <link rel="alternate" hreflang="en" href="http://easyimgconverter.com/en/">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Arial Rounded MT Bold', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .bg-shape {
+            position: fixed;
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .shape-1 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #b3e5fc 0%, #81d4fa 100%);
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+        
+        .shape-2 {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #81d4fa 0%, #4fc3f7 100%);
+            top: 20%;
+            right: 10%;
+            animation-delay: 5s;
+        }
+        
+        .shape-3 {
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(135deg, #80cbc4 0%, #4db6ac 100%);
+            bottom: 15%;
+            left: 15%;
+            animation-delay: 10s;
+        }
+        
+        .shape-4 {
+            width: 160px;
+            height: 160px;
+            background: linear-gradient(135deg, #b2dfdb 0%, #80cbc4 100%);
+            bottom: 10%;
+            right: 20%;
+            animation-delay: 15s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(20px, 30px); }
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: #0288d1;
+            font-size: 1.8em;
+            font-weight: 900;
+            text-decoration: none;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: #0288d1;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            transition: all 0.3s;
+            font-size: 1.1em;
+        }
+        
+        .nav-links a:hover {
+            color: #03a9f4;
+            transform: scale(1.05);
+        }
+        
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .lang-switch select {
+            padding: 10px 20px;
+            border: 3px solid #0288d1;
+            border-radius: 50px;
+            background: white;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-weight: 600;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .lang-switch select:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(2, 136, 209, 0.3);
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #80deea 0%, #4dd0e1 100%);
+            border-radius: 30px;
+            margin: 30px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .hero h1 {
+            color: white;
+            font-size: 4em;
+            margin-bottom: 20px;
+            font-weight: 900;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            color: white;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .primary-btn {
+            background: white;
+            color: #0288d1;
+            padding: 20px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-weight: 700;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .primary-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        }
+        
+        .secondary-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 20px 50px;
+            border: 3px solid white;
+            border-radius: 50px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-weight: 700;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .secondary-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+        }
+        
+        .section {
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 3em;
+            color: #0288d1;
+            margin-bottom: 20px;
+            font-weight: 900;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.4em;
+            color: #555;
+            margin-bottom: 60px;
+            font-weight: 600;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .tool-card-wrapper {
+            perspective: 1000px;
+        }
+        
+        .tool-card {
+            background: white;
+            border-radius: 30px;
+            padding: 40px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid #e0f7fa;
+            display: block;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-color: #0288d1;
+        }
+        
+        .tool-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5em;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+        
+        .tool-card h3 {
+            color: #0288d1;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+        
+        .tool-card p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid #e0f7fa;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-color: #0288d1;
+        }
+        
+        .feature-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .feature-item h3 {
+            color: #0288d1;
+            font-size: 2em;
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+        
+        .feature-item p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 3px solid #e0f7fa;
+        }
+        
+        .stat-number {
+            font-size: 3.5em;
+            color: #0288d1;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid #e0f7fa;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-color: #0288d1;
+        }
+        
+        .blog-image {
+            font-size: 4em;
+            text-align: center;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .blog-card h3 {
+            color: #0288d1;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+        
+        .blog-card p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #0288d1;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1.1em;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 3px solid #e0f7fa;
+            border-radius: 20px;
+            font-size: 1em;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #0288d1;
+            box-shadow: 0 0 0 4px rgba(2, 136, 209, 0.1);
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            padding: 18px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: block;
+            margin: 0 auto;
+            font-weight: 700;
+            box-shadow: 0 6px 15px rgba(2, 136, 209, 0.3);
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .submit-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(2, 136, 209, 0.4);
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            padding: 60px 20px 30px;
+            border-radius: 30px 30px 0 0;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+        
+        .footer-section p {
+            color: #b3e5fc;
+            line-height: 1.8;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-weight: 600;
+        }
+        
+        .footer-section a:hover {
+            color: #b3e5fc;
+            transform: translateX(8px) scale(1.05);
+        }
+        
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: white;
+            font-size: 1em;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .footer-bottom p {
+            margin: 0;
+            opacity: 0.95;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .hero p {
+                font-size: 1.2em;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .tools-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .section-title {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+    <div class="bg-shape shape-4"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🔄 Easy Img Converter </a>
+            <div class="nav-links">
+                <a href="#tools">Tools</a>
+                <a href="#about">About</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="lang-switch">
+        <select onchange="location.href = this.value">
+            <option value="index.html">English</option>
+            <option value="zh-tw/index.html">繁體中文</option>
+        </select>
+    </div>
+    
+    <div class="container">
+        <div class="hero">
+            <h1>🎨 Your Image Converter is Here! ✨</h1>
+            <p>Fast, secure, and completely free! Convert images between different formats with ease. 🌈</p>
+            <div class="hero-buttons">
+                <a href="#tools" class="primary-btn">Start Converting 🚀</a>
+                <a href="#about" class="secondary-btn">Learn More 📚</a>
+            </div>
+        </div>
+        
+        <section class="section tools-section" id="tools">
+            <h2 class="section-title">Easy to Use Image Tools 🛠️</h2>
+            <p class="section-subtitle">All the tools you need to convert images in bulk! 🎨 Your online image converter is here and forever free! ✨ Fast, secure, and super cute! 🌈</p>
+            
+            <div class="tools-grid" id="tools">
+                <div class="tool-card-wrapper">
+                    <a href="../jpg-to-png.html" class="tool-card" data-category="convert">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
+                        <h3>JPG to PNG 🎨</h3>
+                        <p>Convert JPG images to PNG format. Fast, secure conversion with transparency support! ✨</p>
+                    </a>
+                </div>
+
+                <div class="tool-card-wrapper">
+                    <a href="../png-to-jpg.html" class="tool-card" data-category="convert">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
+                        <h3>PNG to JPG 🎨</h3>
+                        <p>Convert PNG images to JPG format. Fast, secure conversion with white background support! ✨</p>
+                    </a>
+                </div>
+
+                <div class="tool-card-wrapper">
+                    <a href="../webp-to-png.html" class="tool-card" data-category="convert">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
+                        <h3>WEBP to PNG 🌈</h3>
+                        <p>Convert WEBP images to PNG format. Fast, secure conversion with transparency support! ✨</p>
+                    </a>
+                </div>
+
+                <div class="tool-card-wrapper">
+                    <a href="../webp-to-jpg.html" class="tool-card" data-category="convert">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
+                        <h3>WEBP to JPG 🌈</h3>
+                        <p>Convert WEBP images to JPG format. Fast, secure conversion with white background support! ✨</p>
+                    </a>
+                </div>
+
+                <div class="tool-card-wrapper">
+                    <a href="../bmp-to-png.html" class="tool-card" data-category="convert">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
+                        <h3>BMP to PNG 🌿</h3>
+                        <p>Convert BMP images to PNG format. Fast, secure conversion with transparency support! ✨</p>
+                    </a>
+                </div>
+
+                <div class="tool-card-wrapper">
+                    <a href="../bmp-to-jpg.html" class="tool-card" data-category="convert">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
+                        <h3>BMP to JPG 🌿</h3>
+                        <p>Convert BMP images to JPG format. Fast, secure conversion with white background support! ✨</p>
+                    </a>
+                </div>
+
+                <div class="tool-card-wrapper">
+                    <a href="../svg-to-png.html" class="tool-card" data-category="convert">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🎨</div>
+                        <h3>SVG to PNG 🎨</h3>
+                        <p>Convert SVG images to PNG format. Fast, secure conversion with transparency support! ✨</p>
+                    </a>
+                </div>
+
+                <div class="tool-card-wrapper">
+                    <a href="../svg-to-jpg.html" class="tool-card" data-category="convert">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🎨</div>
+                        <h3>SVG to JPG 🎨</h3>
+                        <p>Convert SVG images to JPG format. Fast, secure conversion with white background support! ✨</p>
+                    </a>
+                </div>
+
+                <div class="tool-card-wrapper">
+                    <a href="../pdf-to-jpg.html" class="tool-card" data-category="convert">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">📄</div>
+                        <h3>PDF to JPG 📄</h3>
+                        <p>Convert PDF documents to JPG images. Extract all pages as high-quality images instantly! ✨</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section about-section" id="about">
+            <h2 class="section-title">Why Choose Easy Img Converter? 🌟</h2>
+            <p class="section-subtitle">We provide the cutest image conversion tools for everyone! Fast, secure, and completely free! 🎨</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">💰</div>
+                    <h3>100% Free 🎉</h3>
+                    <p>All our tools are completely free to use with no hidden costs or subscriptions required. Ever! ✨</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure & Private 🛡️</h3>
+                    <p>Your files never leave your browser. All processing happens locally on your device for maximum security! 🔐</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast & Easy ⚡</h3>
+                    <p>No software to install. Just open your browser and start converting immediately with lightning speed! 🚀</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3>Works Everywhere 🌍</h3>
+                    <p>Compatible with all modern browsers and devices. Convert images on your phone, tablet, or computer! 📱💻</p>
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">1M+</span>
+                    <span class="stat-label">Images Converted 📸</span>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Free Forever 🎁</span>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Available 🌐</span>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Supported Formats 🎨</span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section blog-section" id="blog">
+            <h2 class="section-title">Latest from Our Blog 📚</h2>
+            <p class="section-subtitle">Tips, tutorials, and updates about image conversion and editing! 🎨</p>
+            
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">📊</div>
+                    <h3>10 Tips for Perfect Image Compression 📉</h3>
+                    <p>Learn how to reduce file size without losing quality. Expert tips for optimal compression results! ✨</p>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image">🎨</div>
+                    <h3>How to Convert Images Like a Pro 🎨</h3>
+                    <p>Master the art of image conversion with our step-by-step guide and best practices! 🚀</p>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image">📝</div>
+                    <h3>Best Practices for Image Format Selection 🎯</h3>
+                    <p>Choose the right format for your needs. JPG, PNG, WEBP and more explained! 🌈</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section contact-section" id="contact">
+            <h2 class="section-title">Get in Touch 💌</h2>
+            <p class="section-subtitle">Have questions or suggestions? We'd love to hear from you! 🌈</p>
+            
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name 🌟</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address 📧</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject 📝</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message 💬</label>
+                            <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message 💌</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About 🌟</h3>
+                <p>Easy Img Converter provides powerful image conversion tools for everyone. Fast, secure, and completely free! 🎨✨</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="../updates.html">Updates</a></li>
+                    <li><a href="https://img-ps.top" target="_blank">Photo Editor</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 Easy Img Converter. Made with 🎨 and ✨ for you!</p>
+        </div>
+    </footer>
+
+    <script>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const toolCards = document.querySelectorAll('.tool-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const category = btn.dataset.category;
+                
+                toolCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.parentElement.style.display = 'block';
+                    } else {
+                        card.parentElement.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
