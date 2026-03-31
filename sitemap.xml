@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>http://easyimgconverter.com/en/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="http://easyimgconverter.com/en/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="http://easyimgconverter.com/zh-tw/"/>
+        <lastmod>2026-03-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://easyimgconverter.com/zh-tw/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="http://easyimgconverter.com/en/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="http://easyimgconverter.com/zh-tw/"/>
+        <lastmod>2026-03-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+</urlset>

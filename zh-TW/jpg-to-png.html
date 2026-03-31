@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPG 轉 PNG 轉換器 - Easy Img Converter</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="JPG 轉 PNG 轉換器。將 JPG 圖片轉換為 PNG 格式，支持透明度。快速、安全、無檔案大小限制。完美滿足您的圖片轉換需求。">
+    <meta name="keywords" content="jpg 轉 png 轉換器, 在線轉換器, 圖片轉換器, png 轉換器, 圖片工具, 照片轉換器, 轉換器, Easy Img Converter">
+    <meta name="author" content="Easy Img Converter">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://easyimgconverter.com/zh-tw/jpg-to-png.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://easyimgconverter.com/zh-tw/jpg-to-png.html">
+    <meta property="og:title" content="JPG 轉 PNG 轉換器 - Easy Img Converter">
+    <meta property="og:description" content="將 JPG 圖片轉換為 PNG 格式，支持透明度。快速、安全、無檔案大小限制。">
+    <meta property="og:image" content="http://easyimgconverter.com/images/jpg-to-png.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://easyimgconverter.com/zh-tw/jpg-to-png.html">
+    <meta property="twitter:title" content="JPG 轉 PNG 轉換器 - Easy Img Converter">
+    <meta property="twitter:description" content="將 JPG 圖片轉換為 PNG 格式，支持透明度。快速、安全、無檔案大小限制。">
+    <meta property="twitter:image" content="http://easyimgconverter.com/images/jpg-to-png.jpg">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "JPG 轉 PNG 轉換器",
+        "description": "JPG 轉 PNG 轉換器，可將 JPG 圖片轉換為 PNG 格式，支持透明度。快速、安全、無檔案大小限制。",
+        "applicationCategory": "WebApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "Easy Img Converter"
+        },
+        "featureList": "JPG 轉 PNG, 批量轉換, 透明度支持, 無損品質, 無檔案大小限制, 安全處理"
+    }
+    </script>
+    
+    <link rel="alternate" hreflang="en" href="http://easyimgconverter.com/en/jpg-to-png.html">
+    <link rel="alternate" hreflang="zh-TW" href="http://easyimgconverter.com/zh-tw/jpg-to-png.html">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', 'Arial Rounded MT Bold', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #0288d1;
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 900;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .description {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto 25px;
+            color: #0277bd;
+            font-weight: 600;
+        }
+        
+        .supported-formats {
+            margin: 20px 0;
+            font-size: 1.1em;
+            color: #01579b;
+        }
+        
+        .supported-formats a {
+            color: #0288d1;
+            text-decoration: none;
+            font-weight: 700;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+        
+        .supported-formats a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(2, 136, 209, 0.3);
+        }
+        
+        .converter-section {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .upload-area {
+            border: 4px dashed #0288d1;
+            border-radius: 25px;
+            padding: 50px;
+            text-align: center;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-bottom: 25px;
+        }
+        
+        .upload-area.dragover {
+            background: linear-gradient(135deg, #b3e5fc 0%, #81d4fa 100%);
+            border-color: #01579b;
+            transform: scale(1.02);
+        }
+        
+        .upload-area:hover {
+            background: linear-gradient(135deg, #b3e5fc 0%, #81d4fa 100%);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(2, 136, 209, 0.2);
+        }
+        
+        .select-btn {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            padding: 18px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 700;
+            box-shadow: 0 6px 15px rgba(2, 136, 209, 0.3);
+        }
+        
+        .select-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(2, 136, 209, 0.4);
+        }
+        
+        .drop-text {
+            color: #0277bd;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        
+        .file-list {
+            margin-top: 25px;
+        }
+        
+        .file-item {
+            background: white;
+            border: 3px solid #e0f7fa;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s;
+        }
+        
+        .file-item:hover {
+            border-color: #0288d1;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(2, 136, 209, 0.15);
+        }
+        
+        .file-info {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+        
+        .file-icon {
+            font-size: 2.5em;
+            margin-right: 20px;
+        }
+        
+        .file-name {
+            font-weight: 700;
+            color: #0277bd;
+            font-size: 1.1em;
+        }
+        
+        .file-size {
+            color: #01579b;
+            font-size: 1em;
+            margin-left: 15px;
+            font-weight: 600;
+        }
+        
+        .file-actions {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .action-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+            font-weight: 700;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
+        }
+        
+        .remove-btn {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+        }
+        
+        .remove-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(255, 107, 107, 0.4);
+        }
+        
+        .convert-btn {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(2, 136, 209, 0.3);
+        }
+        
+        .convert-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(2, 136, 209, 0.4);
+        }
+        
+        .convert-all-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .convert-all-section button {
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            font-weight: 700;
+            box-shadow: 0 6px 15px rgba(2, 136, 209, 0.3);
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
+        }
+        
+        .convert-all-section button:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(2, 136, 209, 0.4);
+        }
+        
+        .convert-all-section button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .status-container {
+            margin-top: 30px;
+            padding: 30px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            display: none;
+            border: 3px solid #e0f7fa;
+        }
+        
+        .status-text {
+            font-weight: 700;
+            color: #0277bd;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 25px;
+            background-color: #e0f7fa;
+            border-radius: 50px;
+            overflow: hidden;
+            border: 2px solid #b3e5fc;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            width: 0%;
+            transition: width 0.4s ease;
+            border-radius: 50px;
+        }
+        
+        .download-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-weight: 700;
+            box-shadow: 0 6px 15px rgba(2, 136, 209, 0.3);
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(2, 136, 209, 0.4);
+        }
+        
+        .privacy-note {
+            color: #01579b;
+            text-align: center;
+            font-size: 1em;
+            font-weight: 600;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JPG 轉 PNG</h1>
+            <p class="description">將 JPG 圖片轉換為 PNG 格式。快速、安全的轉換。PNG 支持透明度和無損品質。</p>
+            <p class="supported-formats">
+                JPG 可轉換為： 
+                <a href="#">PNG</a>
+            </p>
+        </header>
+        
+        <div class="converter-section">
+            <div class="upload-area" id="uploadArea">
+                <label for="file-input" class="select-btn">選擇 JPG 檔案</label>
+                <input type="file" id="file-input" accept="image/jpeg,image/jpg" multiple>
+                
+                <p class="drop-text">或將 JPG 檔案拖曳至此</p>
+            </div>
+            
+            <div class="file-list" id="fileList"></div>
+            
+            <div class="convert-all-section" id="convertAllSection">
+                <button class="convert-all-btn" id="convertAllBtn">全部轉換</button>
+            </div>
+            
+            <div class="status-container" id="statusContainer">
+                <div class="status-text" id="statusText">轉換中...</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+            
+            <div class="download-section" id="downloadSection"></div>
+        </div>
+        
+        <p class="privacy-note">您的檔案在瀏覽器中安全處理。不會將任何數據發送到我們的伺服器。</p>
+        </div>
+        
+        <section class="info-section">
+            <h2>JPG 和 PNG 格式說明</h2>
+            
+            <div class="info-content">
+                <div class="info-card">
+                    <h3>什麼是 JPG？</h3>
+                    <p>JPG（或 JPEG）是一種廣泛使用的圖片格式，使用<strong>有損壓縮</strong>。這意味著為了減少檔案大小，會丟棄一些圖片數據，使其非常適合照片和具有許多顏色的複雜圖片。</p>
+                    <ul>
+                        <li><strong>適用於：</strong> 照片、網頁圖片、電子郵件附件</li>
+                        <li><strong>檔案大小：</strong> 由於壓縮而較小</li>
+                        <li><strong>透明度：</strong> 不支持</li>
+                        <li><strong>品質：</strong> 可調整（通常為 60-90% 以獲得最佳平衡）</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3>什麼是 PNG？</h3>
+                    <p>PNG（Portable Network Graphics）使用<strong>無損壓縮</strong>，意味著壓縮過程中不會丟失任何圖片數據。它非常適合需要透明度和銳利圖形的圖片。</p>
+                    <ul>
+                        <li><strong>適用於：</strong> 標誌、圖標、帶文字的圖形、需要透明度的圖片</li>
+                        <li><strong>檔案大小：</strong> 比 JPG 大（無有損壓縮）</li>
+                        <li><strong>透明度：</strong> 完全支持（Alpha 通道）</li>
+                        <li><strong>品質：</strong> 始終無損 - 無品質損失</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>為什麼要將 JPG 轉換為 PNG？</h3>
+            
+            <div class="info-text">
+                <p>您可能需要將 JPG 圖片轉換為 PNG 格式的原因有多個：</p>
+                
+                <div class="benefit-list">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✨</span>
+                        <div>
+                            <h4>透明度支持</h4>
+                            <p>PNG 支持透明度，允許您創建具有透明背景的圖片。JPG 完全不支持透明度。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🎨</span>
+                        <div>
+                            <h4>無損品質</h4>
+                            <p>PNG 保持完美的圖片品質，沒有壓縮偽影。JPG 的壓縮有時會造成可見的品質問題。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🖼️</span>
+                        <div>
+                            <h4>圖形和文字</h4>
+                            <p>PNG 比 JPG 更好地保留銳利邊緣和文字清晰度，使其非常適合截圖和帶文字的圖形。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span class="benefit-icon">💻</span>
+                        <div>
+                            <h4>網頁開發</h4>
+                            <p>許多網頁開發者更喜歡使用 PNG 來製作標誌、圖標和 UI 元素，因為它支持透明度且品質清晰。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>什麼時候應該使用 JPG 與 PNG？</h3>
+            
+            <div class="comparison-table">
+                <div class="comparison-row">
+                    <div class="comparison-cell">
+                        <strong>使用 JPG 的情況：</strong>
+                    </div>
+                    <div class="comparison-cell">
+                        <ul>
+                            <li>具有許多顏色的照片</li>
+                            <li>檔案大小很重要</li>
+                            <li>不需要透明度</li>
+                            <li>網頁優化是關鍵</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell">
+                        <strong>使用 PNG 的情況：</strong>
+                    </div>
+                    <div class="comparison-cell">
+                        <ul>
+                            <li>需要透明度</li>
+                            <li>帶文字或銳利邊緣的圖形</li>
+                            <li>標誌或圖標設計</li>
+                            <li>需要最高品質</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>我們的 JPG 轉 PNG 轉換器如何運作</h3>
+            
+            <div class="info-text">
+                <p>我們的轉換器使用先進的 HTML5 Canvas 技術直接在您的瀏覽器中轉換圖片。以下是發生的過程：</p>
+                
+                <ol class="steps-list">
+                    <li><strong>上傳：</strong> 您從設備選擇 JPG 檔案</li>
+                    <li><strong>處理：</strong> 圖片加載到 canvas 元素中</li>
+                    <li><strong>轉換：</strong> 將 canvas 導出為 PNG 格式</li>
+                    <li><strong>下載：</strong> 轉換後的 PNG 已準備好下載</li>
+                </ol>
+                
+                <p><strong>隱私保障：</strong> 所有處理都在您的設備上本地進行。您的圖片從不上傳到任何伺服器，確保完全的隱私和安全。</p>
+            </div>
+            
+            <h3>常見問題</h3>
+            
+            <div class="faq-section">
+                <div class="faq-item">
+                    <h4>將 JPG 轉換為 PNG 能提高圖片品質嗎？</h4>
+                    <p>不一定。從 JPG 轉換為 PNG 並不能恢復原始 JPG 壓縮過程中丟失的品質。但是，PNG 不會進一步降低圖片品質，因為它使用無損壓縮。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>檔案大小會增加嗎？</h4>
+                    <p>是的，PNG 檔案通常比 JPG 檔案大，因為它們不使用有損壓縮。確切的大小取決於圖片內容。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>我可以一次轉換多個 JPG 檔案嗎？</h4>
+                    <p>當然可以！我們的轉換器支持批量處理，因此您可以一次將多個 JPG 檔案轉換為 PNG。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>有檔案大小限制嗎？</h4>
+                    <p>沒有嚴格的檔案大小限制。但是，非常大的圖片（超過 50MB）可能需要更長的處理時間，具體取決於您的設備記憶體。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>我的圖片會存儲在您的伺服器上嗎？</h4>
+                    <p>不會！所有轉換都在您的瀏覽器中使用客戶端處理進行。您的圖片從不離開您的設備。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <style>
+        .info-section {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .info-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #0056b3;
+            margin-bottom: 40px;
+        }
+        
+        .info-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .info-card h3 {
+            color: #0056b3;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 15px;
+        }
+        
+        .info-card p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .info-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .info-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #666;
+        }
+        
+        .info-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .info-text {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .info-text h3, .info-text h4 {
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+        
+        .info-text p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .info-text ul, .info-text ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .info-text li {
+            margin-bottom: 10px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .benefit-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+        
+        .benefit-icon {
+            font-size: 2em;
+        }
+        
+        .benefit-item h4 {
+            color: #0056b3;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .benefit-item p {
+            color: #666;
+            margin: 0;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        
+        .comparison-table {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+        
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+        }
+        
+        .comparison-cell {
+            padding: 25px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-cell:last-child {
+            border-bottom: none;
+        }
+        
+        .comparison-cell ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        
+        .comparison-cell li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+            color: #666;
+        }
+        
+        .comparison-cell li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #0056b3;
+            font-weight: bold;
+        }
+        
+        .steps-list {
+            counter-reset: step-counter;
+        }
+        
+        .steps-list li {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .steps-list li::before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 35px;
+            height: 35px;
+            background: #0056b3;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .faq-section {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .faq-item h4 {
+            color: #0056b3;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .faq-item p {
+            color: #666;
+            line-height: 1.7;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .info-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefit-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-section h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+    
+    <script>
+        let filesToConvert = [];
+        let convertedFiles = [];
+        
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('file-input');
+        const fileList = document.getElementById('fileList');
+        const convertAllSection = document.getElementById('convertAllSection');
+        const convertAllBtn = document.getElementById('convertAllBtn');
+        const statusContainer = document.getElementById('statusContainer');
+        const statusText = document.getElementById('statusText');
+        const progressFill = document.getElementById('progressFill');
+        const downloadSection = document.getElementById('downloadSection');
+        
+        uploadArea.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+        
+        uploadArea.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+        });
+        
+        uploadArea.addEventListener('drop', function(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            
+            const droppedFiles = Array.from(e.dataTransfer.files);
+            handleFiles(droppedFiles);
+        });
+        
+        fileInput.addEventListener('change', function(e) {
+            const selectedFiles = Array.from(e.target.files);
+            handleFiles(selectedFiles);
+        });
+        
+        function handleFiles(files) {
+            const jpgFiles = files.filter(file => 
+                file.type === 'image/jpeg' || 
+                file.type === 'image/jpg' || 
+                file.name.toLowerCase().endsWith('.jpg') || 
+                file.name.toLowerCase().endsWith('.jpeg')
+            );
+            
+            if (jpgFiles.length === 0) {
+                alert('請僅選擇 JPG 檔案');
+                return;
+            }
+            
+            filesToConvert = filesToConvert.concat(jpgFiles.map(file => ({
+                file: file,
+                id: Date.now() + Math.random(),
+                converted: false,
+                convertedBlob: null
+            })));
+            
+            renderFileList();
+            convertAllSection.style.display = 'block';
+        }
+        
+        function formatFileSize(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
+        }
+        
+        function renderFileList() {
+            if (filesToConvert.length === 0) {
+                fileList.style.display = 'none';
+                convertAllSection.style.display = 'none';
+                return;
+            }
+            
+            fileList.style.display = 'block';
+            
+            fileList.innerHTML = filesToConvert.map(item => `
+                <div class="file-item" data-id="${item.id}">
+                    <div class="file-info">
+                        <div class="file-icon">📷</div>
+                        <div>
+                            <div class="file-name">${item.converted ? item.file.name.replace(/\.jpe?g$/i, '.png') : item.file.name}</div>
+                            <div class="file-size">${item.converted ? 'PNG' : formatFileSize(item.file.size)}</div>
+                        </div>
+                    </div>
+                    <div class="file-actions">
+                        ${item.converted ? `
+                            <button class="action-btn convert-btn" onclick="downloadFile(${item.id})">下載</button>
+                        ` : ''}
+                        <button class="action-btn remove-btn" onclick="removeFile(${item.id})">移除</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        window.removeFile = function(id) {
+            filesToConvert = filesToConvert.filter(item => item.id !== id);
+            renderFileList();
+        };
+        
+        window.convertFile = async function(id) {
+            const fileItem = filesToConvert.find(item => item.id === id);
+            if (!fileItem || fileItem.converted) return;
+            
+            statusContainer.style.display = 'block';
+            statusText.textContent = `正在轉換 ${fileItem.file.name}...`;
+            progressFill.style.width = '0%';
+            
+            try {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                const img = new Image();
+                
+                const blobUrl = URL.createObjectURL(fileItem.file);
+                
+                img.onload = function() {
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    
+                    ctx.drawImage(img, 0, 0);
+                    
+                    canvas.toBlob(function(blob) {
+                        if (blob) {
+                            fileItem.converted = true;
+                            fileItem.convertedBlob = blob;
+                            
+                            statusText.textContent = `已轉換 ${fileItem.file.name}！`;
+                            progressFill.style.width = '100%';
+                            
+                            setTimeout(() => {
+                                statusContainer.style.display = 'none';
+                                renderFileList();
+                            }, 500);
+                            
+                            URL.revokeObjectURL(blobUrl);
+                        } else {
+                            reject(new Error('轉換失敗'));
+                        }
+                    }, 'image/png');
+                };
+                
+                img.onerror = function() {
+                    alert('圖片加載錯誤');
+                    statusContainer.style.display = 'none';
+                    URL.revokeObjectURL(blobUrl);
+                };
+                
+                img.src = blobUrl;
+                
+            } catch (error) {
+                console.error('轉換錯誤:', error);
+                alert('轉換檔案時出錯。請重試。');
+                statusContainer.style.display = 'none';
+                URL.revokeObjectURL(blobUrl);
+            }
+        };
+        
+        window.downloadFile = function(id) {
+            const fileItem = filesToConvert.find(item => item.id === id);
+            if (!fileItem || !fileItem.convertedBlob) return;
+            
+            const url = URL.createObjectURL(fileItem.convertedBlob);
+            const a = document.createElement('a');
+            const originalName = fileItem.file.name;
+            const newName = originalName.replace(/\.(jpg|jpeg)$/i, '.png');
+            a.href = url;
+            a.download = newName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        };
+        
+        convertAllBtn.addEventListener('click', async function() {
+            const uncompressedFiles = filesToConvert.filter(f => !f.converted);
+            
+            if (uncompressedFiles.length === 0) return;
+            
+            convertAllBtn.disabled = true;
+            statusContainer.style.display = 'block';
+            
+            const totalFiles = uncompressedFiles.length;
+            
+            for (let i = 0; i < totalFiles; i++) {
+                const fileItem = uncompressedFiles[i];
+                statusText.textContent = `正在轉換 ${fileItem.file.name}... (${i + 1}/${totalFiles})`;
+                progressFill.style.width = `${((i + 1) / totalFiles) * 100}%`;
+                
+                try {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    const img = new Image();
+                    
+                    const blobUrl = URL.createObjectURL(fileItem.file);
+                    
+                    img.onload = function() {
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        
+                        ctx.drawImage(img, 0, 0);
+                        
+                        canvas.toBlob(function(blob) {
+                            if (blob) {
+                                fileItem.converted = true;
+                                fileItem.convertedBlob = blob;
+                                
+                                if (i === totalFiles - 1) {
+                                    statusText.textContent = '所有檔案已轉換！';
+                                    progressFill.style.width = '100%';
+                                    setTimeout(() => {
+                                        statusContainer.style.display = 'none';
+                                        convertAllBtn.disabled = false;
+                                        renderFileList();
+                                    }, 1000);
+                                }
+                                
+                                URL.revokeObjectURL(blobUrl);
+                            }
+                        }, 'image/png');
+                    };
+                    
+                    img.onerror = function() {
+                        console.error('圖片加載錯誤:', fileItem.file.name);
+                    };
+                    
+                    img.src = blobUrl;
+                    
+                } catch (error) {
+                    console.error('轉換錯誤:', error);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

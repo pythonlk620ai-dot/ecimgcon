@@ -156,9 +156,11 @@
             top: 20px;
             right: 20px;
             z-index: 1000;
+            display: flex;
+            gap: 10px;
         }
         
-        .lang-switch select {
+        .lang-switch .lang-btn {
             padding: 10px 20px;
             border: 3px solid #0288d1;
             border-radius: 50px;
@@ -170,9 +172,15 @@
             transition: all 0.3s;
         }
         
-        .lang-switch select:hover {
+        .lang-switch .lang-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 12px rgba(2, 136, 209, 0.3);
+        }
+        
+        .lang-switch .lang-btn.active {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            border-color: transparent;
         }
         
         .hero {
@@ -632,10 +640,8 @@
     </nav>
     
     <div class="lang-switch">
-        <select onchange="location.href = this.value">
-            <option value="../index.html">English</option>
-            <option value="index.html" selected>繁體中文</option>
-        </select>
+        <button class="lang-btn" data-lang="en" onclick="switchLanguage('en')">English</button>
+        <button class="lang-btn" data-lang="zh-tw" onclick="switchLanguage('zh-tw')" selected>繁體中文</button>
     </div>
     
     <div class="container">
@@ -884,6 +890,13 @@
             });
         });
 
+        document.querySelectorAll('.lang-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const lang = button.getAttribute('data-lang');
+                switchLanguage(lang);
+            });
+        });
+
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('感謝您的訊息！我們會盡快回覆您。');
@@ -901,6 +914,33 @@
                 }
             });
         });
+
+        function switchLanguage(lang) {
+            const currentPath = window.location.pathname;
+            const currentLang = currentPath.includes('/zh-tw/') ? 'zh-tw' : 'en';
+            
+            if (currentLang === lang) return;
+            
+            let relativePath = currentPath;
+            if (currentPath.includes('/en/')) {
+                relativePath = currentPath.replace('/en/', '/');
+            } else if (currentPath.includes('/zh-tw/')) {
+                relativePath = currentPath.replace('/zh-tw/', '/');
+            }
+            
+            if (relativePath === '') relativePath = '/';
+            if (relativePath === '/') relativePath = '/index.html';
+            
+            let newPath = '';
+            if (lang === 'en') {
+                newPath = '/en' + relativePath;
+            } else {
+                newPath = '/zh-tw' + relativePath;
+            }
+            
+            newPath = newPath.replace(/\/+/g, '/');
+            window.location.href = newPath;
+        }
     </script>
 </body>
 </html>
