@@ -1,30 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG è½‰ JPG è½‰æ›å™¨ - Easy Img Converter</title>
+    <title>SVG 轉 JPG 轉換器 - Easy Img Converter</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="SVG to JPG converter. Convert SVG images to JPG format with lossy compression. Fast, secure, and no file size limits. Perfect for image conversion needs.">
-    <meta name="keywords" content="svg to jpg converter, online converter, image converter, jpg converter, image tool, photo converter, converter, Easy Img Converter">
+    <meta name="description" content="SVG 轉 JPG 轉換器。將 SVG 圖片轉換為 JPG 格式，使用有損壓縮。快速、安全、無檔案大小限制。完美滿足圖片轉換需求。">
+    <meta name="keywords" content="svg 轉 jpg 轉換器, 在線轉換器, 圖片轉換器, jpg 轉換器, 圖片工具, 照片轉換器, 轉換器, Easy Img Converter">
     <meta name="author" content="Easy Img Converter">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="http://easyimgconverter.com/zh-tw/svg-to-jpg.html">
-    <link rel="alternate" hreflang="en" href="http://easyimgconverter.com/en/svg-to-jpg.html">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://easyimgconverter.com/zh-tw/svg-to-jpg.html">
-    <meta property="og:title" content="SVG to JPG Converter - Easy Img Converter">
-    <meta property="og:description" content="Convert SVG images to JPG format with lossy compression. Fast, secure, and no file size limits.">
+    <meta property="og:title" content="SVG 轉 JPG 轉換器 - Easy Img Converter">
+    <meta property="og:description" content="將 SVG 圖片轉換為 JPG 格式，使用有損壓縮。快速、安全、無檔案大小限制。">
     <meta property="og:image" content="http://easyimgconverter.com/images/svg-to-jpg.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="http://easyimgconverter.com/zh-tw/svg-to-jpg.html">
-    <meta property="twitter:title" content="SVG to JPG Converter - Easy Img Converter">
-    <meta property="twitter:description" content="Convert SVG images to JPG format with lossy compression. Fast, secure, and no file size limits.">
+    <meta property="twitter:title" content="SVG 轉 JPG 轉換器 - Easy Img Converter">
+    <meta property="twitter:description" content="將 SVG 圖片轉換為 JPG 格式，使用有損壓縮。快速、安全、無檔案大小限制。">
     <meta property="twitter:image" content="http://easyimgconverter.com/images/svg-to-jpg.jpg">
     
     <!-- Schema.org structured data -->
@@ -32,8 +31,8 @@
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "SVG to JPG Converter",
-        "description": "SVG to JPG converter that converts SVG images to JPG format with lossy compression. Fast, secure, and no file size limits.",
+        "name": "SVG 轉 JPG 轉換器",
+        "description": "SVG 轉 JPG 轉換器，可將 SVG 圖片轉換為 JPG 格式並使用有損壓縮。快速、安全、無檔案大小限制。",
         "applicationCategory": "WebApplication",
         "operatingSystem": "Web Browser",
         "offers": {
@@ -45,7 +44,7 @@
             "@type": "Organization",
             "name": "Easy Img Converter"
         },
-        "featureList": "Convert SVG to JPG, Batch conversion, Lossy compression, Smaller file sizes, No file size limits, Secure processing"
+        "featureList": "SVG 轉 JPG, 批次轉換, 有損壓縮, 較小檔案大小, 無檔案大小限制, 安全處理"
     }
     </script>
     
@@ -69,6 +68,139 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #fff;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 2.5em;
+            font-weight: 900;
+            color: #0288d1;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 0px #fff, 3px 3px 0px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite;
+            transition: all 0.3s;
+        }
+        
+        .logo:hover {
+            transform: scale(1.1) rotate(2deg);
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .logo span {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 50%, #4fc3f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #0288d1;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            position: relative;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 4px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            transition: width 0.3s;
+            border-radius: 10px;
+        }
+        
+        .nav-links a:hover {
+            color: #03a9f4;
+            transform: scale(1.1);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .lang-switch {
+            position: relative;
+        }
+        
+        .lang-switch select {
+            padding: 14px 40px 14px 20px;
+            border-radius: 50px;
+            border: 3px solid #0288d1;
+            background: white;
+            color: #0288d1;
+            font-weight: 700;
+            font-size: 1em;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%230288d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+        }
+        
+        .lang-switch select option {
+            background: white;
+            color: #0288d1;
+            padding: 10px;
+            font-weight: 700;
+        }
+        
+        .lang-switch select:hover {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            border-color: transparent;
+        }
+        
+        .lang-switch select:hover option {
+            background: white;
+            color: #0288d1;
         }
         
         header {
@@ -639,32 +771,55 @@
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🔄 Easy Img Converter </a>
+            <div class="nav-links">
+                <a href="#tools">工具</a>
+                <a href="#about">關於</a>
+                <a href="#blog">部落格</a>
+                <a href="#contact">聯絡</a>
+            </div>
+            <div class="nav-buttons">
+                <div class="lang-switch">
+                    <select onchange="window.location.href=this.value">
+                        <option value="../en/index.html">English</option>
+                        <option value="../ko/index.html">한국어</option>
+                        <option value="./index.html" selected>繁體中文</option>
+                        <option value="../zh-CN/index.html">简体中文</option>
+                        <option value="../ja/index.html">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
     <div class="container">
         <header>
-            <h1>SVG TO JPG 🎨</h1>
-            <p class="description">Convert SVG images to JPG format. Fast, secure conversion. JPG provides smaller file sizes with lossy compression! ✨</p>
+            <h1>SVG 轉 JPG 🎨</h1>
+            <p class="description">將 SVG 圖片轉換為 JPG 格式。快速、安全的轉換。JPG 提供較小的檔案大小和有損壓縮！✨</p>
             <p class="supported-formats">
-                Convert SVG to: 
+                轉換 SVG 為：
                 <a href="#">JPG</a>
             </p>
         </header>
         
         <div class="converter-section">
             <div class="upload-area" id="uploadArea">
-                <label for="file-input" class="select-btn">📂 Select SVG files</label>
+                <label for="file-input" class="select-btn">📂 選擇 SVG 檔案</label>
                 <input type="file" id="file-input" accept="image/svg+xml" multiple>
                 
-                <p class="drop-text">or drop SVG files here 📥</p>
+                <p class="drop-text">或將 SVG 檔案拖曳至此 📥</p>
             </div>
             
             <div class="file-list" id="fileList"></div>
             
             <div class="convert-all-section" id="convertAllSection">
-                <button class="convert-all-btn" id="convertAllBtn">✨ Convert All</button>
+                <button class="convert-all-btn" id="convertAllBtn">✨ 全部轉換</button>
             </div>
             
             <div class="status-container" id="statusContainer">
-                <div class="status-text" id="statusText">Converting... ⏳</div>
+                <div class="status-text" id="statusText">轉換中... ⏳</div>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progressFill"></div>
                 </div>
@@ -673,138 +828,138 @@
             <div class="download-section" id="downloadSection"></div>
         </div>
         
-        <p class="privacy-note">🔒 Your files are processed securely in your browser. No data is sent to our servers!</p>
+        <p class="privacy-note">🔒 您的檔案會在您的瀏覽器中安全處理。不會發送任何資料到我們的伺服器！</p>
         </div>
         
         <section class="info-section">
-            <h2>Understanding SVG and JPG Formats 📚</h2>
+            <h2>了解 SVG 和 JPG 格式 📚</h2>
             
             <div class="info-content">
                 <div class="info-card">
-                    <h3>What is SVG? 🖼️</h3>
-                    <p>SVG (Scalable Vector Graphics) is an <strong>XML-based vector image format</strong>. It uses mathematical formulas to create images, making it infinitely scalable without quality loss.</p>
+                    <h3>什麼是 SVG？🖼️</h3>
+                    <p>SVG（可縮放向量圖形）是一種<strong>基於 XML 的向量圖片格式</strong>。它使用數學公式創建圖片，使其可以無限縮放而不損失品質。</p>
                     <ul>
-                        <li><strong>Best for:</strong> Logos, icons, illustrations, graphics with text</li>
-                        <li><strong>File size:</strong> Small (text-based XML)</li>
-                        <li><strong>Transparency:</strong> Fully supported</li>
-                        <li><strong>Quality:</strong> Infinitely scalable - no quality loss</li>
+                        <li><strong>適用於：</strong> 標誌、圖示、插圖、帶文字的圖形</li>
+                        <li><strong>檔案大小：</strong> 小（基於文字的 XML）</li>
+                        <li><strong>透明度：</strong> 完全支援</li>
+                        <li><strong>品質：</strong> 可無限縮放 - 無品質損失</li>
                     </ul>
                 </div>
                 
                 <div class="info-card">
-                    <h3>What is JPG? 📷</h3>
-                    <p>JPG (Joint Photographic Experts Group) uses <strong>lossy compression</strong>, which reduces file size by discarding some image data. It's perfect for photos and complex images.</p>
+                    <h3>什麼是 JPG？📷</h3>
+                    <p>JPG（聯合圖像專家組）使用<strong>有損壓縮</strong>，通過捨棄一些圖片資料來減少檔案大小。它非常適合照片和複雜圖片。</p>
                     <ul>
-                        <li><strong>Best for:</strong> Photos, complex images, web graphics</li>
-                        <li><strong>File size:</strong> Small (lossy compression)</li>
-                        <li><strong>Transparency:</strong> Not supported</li>
-                        <li><strong>Quality:</strong> Adjustable compression - some quality loss</li>
+                        <li><strong>適用於：</strong> 照片、複雜圖片、網頁圖形</li>
+                        <li><strong>檔案大小：</strong> 小（有損壓縮）</li>
+                        <li><strong>透明度：</strong> 不支援</li>
+                        <li><strong>品質：</strong> 可調整壓縮 - 一些品質損失</li>
                     </ul>
                 </div>
             </div>
             
-            <h3>Why Convert SVG to JPG? 🤔</h3>
+            <h3>為什麼要將 SVG 轉換為 JPG？🤔</h3>
             
             <div class="info-text">
-                <p>There are several reasons why you might need to convert SVG images to JPG format:</p>
+                <p>您可能有幾個原因需要將 SVG 圖片轉換為 JPG 格式：</p>
                 
                 <div class="benefit-list">
                     <div class="benefit-item">
                         <span class="benefit-icon">📱</span>
                         <div>
-                            <h4>Smaller File Sizes</h4>
-                            <p>JPG's lossy compression creates smaller files, making them faster to load on websites and easier to share.</p>
+                            <h4>較小的檔案大小</h4>
+                            <p>JPG 的有損壓縮創建較小的檔案，使其在網站上載入更快，更容易分享。</p>
                         </div>
                     </div>
                     
                     <div class="benefit-item">
                         <span class="benefit-icon">🖼️</span>
                         <div>
-                            <h4>Wider Compatibility</h4>
-                            <p>JPG is supported by virtually all applications, social media platforms, and devices. SVG requires specific software or web browsers to display properly.</p>
+                            <h4>更廣泛的相容性</h4>
+                            <p>JPG 幾乎被所有應用程式、社群媒體平台和裝置支援。SVG 需要特定的軟體或網頁瀏覽器才能正確顯示。</p>
                         </div>
                     </div>
                     
                     <div class="benefit-item">
                         <span class="benefit-icon">📷</span>
                         <div>
-                            <h4>Photo-Like Quality</h4>
-                            <p>JPG is perfect for images with gradients and complex colors, providing excellent photo-like quality.</p>
+                            <h4>照片般的品質</h4>
+                            <p>JPG 非常適合具有漸層和複雜顏色的圖片，提供出色的照片般品質。</p>
                         </div>
                     </div>
                     
                     <div class="benefit-item">
                         <span class="benefit-icon">📊</span>
                         <div>
-                            <h4>Web Optimization</h4>
-                            <p>JPG files are optimized for web use, loading faster and consuming less bandwidth.</p>
+                            <h4>網頁最佳化</h4>
+                            <p>JPG 檔案針對網頁使用進行了最佳化，載入更快並消耗更少的頻寬。</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <h3>When Should You Use SVG vs JPG? 📊</h3>
+            <h3>何時應該使用 SVG 還是 JPG？📊</h3>
             
             <div class="comparison-table">
                 <div class="comparison-row">
                     <div class="comparison-cell">
-                        <strong>Use SVG when:</strong>
+                        <strong>使用 SVG 時：</strong>
                     </div>
                     <div class="comparison-cell">
-                        <strong>Use JPG when:</strong>
+                        <strong>使用 JPG 時：</strong>
                     </div>
                 </div>
                 
                 <div class="comparison-row">
                     <div class="comparison-cell">
                         <ul>
-                            <li>Logos and icons</li>
-                            <li>Graphics with text</li>
-                            <li>Infinitely scalable needed</li>
-                            <li>Editable graphics</li>
+                            <li>標誌和圖示</li>
+                            <li>帶文字的圖形</li>
+                            <li>需要無限縮放</li>
+                            <li>可編輯的圖形</li>
                         </ul>
                     </div>
                     <div class="comparison-cell">
                         <ul>
-                            <li>Photos and complex images</li>
-                            <li>Smaller file sizes needed</li>
-                            <li>Web optimization</li>
-                            <li>Photo-like quality</li>
+                            <li>照片和複雜圖片</li>
+                            <li>需要較小的檔案大小</li>
+                            <li>網頁最佳化</li>
+                            <li>照片般的品質</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <h3>How to Convert SVG to JPG? 🛠️</h3>
+            <h3>如何將 SVG 轉換為 JPG？🛠️</h3>
             
             <ol class="steps-list">
-                <li>Click the "Select SVG files" button or drag and drop SVG files into the upload area</li>
-                <li>Wait for files to be uploaded and displayed in the file list</li>
-                <li>Click "Convert All" to convert all SVG files to JPG format</li>
-                <li>Download your converted JPG files individually or all together</li>
+                <li>點擊「選擇 SVG 檔案」按鈕或將 SVG 檔案拖曳到上傳區域</li>
+                <li>等待檔案上傳並顯示在檔案列表中</li>
+                <li>點擊「全部轉換」將所有 SVG 檔案轉換為 JPG 格式</li>
+                <li>單獨下載或一起下載您轉換後的 JPG 檔案</li>
             </ol>
             
             <div class="faq-section">
-                <h3>Frequently Asked Questions ❓</h3>
+                <h3>常見問題 ❓</h3>
                 
                 <div class="faq-item">
-                    <h4>Is SVG to JPG conversion free? 💰</h4>
-                    <p>Yes! Our SVG to JPG converter is completely free to use with no file size limits or hidden fees. Convert as many files as you need!</p>
+                    <h4>SVG 轉 JPG 轉換是免費的嗎？💰</h4>
+                    <p>是的！我們的 SVG 轉 JPG 轉換器完全免費使用，沒有檔案大小限制或隱藏費用。您可以轉換所需的任意數量檔案！</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Does JPG maintain SVG quality? 🎨</h4>
-                    <p>JPG uses lossy compression, so some image data is discarded to reduce file size. However, the quality is still excellent for most purposes, especially when you adjust the compression level.</p>
+                    <h4>JPG 能保持 SVG 品質嗎？🎨</h4>
+                    <p>JPG 使用有損壓縮，因此會捨棄一些圖片資料以減少檔案大小。然而，品質對大多數用途來說仍然非常出色，特別是當您調整壓縮等級時。</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Can I convert multiple SVG files at once? ⚡</h4>
-                    <p>Yes! You can upload and convert multiple SVG files simultaneously. Just select all the files you want to convert at once!</p>
+                    <h4>我可以一次轉換多個 SVG 檔案嗎？⚡</h4>
+                    <p>可以！您可以同時上傳並轉換多個 SVG 檔案。只需一次選擇您想要轉換的所有檔案！</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Are my files secure? 🔒</h4>
-                    <p>Yes! All conversions happen in your browser. Your files are never sent to our servers, ensuring complete privacy and security.</p>
+                    <h4>我的檔案安全嗎？🔒</h4>
+                    <p>是的！所有轉換都在您的瀏覽器中進行。您的檔案永遠不會發送到我們的伺服器，確保完全的隱私和安全。</p>
                 </div>
             </div>
         </section>
@@ -853,7 +1008,7 @@
                     }
                 });
             } else {
-                alert('Please select SVG files only! 🎨');
+                alert('請僅選擇 SVG 檔案！🎨');
             }
         }
         
@@ -872,7 +1027,7 @@
                         </div>
                     </div>
                     <div class="file-actions">
-                        <button class="action-btn remove-btn" onclick="removeFile(${index})">❌ Remove</button>
+                        <button class="action-btn remove-btn" onclick="removeFile(${index})">❌ 移除</button>
                     </div>
                 `;
                 fileList.appendChild(fileItem);
@@ -928,7 +1083,7 @@
                     
                     img.src = url;
                 } catch (error) {
-                    console.error('Error converting file:', file.name, error);
+                    console.error('轉換檔案時出錯:', file.name, error);
                 }
                 
                 const progress = ((i + 1) / totalFiles) * 100;
@@ -936,7 +1091,7 @@
                 statusText.textContent = `Converting ${i + 1} of ${totalFiles}... ⏳`;
             }
             
-            statusText.textContent = 'Conversion Complete! ✅';
+            statusText.textContent = '轉換完成！✅';
             
             setTimeout(() => {
                 showDownloadOptions(convertedFiles);
@@ -948,14 +1103,14 @@
             
             const downloadAllBtn = document.createElement('button');
             downloadAllBtn.className = 'download-btn';
-            downloadAllBtn.textContent = '📥 Download All';
+            downloadAllBtn.textContent = '📥 下載全部';
             downloadAllBtn.onclick = () => downloadAllFiles(convertedFiles);
             downloadSection.appendChild(downloadAllBtn);
             
             convertedFiles.forEach((file, index) => {
                 const downloadBtn = document.createElement('button');
                 downloadBtn.className = 'download-btn';
-                downloadBtn.textContent = `📥 Download ${file.name}`;
+                downloadBtn.textContent = `📥 下載 ${file.name}`;
                 downloadBtn.style.marginTop = '10px';
                 downloadBtn.onclick = () => downloadFile(file);
                 downloadSection.appendChild(downloadBtn);

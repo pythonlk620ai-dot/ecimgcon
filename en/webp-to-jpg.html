@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,19 +10,18 @@
     <meta name="keywords" content="webp to jpg converter, online converter, image converter, jpg converter, image tool, photo converter, converter, Easy Img Converter">
     <meta name="author" content="Easy Img Converter">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="http://easyimgconverter.com/en/webp-to-jpg.html">
-    <link rel="alternate" hreflang="zh-TW" href="http://easyimgconverter.com/zh-tw/webp-to-jpg.html">
+    <link rel="canonical" href="http://easyimgconverter.com/webp-to-jpg.html">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://easyimgconverter.com/en/webp-to-jpg.html">
+    <meta property="og:url" content="http://easyimgconverter.com/webp-to-jpg.html">
     <meta property="og:title" content="WEBP to JPG Converter - Easy Img Converter">
     <meta property="og:description" content="Convert WEBP images to JPG format with transparency support. Fast, secure, and no file size limits.">
     <meta property="og:image" content="http://easyimgconverter.com/images/webp-to-jpg.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="http://easyimgconverter.com/en/webp-to-jpg.html">
+    <meta property="twitter:url" content="http://easyimgconverter.com/webp-to-jpg.html">
     <meta property="twitter:title" content="WEBP to JPG Converter - Easy Img Converter">
     <meta property="twitter:description" content="Convert WEBP images to JPG format with transparency support. Fast, secure, and no file size limits.">
     <meta property="twitter:image" content="http://easyimgconverter.com/images/webp-to-jpg.jpg">
@@ -67,6 +66,139 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #fff;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 2.5em;
+            font-weight: 900;
+            color: #0288d1;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 0px #fff, 3px 3px 0px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite;
+            transition: all 0.3s;
+        }
+        
+        .logo:hover {
+            transform: scale(1.1) rotate(2deg);
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .logo span {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 50%, #4fc3f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #0288d1;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            position: relative;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 4px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            transition: width 0.3s;
+            border-radius: 10px;
+        }
+        
+        .nav-links a:hover {
+            color: #03a9f4;
+            transform: scale(1.1);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .lang-switch {
+            position: relative;
+        }
+        
+        .lang-switch select {
+            padding: 14px 40px 14px 20px;
+            border-radius: 50px;
+            border: 3px solid #0288d1;
+            background: white;
+            color: #0288d1;
+            font-weight: 700;
+            font-size: 1em;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%230288d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+        }
+        
+        .lang-switch select option {
+            background: white;
+            color: #0288d1;
+            padding: 10px;
+            font-weight: 700;
+        }
+        
+        .lang-switch select:hover {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            border-color: transparent;
+        }
+        
+        .lang-switch select:hover option {
+            background: white;
+            color: #0288d1;
         }
         
         header {
@@ -363,6 +495,29 @@
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🔄 Easy Img Converter </a>
+            <div class="nav-links">
+                <a href="#tools">Tools</a>
+                <a href="#about">About</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-buttons">
+                <div class="lang-switch">
+                    <select onchange="window.location.href=this.value">
+                        <option value="./index.html" selected>English</option>
+                        <option value="../ko/index.html">한국어</option>
+                        <option value="../zh-TW/index.html">繁體中文</option>
+                        <option value="../zh-CN/index.html">简体中文</option>
+                        <option value="../ja/index.html">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
     <div class="container">
         <header>
             <h1>WEBP TO JPG</h1>

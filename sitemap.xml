@@ -1,20 +1,309 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- Root index.html (redirect page) -->
     <url>
-        <loc>http://easyimgconverter.com/en/</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="http://easyimgconverter.com/en/"/>
-        <xhtml:link rel="alternate" hreflang="zh-TW" href="http://easyimgconverter.com/zh-tw/"/>
-        <lastmod>2026-03-31</lastmod>
+        <loc>https://easyimgconverter.com/</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/"/>
+        <lastmod>2024-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
+    
+    <!-- Korean version -->
     <url>
-        <loc>http://easyimgconverter.com/zh-tw/</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="http://easyimgconverter.com/en/"/>
-        <xhtml:link rel="alternate" hreflang="zh-TW" href="http://easyimgconverter.com/zh-tw/"/>
-        <lastmod>2026-03-31</lastmod>
+        <loc>https://easyimgconverter.com/ko/</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/"/>
+        <lastmod>2024-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
+    
+    <!-- Traditional Chinese version -->
+    <url>
+        <loc>https://easyimgconverter.com/zh-TW/</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Simplified Chinese version -->
+    <url>
+        <loc>https://easyimgconverter.com/zh-CN/</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Japanese version -->
+    <url>
+        <loc>https://easyimgconverter.com/ja/</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- English version -->
+    <url>
+        <loc>https://easyimgconverter.com/en/</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Converter pages - Korean -->
+    <url>
+        <loc>https://easyimgconverter.com/ko/jpg-to-png.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/jpg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/jpg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/jpg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/jpg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/jpg-to-png.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/ko/png-to-jpg.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/png-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/png-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/png-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/png-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/png-to-jpg.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/ko/webp-to-png.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/webp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/webp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/webp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/webp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/webp-to-png.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/ko/webp-to-jpg.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/webp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/webp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/webp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/webp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/webp-to-jpg.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/ko/bmp-to-png.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/bmp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/bmp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/bmp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/bmp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/bmp-to-png.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/ko/bmp-to-jpg.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/bmp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/bmp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/bmp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/bmp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/bmp-to-jpg.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/ko/svg-to-png.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/svg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/svg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/svg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/svg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/svg-to-png.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/ko/svg-to-jpg.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/svg-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/svg-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/svg-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/svg-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/svg-to-jpg.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/ko/pdf-to-jpg.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/pdf-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/pdf-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/pdf-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/pdf-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/pdf-to-jpg.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Converter pages - English -->
+    <url>
+        <loc>https://easyimgconverter.com/en/jpg-to-png.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/jpg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/jpg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/jpg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/jpg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/jpg-to-png.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/en/png-to-jpg.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/png-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/png-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/png-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/png-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/png-to-jpg.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/en/webp-to-png.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/webp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/webp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/webp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/webp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/webp-to-png.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/en/webp-to-jpg.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/webp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/webp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/webp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/webp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/webp-to-jpg.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/en/bmp-to-png.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/bmp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/bmp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/bmp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/bmp-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/bmp-to-png.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/en/bmp-to-jpg.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/bmp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/bmp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/bmp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/bmp-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/bmp-to-jpg.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/en/svg-to-png.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/svg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/svg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/svg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/svg-to-png.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/svg-to-png.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/en/svg-to-jpg.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/svg-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/svg-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/svg-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/svg-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/svg-to-jpg.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/en/pdf-to-jpg.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/pdf-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/pdf-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/pdf-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/pdf-to-jpg.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/pdf-to-jpg.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Updates pages -->
+    <url>
+        <loc>https://easyimgconverter.com/ko/updates.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/updates.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/updates.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/updates.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/updates.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/updates.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://easyimgconverter.com/en/updates.html</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://easyimgconverter.com/ko/updates.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://easyimgconverter.com/zh-TW/updates.html"/>
+        <xhtml:link rel="alternate" hreflang="zh-CN" href="https://easyimgconverter.com/zh-CN/updates.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://easyimgconverter.com/ja/updates.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://easyimgconverter.com/en/updates.html"/>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
 </urlset>

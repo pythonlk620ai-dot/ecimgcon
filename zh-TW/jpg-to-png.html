@@ -6,7 +6,7 @@
     <title>JPG 轉 PNG 轉換器 - Easy Img Converter</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="JPG 轉 PNG 轉換器。將 JPG 圖片轉換為 PNG 格式，支持透明度。快速、安全、無檔案大小限制。完美滿足您的圖片轉換需求。">
+    <meta name="description" content="JPG 轉 PNG 轉換器。將 JPG 圖片轉換為 PNG 格式，支援透明度。快速、安全、無檔案大小限制。完美滿足圖片轉換需求。">
     <meta name="keywords" content="jpg 轉 png 轉換器, 在線轉換器, 圖片轉換器, png 轉換器, 圖片工具, 照片轉換器, 轉換器, Easy Img Converter">
     <meta name="author" content="Easy Img Converter">
     <meta name="robots" content="index, follow">
@@ -16,14 +16,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://easyimgconverter.com/zh-tw/jpg-to-png.html">
     <meta property="og:title" content="JPG 轉 PNG 轉換器 - Easy Img Converter">
-    <meta property="og:description" content="將 JPG 圖片轉換為 PNG 格式，支持透明度。快速、安全、無檔案大小限制。">
+    <meta property="og:description" content="將 JPG 圖片轉換為 PNG 格式，支援透明度。快速、安全、無檔案大小限制。">
     <meta property="og:image" content="http://easyimgconverter.com/images/jpg-to-png.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="http://easyimgconverter.com/zh-tw/jpg-to-png.html">
     <meta property="twitter:title" content="JPG 轉 PNG 轉換器 - Easy Img Converter">
-    <meta property="twitter:description" content="將 JPG 圖片轉換為 PNG 格式，支持透明度。快速、安全、無檔案大小限制。">
+    <meta property="twitter:description" content="將 JPG 圖片轉換為 PNG 格式，支援透明度。快速、安全、無檔案大小限制。">
     <meta property="twitter:image" content="http://easyimgconverter.com/images/jpg-to-png.jpg">
     
     <!-- Schema.org structured data -->
@@ -32,7 +32,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "JPG 轉 PNG 轉換器",
-        "description": "JPG 轉 PNG 轉換器，可將 JPG 圖片轉換為 PNG 格式，支持透明度。快速、安全、無檔案大小限制。",
+        "description": "JPG 轉 PNG 轉換器，可將 JPG 圖片轉換為 PNG 格式並支援透明度。快速、安全、無檔案大小限制。",
         "applicationCategory": "WebApplication",
         "operatingSystem": "Web Browser",
         "offers": {
@@ -44,12 +44,9 @@
             "@type": "Organization",
             "name": "Easy Img Converter"
         },
-        "featureList": "JPG 轉 PNG, 批量轉換, 透明度支持, 無損品質, 無檔案大小限制, 安全處理"
+        "featureList": "JPG 轉 PNG, 批次轉換, 透明度支援, 無損品質, 無檔案大小限制, 安全處理"
     }
     </script>
-    
-    <link rel="alternate" hreflang="en" href="http://easyimgconverter.com/en/jpg-to-png.html">
-    <link rel="alternate" hreflang="zh-TW" href="http://easyimgconverter.com/zh-tw/jpg-to-png.html">
     
     <style>
         * {
@@ -59,7 +56,7 @@
         }
         
         body {
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', 'Arial Rounded MT Bold', sans-serif;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Arial Rounded MT Bold', sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
@@ -70,6 +67,139 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #fff;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 2.5em;
+            font-weight: 900;
+            color: #0288d1;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 0px #fff, 3px 3px 0px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite;
+            transition: all 0.3s;
+        }
+        
+        .logo:hover {
+            transform: scale(1.1) rotate(2deg);
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .logo span {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 50%, #4fc3f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #0288d1;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            position: relative;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 4px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            transition: width 0.3s;
+            border-radius: 10px;
+        }
+        
+        .nav-links a:hover {
+            color: #03a9f4;
+            transform: scale(1.1);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .lang-switch {
+            position: relative;
+        }
+        
+        .lang-switch select {
+            padding: 14px 40px 14px 20px;
+            border-radius: 50px;
+            border: 3px solid #0288d1;
+            background: white;
+            color: #0288d1;
+            font-weight: 700;
+            font-size: 1em;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%230288d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+        }
+        
+        .lang-switch select option {
+            background: white;
+            color: #0288d1;
+            padding: 10px;
+            font-weight: 700;
+        }
+        
+        .lang-switch select:hover {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            border-color: transparent;
+        }
+        
+        .lang-switch select:hover option {
+            background: white;
+            color: #0288d1;
         }
         
         header {
@@ -239,7 +369,7 @@
             font-size: 1em;
             transition: all 0.3s;
             font-weight: 700;
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
         }
         
         .remove-btn {
@@ -280,7 +410,7 @@
             color: white;
             font-weight: 700;
             box-shadow: 0 6px 15px rgba(2, 136, 209, 0.3);
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
         }
         
         .convert-all-section button:hover {
@@ -345,7 +475,7 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             font-weight: 700;
             box-shadow: 0 6px 15px rgba(2, 136, 209, 0.3);
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
         }
         
         .download-btn:hover {
@@ -366,12 +496,35 @@
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🔄 Easy Img Converter </a>
+            <div class="nav-links">
+                <a href="#tools">工具</a>
+                <a href="#about">關於</a>
+                <a href="#blog">部落格</a>
+                <a href="#contact">聯絡</a>
+            </div>
+            <div class="nav-buttons">
+                <div class="lang-switch">
+                    <select onchange="window.location.href=this.value">
+                        <option value="../en/index.html">English</option>
+                        <option value="../ko/index.html">한국어</option>
+                        <option value="./index.html" selected>繁體中文</option>
+                        <option value="../zh-CN/index.html">简体中文</option>
+                        <option value="../ja/index.html">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
     <div class="container">
         <header>
             <h1>JPG 轉 PNG</h1>
-            <p class="description">將 JPG 圖片轉換為 PNG 格式。快速、安全的轉換。PNG 支持透明度和無損品質。</p>
+            <p class="description">將 JPG 圖片轉換為 PNG 格式。快速、安全的轉換。PNG 支援透明度和無損品質。</p>
             <p class="supported-formats">
-                JPG 可轉換為： 
+                轉換 JPG 為: 
                 <a href="#">PNG</a>
             </p>
         </header>
@@ -400,7 +553,7 @@
             <div class="download-section" id="downloadSection"></div>
         </div>
         
-        <p class="privacy-note">您的檔案在瀏覽器中安全處理。不會將任何數據發送到我們的伺服器。</p>
+        <p class="privacy-note">您的檔案在瀏覽器中安全處理。不會將任何資料發送到我們的伺服器。</p>
         </div>
         
         <section class="info-section">
@@ -408,23 +561,23 @@
             
             <div class="info-content">
                 <div class="info-card">
-                    <h3>什麼是 JPG？</h3>
-                    <p>JPG（或 JPEG）是一種廣泛使用的圖片格式，使用<strong>有損壓縮</strong>。這意味著為了減少檔案大小，會丟棄一些圖片數據，使其非常適合照片和具有許多顏色的複雜圖片。</p>
+                    <h3>JPG 是什麼？</h3>
+                    <p>JPG（或 JPEG）是一種廣泛使用的圖片格式，使用<strong>有損壓縮</strong>。這意味著為了減少檔案大小，會丟棄一些圖片資料，使其非常適合照片和具有許多顏色的複雜圖片。</p>
                     <ul>
-                        <li><strong>適用於：</strong> 照片、網頁圖片、電子郵件附件</li>
+                        <li><strong>最適合：</strong> 照片、網頁圖片、電子郵件附件</li>
                         <li><strong>檔案大小：</strong> 由於壓縮而較小</li>
-                        <li><strong>透明度：</strong> 不支持</li>
+                        <li><strong>透明度：</strong> 不支援</li>
                         <li><strong>品質：</strong> 可調整（通常為 60-90% 以獲得最佳平衡）</li>
                     </ul>
                 </div>
                 
                 <div class="info-card">
-                    <h3>什麼是 PNG？</h3>
-                    <p>PNG（Portable Network Graphics）使用<strong>無損壓縮</strong>，意味著壓縮過程中不會丟失任何圖片數據。它非常適合需要透明度和銳利圖形的圖片。</p>
+                    <h3>PNG 是什麼？</h3>
+                    <p>PNG（可移植網路圖形格式）使用<strong>無損壓縮</strong>，意味著壓縮過程中不會遺失任何圖片資料。它非常適合需要透明度和銳利圖形的圖片。</p>
                     <ul>
-                        <li><strong>適用於：</strong> 標誌、圖標、帶文字的圖形、需要透明度的圖片</li>
+                        <li><strong>最適合：</strong> 標誌、圖示、帶文字的圖形、需要透明度的圖片</li>
                         <li><strong>檔案大小：</strong> 比 JPG 大（無有損壓縮）</li>
-                        <li><strong>透明度：</strong> 完全支持（Alpha 通道）</li>
+                        <li><strong>透明度：</strong> 完全支援（alpha 通道）</li>
                         <li><strong>品質：</strong> 始終無損 - 無品質損失</li>
                     </ul>
                 </div>
@@ -433,14 +586,14 @@
             <h3>為什麼要將 JPG 轉換為 PNG？</h3>
             
             <div class="info-text">
-                <p>您可能需要將 JPG 圖片轉換為 PNG 格式的原因有多個：</p>
+                <p>您可能需要將 JPG 圖片轉換為 PNG 格式的原因有很多：</p>
                 
                 <div class="benefit-list">
                     <div class="benefit-item">
                         <span class="benefit-icon">✨</span>
                         <div>
-                            <h4>透明度支持</h4>
-                            <p>PNG 支持透明度，允許您創建具有透明背景的圖片。JPG 完全不支持透明度。</p>
+                            <h4>透明度支援</h4>
+                            <p>PNG 支援透明度，讓您可以建立具有透明背景的圖片。JPG 完全不支援透明度。</p>
                         </div>
                     </div>
                     
@@ -448,7 +601,7 @@
                         <span class="benefit-icon">🎨</span>
                         <div>
                             <h4>無損品質</h4>
-                            <p>PNG 保持完美的圖片品質，沒有壓縮偽影。JPG 的壓縮有時會造成可見的品質問題。</p>
+                            <p>PNG 保持完美的圖片品質，沒有壓縮偽影。JPG 的壓縮有時會產生可見的品質問題。</p>
                         </div>
                     </div>
                     
@@ -456,7 +609,7 @@
                         <span class="benefit-icon">🖼️</span>
                         <div>
                             <h4>圖形和文字</h4>
-                            <p>PNG 比 JPG 更好地保留銳利邊緣和文字清晰度，使其非常適合截圖和帶文字的圖形。</p>
+                            <p>PNG 比 JPG 更好地保留銳利邊緣和文字清晰度，使其非常適合螢幕截圖和帶文字的圖形。</p>
                         </div>
                     </div>
                     
@@ -464,7 +617,7 @@
                         <span class="benefit-icon">💻</span>
                         <div>
                             <h4>網頁開發</h4>
-                            <p>許多網頁開發者更喜歡使用 PNG 來製作標誌、圖標和 UI 元素，因為它支持透明度且品質清晰。</p>
+                            <p>許多網頁開發者更喜歡 PNG 用於標誌、圖示和 UI 元素，因為它支援透明度和清晰的品質。</p>
                         </div>
                     </div>
                 </div>
@@ -482,7 +635,7 @@
                             <li>具有許多顏色的照片</li>
                             <li>檔案大小很重要</li>
                             <li>不需要透明度</li>
-                            <li>網頁優化是關鍵</li>
+                            <li>網頁最佳化是關鍵</li>
                         </ul>
                     </div>
                 </div>
@@ -495,8 +648,8 @@
                         <ul>
                             <li>需要透明度</li>
                             <li>帶文字或銳利邊緣的圖形</li>
-                            <li>標誌或圖標設計</li>
-                            <li>需要最高品質</li>
+                            <li>標誌或圖示設計</li>
+                            <li>最大品質至關重要</li>
                         </ul>
                     </div>
                 </div>
@@ -505,24 +658,24 @@
             <h3>我們的 JPG 轉 PNG 轉換器如何運作</h3>
             
             <div class="info-text">
-                <p>我們的轉換器使用先進的 HTML5 Canvas 技術直接在您的瀏覽器中轉換圖片。以下是發生的過程：</p>
+                <p>我們的轉換器使用先進的 HTML5 Canvas 技術直接在您的瀏覽器中轉換您的圖片。以下是運作過程：</p>
                 
                 <ol class="steps-list">
-                    <li><strong>上傳：</strong> 您從設備選擇 JPG 檔案</li>
-                    <li><strong>處理：</strong> 圖片加載到 canvas 元素中</li>
-                    <li><strong>轉換：</strong> 將 canvas 導出為 PNG 格式</li>
+                    <li><strong>上傳：</strong> 您從您的設備選擇 JPG 檔案</li>
+                    <li><strong>處理：</strong> 圖片被載入到 canvas 元素中</li>
+                    <li><strong>轉換：</strong> 將 canvas 匯出為 PNG 格式</li>
                     <li><strong>下載：</strong> 轉換後的 PNG 已準備好下載</li>
                 </ol>
                 
-                <p><strong>隱私保障：</strong> 所有處理都在您的設備上本地進行。您的圖片從不上傳到任何伺服器，確保完全的隱私和安全。</p>
+                <p><strong>隱私保障：</strong> 所有處理都在您的設備上本地進行。您的圖片永遠不會上傳到任何伺服器，確保完全的隱私和安全。</p>
             </div>
             
             <h3>常見問題</h3>
             
             <div class="faq-section">
                 <div class="faq-item">
-                    <h4>將 JPG 轉換為 PNG 能提高圖片品質嗎？</h4>
-                    <p>不一定。從 JPG 轉換為 PNG 並不能恢復原始 JPG 壓縮過程中丟失的品質。但是，PNG 不會進一步降低圖片品質，因為它使用無損壓縮。</p>
+                    <h4>將 JPG 轉換為 PNG 會改善圖片品質嗎？</h4>
+                    <p>不一定。從 JPG 轉換為 PNG 無法恢復原始 JPG 壓縮期間損失的品質。然而，PNG 不會進一步降低圖片品質，因為它使用無損壓縮。</p>
                 </div>
                 
                 <div class="faq-item">
@@ -532,17 +685,17 @@
                 
                 <div class="faq-item">
                     <h4>我可以一次轉換多個 JPG 檔案嗎？</h4>
-                    <p>當然可以！我們的轉換器支持批量處理，因此您可以一次將多個 JPG 檔案轉換為 PNG。</p>
+                    <p>當然可以！我們的轉換器支援批次處理，因此您可以一次將多個 JPG 檔案轉換為 PNG。</p>
                 </div>
                 
                 <div class="faq-item">
                     <h4>有檔案大小限制嗎？</h4>
-                    <p>沒有嚴格的檔案大小限制。但是，非常大的圖片（超過 50MB）可能需要更長的處理時間，具體取決於您的設備記憶體。</p>
+                    <p>沒有嚴格的檔案大小限制。然而，非常大的圖片（超過 50MB）可能需要更長的處理時間，具體取決於您的設備記憶體。</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>我的圖片會存儲在您的伺服器上嗎？</h4>
-                    <p>不會！所有轉換都在您的瀏覽器中使用客戶端處理進行。您的圖片從不離開您的設備。</p>
+                    <h4>我的圖片會儲存在您的伺服器上嗎？</h4>
+                    <p>不會！所有轉換都在您的瀏覽器中使用用戶端處理進行。您的圖片永遠不會離開您的設備。</p>
                 </div>
             </div>
         </section>
@@ -897,7 +1050,7 @@
             if (!fileItem || fileItem.converted) return;
             
             statusContainer.style.display = 'block';
-            statusText.textContent = `正在轉換 ${fileItem.file.name}...`;
+            statusText.textContent = `轉換 ${fileItem.file.name}...`;
             progressFill.style.width = '0%';
             
             try {
@@ -934,7 +1087,7 @@
                 };
                 
                 img.onerror = function() {
-                    alert('圖片加載錯誤');
+                    alert('載入圖片時出錯');
                     statusContainer.style.display = 'none';
                     URL.revokeObjectURL(blobUrl);
                 };
@@ -942,8 +1095,8 @@
                 img.src = blobUrl;
                 
             } catch (error) {
-                console.error('轉換錯誤:', error);
-                alert('轉換檔案時出錯。請重試。');
+                console.error('Conversion error:', error);
+                alert('轉換檔案時出錯。請再試一次。');
                 statusContainer.style.display = 'none';
                 URL.revokeObjectURL(blobUrl);
             }
@@ -977,7 +1130,7 @@
             
             for (let i = 0; i < totalFiles; i++) {
                 const fileItem = uncompressedFiles[i];
-                statusText.textContent = `正在轉換 ${fileItem.file.name}... (${i + 1}/${totalFiles})`;
+                statusText.textContent = `轉換 ${fileItem.file.name}... (${i + 1}/${totalFiles})`;
                 progressFill.style.width = `${((i + 1) / totalFiles) * 100}%`;
                 
                 try {
@@ -1014,13 +1167,13 @@
                     };
                     
                     img.onerror = function() {
-                        console.error('圖片加載錯誤:', fileItem.file.name);
+                        console.error('載入圖片時出錯:', fileItem.file.name);
                     };
                     
                     img.src = blobUrl;
                     
                 } catch (error) {
-                    console.error('轉換錯誤:', error);
+                    console.error('Conversion error:', error);
                 }
             }
         });

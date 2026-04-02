@@ -6,7 +6,7 @@
     <title>圖片轉換器 - Easy Img Converter</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="圖片轉換器。將圖片在不同格式之間轉換，如 JPG、PNG、PDF、SVG、BMP、WEBP 等。快速、安全、無檔案大小限制。完美滿足您的圖片轉換需求。">
+    <meta name="description" content="圖片轉換器。將圖片轉換為不同格式，如 JPG、PNG、PDF、SVG、BMP、WEBP 等。快速、安全、無檔案大小限制。完美滿足圖片轉換需求。">
     <meta name="keywords" content="圖片轉換器, 在線轉換器, 圖片格式轉換, 圖片工具, 照片轉換器, 轉換器, 圖片轉換工具, Easy Img Converter">
     <meta name="author" content="Easy Img Converter">
     <meta name="robots" content="index, follow">
@@ -16,14 +16,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://easyimgconverter.com/zh-tw/">
     <meta property="og:title" content="圖片轉換器 - Easy Img Converter">
-    <meta property="og:description" content="將圖片在不同格式之間轉換，如 JPG、PNG、PDF、SVG、BMP、WEBP 等。快速、安全、無檔案大小限制。">
+    <meta property="og:description" content="將圖片轉換為不同格式，如 JPG、PNG、PDF、SVG、BMP、WEBP 等。快速、安全、無檔案大小限制。">
     <meta property="og:image" content="http://easyimgconverter.com/images/landing.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="http://easyimgconverter.com/zh-tw/">
-    <meta property="twitter:title" content="圖片轉換器 - Easy Img Converter">
-    <meta property="twitter:description" content="將圖片在不同格式之間轉換，如 JPG、PNG、PDF、SVG、BMP、WEBP 等。快速、安全、無檔案大小限制。">
+    <meta property="twitter:title" content="最佳免費在線圖片轉換器 - Easy Img Converter">
+    <meta property="twitter:description" content="將圖片轉換為不同格式，如 JPG、PNG、PDF、SVG、BMP、WEBP 等。快速、安全、無檔案大小限制。">
     <meta property="twitter:image" content="http://easyimgconverter.com/images/landing.jpg">
     
     <!-- Schema.org structured data -->
@@ -32,7 +32,7 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Easy Img Converter - 圖片轉換器",
-        "description": "圖片轉換器，可在不同格式之間轉換圖片，如 JPG、PNG、PDF、SVG、BMP、WEBP 等。快速、安全、無檔案大小限制。",
+        "description": "免費的線上圖片轉換器，可將圖片轉換為 JPG、PNG、PDF、SVG、BMP、WEBP 等不同格式。快速、安全、無檔案大小限制。",
         "applicationCategory": "WebApplication",
         "operatingSystem": "Web Browser",
         "offers": {
@@ -44,12 +44,10 @@
             "@type": "Organization",
             "name": "Easy Img Converter"
         },
-        "featureList": "在線轉換圖片, 批量轉換, 多格式支持, 無損品質, 無檔案大小限制, 安全處理, ZIP下載"
+        "featureList": "線上轉換圖片, 批次轉換, 多格式支援, 無損品質, 無檔案大小限制, 安全處理, ZIP 下載"
     }
     </script>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔄</text></svg>">
-    <link rel="alternate" hreflang="en" href="http://easyimgconverter.com/en/">
-    <link rel="alternate" hreflang="zh-TW" href="http://easyimgconverter.com/zh-tw/">
     <style>
         * {
             margin: 0;
@@ -58,7 +56,7 @@
         }
         
         body {
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', 'Arial Rounded MT Bold', sans-serif;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Arial Rounded MT Bold', sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
@@ -66,6 +64,7 @@
             overflow-x: hidden;
         }
         
+        /* Animated background shapes */
         .bg-shape {
             position: fixed;
             border-radius: 50%;
@@ -101,96 +100,65 @@
         }
         
         .shape-4 {
-            width: 160px;
-            height: 160px;
+            width: 120px;
+            height: 120px;
             background: linear-gradient(135deg, #b2dfdb 0%, #80cbc4 100%);
-            bottom: 10%;
-            right: 20%;
+            bottom: 20%;
+            right: 5%;
             animation-delay: 15s;
         }
         
         @keyframes float {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(20px, 30px); }
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-30px) rotate(10deg);
+            }
+            50% {
+                transform: translateY(20px) rotate(-5deg);
+            }
+            75% {
+                transform: translateY(-15px) rotate(5deg);
+            }
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #fff;
         }
         
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 20px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .logo {
-            color: #0288d1;
-            font-size: 1.8em;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 2.5em;
             font-weight: 900;
-            text-decoration: none;
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
-            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-        
-        .nav-links a {
             color: #0288d1;
             text-decoration: none;
-            font-weight: 600;
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
-            transition: all 0.3s;
-            font-size: 1.1em;
-        }
-        
-        .nav-links a:hover {
-            color: #03a9f4;
-            transform: scale(1.05);
-        }
-        
-        .lang-switch {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
             display: flex;
-            gap: 10px;
-        }
-        
-        .lang-switch .lang-btn {
-            padding: 10px 20px;
-            border: 3px solid #0288d1;
-            border-radius: 50px;
-            background: white;
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
-            font-weight: 600;
-            font-size: 1em;
-            cursor: pointer;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 0px #fff, 3px 3px 0px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite;
             transition: all 0.3s;
         }
         
-        .lang-switch .lang-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(2, 136, 209, 0.3);
-        }
-        
-        .lang-switch .lang-btn.active {
-            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
-            color: white;
-            border-color: transparent;
-        }
-        
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #80deea 0%, #4dd0e1 100%);
-            border-radius: 30px;
-            margin: 30px 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            animation: bounce 2s infinite;
+        .logo:hover {
+            transform: scale(1.1) rotate(2deg);
         }
         
         @keyframes bounce {
@@ -198,21 +166,185 @@
             50% { transform: translateY(-5px); }
         }
         
-        .hero h1 {
+        .logo span {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 50%, #4fc3f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #0288d1;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            position: relative;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 4px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            transition: width 0.3s;
+            border-radius: 10px;
+        }
+        
+        .nav-links a:hover {
+            color: #03a9f4;
+            transform: scale(1.1);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .lang-switch {
+            position: relative;
+        }
+        
+        .lang-switch select {
+            padding: 14px 40px 14px 20px;
+            border-radius: 50px;
+            border: 3px solid #0288d1;
+            background: white;
+            color: #0288d1;
+            font-weight: 700;
+            font-size: 1em;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%230288d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+        }
+        
+        .lang-switch select option {
+            background: white;
+            color: #0288d1;
+            padding: 10px;
+            font-weight: 700;
+        }
+        
+        .lang-switch select:hover {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
             color: white;
+            border-color: transparent;
+        }
+        
+        .lang-switch select:hover option {
+            background: white;
+            color: #0288d1;
+        }
+        
+        .btn {
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1em;
+            border: 3px solid transparent;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 3px solid #0288d1;
+            color: #0288d1;
+        }
+        
+        .btn-outline:hover {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(2, 136, 209, 0.4);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(2, 136, 209, 0.5);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
+            color: #01579b;
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '✨';
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            font-size: 5em;
+            animation: sparkle 2s infinite;
+        }
+        
+        .hero::after {
+            content: '🎨';
+            position: absolute;
+            bottom: 10%;
+            right: 10%;
+            font-size: 6em;
+            animation: sparkle 2.5s infinite reverse;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            50% { transform: scale(1.2) rotate(10deg); opacity: 1; }
+        }
+        
+        .hero h1 {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
             font-size: 4em;
-            margin-bottom: 20px;
-            font-weight: 900;
-            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
             line-height: 1.2;
+            font-weight: 900;
+            color: #01579b;
+            text-shadow: 3px 3px 0px rgba(255,255,255,0.5), 5px 5px 20px rgba(0,0,0,0.2);
+            animation: bounce 2s infinite;
         }
         
         .hero p {
-            color: white;
-            font-size: 1.8em;
-            margin-bottom: 30px;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1.5em;
+            max-width: 900px;
+            margin: 0 auto 70px;
+            opacity: 0.95;
+            line-height: 1.7;
             font-weight: 600;
-            line-height: 1.6;
+            color: #0277bd;
+            text-shadow: 2px 2px 0px rgba(255,255,255,0.3);
         }
         
         .hero-buttons {
@@ -222,249 +354,381 @@
             flex-wrap: wrap;
         }
         
-        .primary-btn {
+        .hero .btn {
+            padding: 16px 35px;
+            font-size: 1.1em;
+        }
+        
+        .category-filter {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 14px 30px;
+            border: 3px solid #81d4fa;
+            border-radius: 50px;
             background: white;
-            color: #0288d1;
-            padding: 20px 50px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.3em;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             font-weight: 700;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
+            font-size: 1em;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
         }
         
-        .primary-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        .filter-btn:hover {
+            border-color: #03a9f4;
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(3, 169, 244, 0.3);
         }
         
-        .secondary-btn {
-            background: rgba(255,255,255,0.2);
+        .filter-btn.active {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
             color: white;
-            padding: 20px 50px;
-            border: 3px solid white;
-            border-radius: 50px;
-            font-size: 1.3em;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            font-weight: 700;
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
-        }
-        
-        .secondary-btn:hover {
-            background: rgba(255,255,255,0.3);
-            transform: scale(1.05);
-        }
-        
-        .section {
-            padding: 80px 20px;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 3em;
-            color: #0288d1;
-            margin-bottom: 20px;
-            font-weight: 900;
-            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.4em;
-            color: #555;
-            margin-bottom: 60px;
-            font-weight: 600;
+            border-color: transparent;
+            box-shadow: 0 8px 20px rgba(2, 136, 209, 0.4);
         }
         
         .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
             max-width: 1400px;
             margin: 0 auto;
-        }
-        
-        .tool-card-wrapper {
-            perspective: 1000px;
+            padding: 0 20px 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 35px;
         }
         
         .tool-card {
             background: white;
-            border-radius: 30px;
-            padding: 40px;
-            text-align: center;
-            text-decoration: none;
-            color: #333;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 25px;
+            padding: 45px 35px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 3px solid #e0f7fa;
+            text-decoration: none;
+            color: inherit;
             display: block;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #fff;
+        }
+        
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
         }
         
         .tool-card:hover {
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-            border-color: #0288d1;
+            box-shadow: 0 20px 50px rgba(2, 136, 209, 0.2);
+            border-color: #81d4fa;
+        }
+        
+        .tool-card:hover::before {
+            transform: scaleX(1);
         }
         
         .tool-icon {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 20px;
-            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3.5em;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            font-size: 3em;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
         }
         
         .tool-card h3 {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1.7em;
+            margin-bottom: 18px;
             color: #0288d1;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            font-weight: 900;
+            font-weight: 800;
         }
         
         .tool-card p {
             color: #666;
-            font-size: 1.1em;
-            line-height: 1.6;
+            font-size: 1em;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+        
+        .new-badge {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.85em;
+            font-weight: 800;
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            box-shadow: 0 4px 12px rgba(2, 136, 209, 0.4);
+            animation: bounce 2s infinite;
+        }
+        
+        .tool-card-wrapper {
+            position: relative;
+        }
+        
+        .section {
+            padding: 100px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 3.5em;
+            margin-bottom: 25px;
+            color: #0288d1;
+            font-weight: 900;
+            position: relative;
+            display: inline-block;
+            text-shadow: 3px 3px 0px rgba(255,255,255,0.5);
+        }
+        
+        .section-title::after {
+            content: '✨';
+            display: block;
+            font-size: 2em;
+            margin: 25px auto 0;
+            animation: sparkle 2s infinite;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1.3em;
+            max-width: 900px;
+            margin: 0 auto 70px;
+            line-height: 1.8;
+            font-weight: 600;
+        }
+        
+        .about-section {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
         }
         
         .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
             max-width: 1400px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
         }
         
         .feature-item {
-            background: white;
-            padding: 40px;
-            border-radius: 30px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 3px solid #e0f7fa;
+            padding: 50px 35px;
+            background: white;
+            border-radius: 25px;
+            transition: all 0.4s;
+            border: 3px solid #fff;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
         
         .feature-item:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-            border-color: #0288d1;
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 40px rgba(2, 136, 209, 0.2);
+            border-color: #81d4fa;
         }
         
         .feature-icon {
             font-size: 4em;
-            margin-bottom: 20px;
-            display: block;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: bounce 2s infinite;
         }
         
         .feature-item h3 {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1.8em;
+            margin-bottom: 25px;
             color: #0288d1;
-            font-size: 2em;
-            margin-bottom: 15px;
-            font-weight: 900;
+            font-weight: 800;
         }
         
         .feature-item p {
             color: #666;
-            font-size: 1.1em;
             line-height: 1.8;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        
+        .stats-section {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            padding: 100px 20px;
+            position: relative;
+        }
+        
+        .stats-section::before {
+            content: '🎨';
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            font-size: 8em;
+            opacity: 0.1;
+            animation: sparkle 3s infinite;
+        }
+        
+        .stats-section::after {
+            content: '✨';
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            font-size: 8em;
+            opacity: 0.1;
+            animation: sparkle 2.5s infinite reverse;
         }
         
         .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
             max-width: 1400px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 45px;
+            text-align: center;
         }
         
         .stat-item {
-            background: white;
-            padding: 40px;
-            border-radius: 30px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 3px solid #e0f7fa;
+            padding: 35px 25px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
         }
         
         .stat-number {
-            font-size: 3.5em;
-            color: #0288d1;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 4em;
             font-weight: 900;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             display: block;
+            color: white;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
         }
         
         .stat-label {
-            color: #666;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
             font-size: 1.2em;
-            font-weight: 600;
+            opacity: 0.95;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .blog-section {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
         }
         
         .blog-grid {
+            max-width: 1400px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
-            max-width: 1400px;
-            margin: 0 auto;
         }
         
         .blog-card {
             background: white;
-            border-radius: 30px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 3px solid #e0f7fa;
+            border: 3px solid #fff;
         }
         
         .blog-card:hover {
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-            border-color: #0288d1;
+            box-shadow: 0 20px 50px rgba(2, 136, 209, 0.2);
+            border-color: #81d4fa;
         }
         
         .blog-image {
-            font-size: 4em;
-            text-align: center;
-            margin-bottom: 20px;
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5em;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+        }
+        
+        .blog-content {
+            padding: 35px;
+        }
+        
+        .blog-date {
+            color: #0288d1;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1em;
+            font-weight: 700;
+            margin-bottom: 15px;
             display: block;
         }
         
         .blog-card h3 {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1.7em;
+            margin-bottom: 18px;
             color: #0288d1;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            font-weight: 900;
+            font-weight: 800;
+            line-height: 1.4;
         }
         
         .blog-card p {
             color: #666;
-            font-size: 1.1em;
-            line-height: 1.8;
+            line-height: 1.7;
+            font-size: 1em;
+            font-weight: 500;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
         }
         
         .contact-container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
-            background: white;
-            padding: 60px;
-            border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
         .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(2, 136, 209, 0.2);
+            border: 3px solid #fff;
         }
         
         .form-group {
@@ -473,82 +737,97 @@
         
         .form-group label {
             display: block;
-            color: #0288d1;
-            font-weight: 600;
             margin-bottom: 10px;
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
-            font-size: 1.1em;
+            font-weight: 700;
+            color: #0288d1;
+            font-size: 1em;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
         }
         
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 15px 20px;
-            border: 3px solid #e0f7fa;
-            border-radius: 20px;
+            padding: 15px;
+            border: 3px solid #81d4fa;
+            border-radius: 15px;
             font-size: 1em;
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
             transition: all 0.3s;
+            background: white;
         }
         
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: #0288d1;
-            box-shadow: 0 0 0 4px rgba(2, 136, 209, 0.1);
+            box-shadow: 0 0 0 4px rgba(2, 136, 209, 0.2);
         }
         
         .form-group textarea {
-            height: 150px;
             resize: vertical;
+            min-height: 150px;
         }
         
         .submit-btn {
+            width: 100%;
+            padding: 18px;
             background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
             color: white;
-            padding: 18px 45px;
             border: none;
-            border-radius: 50px;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: block;
-            margin: 0 auto;
+            border-radius: 15px;
+            font-size: 1.1em;
             font-weight: 700;
-            box-shadow: 0 6px 15px rgba(2, 136, 209, 0.3);
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(2, 136, 209, 0.3);
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
         }
         
         .submit-btn:hover {
-            transform: scale(1.05);
+            transform: translateY(-3px) scale(1.02);
             box-shadow: 0 8px 20px rgba(2, 136, 209, 0.4);
         }
         
-        .footer {
+        footer {
             background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
             color: white;
-            padding: 60px 20px 30px;
-            border-radius: 30px 30px 0 0;
-            margin-top: 60px;
+            padding: 80px 20px 40px;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '✨';
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            font-size: 6em;
+            opacity: 0.1;
+            animation: sparkle 2s infinite;
         }
         
         .footer-content {
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
         }
         
         .footer-section h3 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            font-weight: 900;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1.6em;
+            margin-bottom: 25px;
+            font-weight: 800;
+            color: white;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
         }
         
         .footer-section p {
-            color: #b3e5fc;
+            color: white;
             line-height: 1.8;
+            font-size: 1em;
+            font-weight: 500;
         }
         
         .footer-section ul {
@@ -564,7 +843,7 @@
             text-decoration: none;
             transition: all 0.3s;
             display: inline-block;
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
             font-weight: 600;
         }
         
@@ -581,7 +860,7 @@
             text-align: center;
             color: white;
             font-size: 1em;
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Microsoft JhengHei', sans-serif;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
         }
         
         .footer-bottom p {
@@ -611,6 +890,15 @@
                 grid-template-columns: 1fr;
             }
             
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+            
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -622,6 +910,7 @@
     </style>
 </head>
 <body>
+    <!-- Animated background shapes -->
     <div class="bg-shape shape-1"></div>
     <div class="bg-shape shape-2"></div>
     <div class="bg-shape shape-3"></div>
@@ -636,220 +925,241 @@
                 <a href="#blog">部落格</a>
                 <a href="#contact">聯絡</a>
             </div>
+            <div class="nav-buttons">
+                <div class="lang-switch">
+                    <select onchange="window.location.href=this.value">
+                        <option value="../en/index.html">English</option>
+                        <option value="../ko/index.html">한국어</option>
+                        <option value="./index.html" selected>繁體中文</option>
+                        <option value="../zh-CN/index.html">简体中文</option>
+                        <option value="../ja/index.html">日本語</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </nav>
-    
-    <div class="lang-switch">
-        <button class="lang-btn" data-lang="en" onclick="switchLanguage('en')">English</button>
-        <button class="lang-btn" data-lang="zh-tw" onclick="switchLanguage('zh-tw')" selected>繁體中文</button>
-    </div>
-    
-    <div class="container">
-        <div class="hero">
-            <h1>🎨 您的圖片轉換器已準備就緒！✨</h1>
-            <p>快速、安全且完全免費！輕鬆在不同格式之間轉換圖片。🌈</p>
-            <div class="hero-buttons">
-                <a href="#tools" class="primary-btn">開始轉換 🚀</a>
-                <a href="#about" class="secondary-btn">了解更多 📚</a>
+
+    <section class="hero">
+        <h1>您需要的所有工具<br>批量轉換圖片 🎨</h1>
+        <p>您的線上圖片轉換器已準備就緒，永久免費！✨<br>快速、安全、超級可愛！ 🌈</p>
+        <div class="hero-buttons">
+            <a href="#tools" class="btn btn-primary">開始轉換 🚀</a>
+            <a href="#about" class="btn btn-outline">了解更多 💡</a>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">9+ 🎨</span>
+                <span class="stat-label">轉換工具</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100K+ 📁</span>
+                <span class="stat-label">已處理檔案</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100% 🆓</span>
+                <span class="stat-label">免費使用</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">24/7 🌟</span>
+                <span class="stat-label">隨時可用</span>
             </div>
         </div>
-        
-        <section class="section tools-section" id="tools">
-            <h2 class="section-title">易用的圖片工具 🛠️</h2>
-            <p class="section-subtitle">您需要的所有批量轉換圖片工具！🎨 您的在線圖片轉換器已準備就緒且永久免費！✨ 快速、安全且超級可愛！🌈</p>
-            
-            <div class="tools-grid" id="tools">
-                <div class="tool-card-wrapper">
-                    <a href="../jpg-to-png.html" class="tool-card" data-category="convert">
-                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
-                        <h3>JPG 轉 PNG 🎨</h3>
-                        <p>將 JPG 圖片轉換為 PNG 格式。快速、安全的轉換，支持透明度！✨</p>
-                    </a>
-                </div>
+    </section>
 
-                <div class="tool-card-wrapper">
-                    <a href="../png-to-jpg.html" class="tool-card" data-category="convert">
-                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
-                        <h3>PNG 轉 JPG 🎨</h3>
-                        <p>將 PNG 圖片轉換為 JPG 格式。快速、安全的轉換，支持白色背景！✨</p>
-                    </a>
-                </div>
-
-                <div class="tool-card-wrapper">
-                    <a href="../webp-to-png.html" class="tool-card" data-category="convert">
-                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
-                        <h3>WEBP 轉 PNG 🌈</h3>
-                        <p>將 WEBP 圖片轉換為 PNG 格式。快速、安全的轉換，支持透明度！✨</p>
-                    </a>
-                </div>
-
-                <div class="tool-card-wrapper">
-                    <a href="../webp-to-jpg.html" class="tool-card" data-category="convert">
-                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
-                        <h3>WEBP 轉 JPG 🌈</h3>
-                        <p>將 WEBP 圖片轉換為 JPG 格式。快速、安全的轉換，支持白色背景！✨</p>
-                    </a>
-                </div>
-
-                <div class="tool-card-wrapper">
-                    <a href="../bmp-to-png.html" class="tool-card" data-category="convert">
-                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
-                        <h3>BMP 轉 PNG 🌿</h3>
-                        <p>將 BMP 圖片轉換為 PNG 格式。快速、安全的轉換，支持透明度！✨</p>
-                    </a>
-                </div>
-
-                <div class="tool-card-wrapper">
-                    <a href="../bmp-to-jpg.html" class="tool-card" data-category="convert">
-                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
-                        <h3>BMP 轉 JPG 🌿</h3>
-                        <p>將 BMP 圖片轉換為 JPG 格式。快速、安全的轉換，支持白色背景！✨</p>
-                    </a>
-                </div>
-
-                <div class="tool-card-wrapper">
-                    <a href="../svg-to-png.html" class="tool-card" data-category="convert">
-                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🎨</div>
-                        <h3>SVG 轉 PNG 🎨</h3>
-                        <p>將 SVG 圖片轉換為 PNG 格式。快速、安全的轉換，支持透明度！✨</p>
-                    </a>
-                </div>
-
-                <div class="tool-card-wrapper">
-                    <a href="../svg-to-jpg.html" class="tool-card" data-category="convert">
-                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🎨</div>
-                        <h3>SVG 轉 JPG 🎨</h3>
-                        <p>將 SVG 圖片轉換為 JPG 格式。快速、安全的轉換，支持白色背景！✨</p>
-                    </a>
-                </div>
-
-                <div class="tool-card-wrapper">
-                    <a href="../pdf-to-jpg.html" class="tool-card" data-category="convert">
-                        <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">📄</div>
-                        <h3>PDF 轉 JPG 📄</h3>
-                        <p>將 PDF 文檔轉換為 JPG 圖片。立即提取所有頁面為高品質圖片！✨</p>
-                    </a>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section about-section" id="about">
-            <h2 class="section-title">為什麼選擇 Easy Img Converter？🌟</h2>
-            <p class="section-subtitle">我們為每個人提供最可愛的圖片轉換工具！快速、安全且完全免費！🎨</p>
-            
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">💰</div>
-                    <h3>100% 免費 🎉</h3>
-                    <p>所有工具完全免費使用，無隱藏費用或訂閱要求。永遠免費！✨</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">🔒</div>
-                    <h3>安全與隱私 🛡️</h3>
-                    <p>您的文件不會離開瀏覽器。所有處理都在您的設備上本地進行，確保最大安全！🔐</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">⚡</div>
-                    <h3>快速且易用 ⚡</h3>
-                    <p>無需安裝軟件。只需打開瀏覽器，即可立即開始轉換，速度如閃電！🚀</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">📱</div>
-                    <h3>隨時隨地使用 🌍</h3>
-                    <p>兼容所有現代瀏覽器和設備。在手機、平板或電腦上轉換圖片！📱💻</p>
-                </div>
-            </div>
-            
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">1M+</span>
-                    <span class="stat-label">已轉換圖片 📸</span>
-                </div>
-                
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">永遠免費 🎁</span>
-                </div>
-                
-                <div class="stat-item">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">隨時可用 🌐</span>
-                </div>
-                
-                <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">支持格式 🎨</span>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section blog-section" id="blog">
-            <h2 class="section-title">來自我們的部落格最新消息 📚</h2>
-            <p class="section-subtitle">關於圖片轉換和編輯的技巧、教程和更新！🎨</p>
-            
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <div class="blog-image">📊</div>
-                    <h3>10 個完美圖片壓縮技巧 📉</h3>
-                    <p>學習如何在不損失品質的情況下減少檔案大小。專家提示，實現最佳壓縮效果！✨</p>
-                </div>
-                
-                <div class="blog-card">
-                    <div class="blog-image">🎨</div>
-                    <h3>如何像專業人士一樣轉換圖片 🎨</h3>
-                    <p>通過我們的逐步指南和最佳實踐，掌握圖片轉換藝術！🚀</p>
-                </div>
-                
-                <div class="blog-card">
-                    <div class="blog-image">📝</div>
-                    <h3>圖片格式選擇的最佳實踐 🎯</h3>
-                    <p>為您的需求選擇合適的格式。JPG、PNG、WEBP 等全面解釋！🌈</p>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section contact-section" id="contact">
-            <h2 class="section-title">聯絡我們 💌</h2>
-            <p class="section-subtitle">有問題或建議？我們很樂意聽取您的意見！🌈</p>
-            
-            <div class="contact-container">
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">您的姓名 🌟</label>
-                            <input type="text" id="name" name="name" placeholder="輸入您的姓名" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">電子郵件地址 📧</label>
-                            <input type="email" id="email" name="email" placeholder="輸入您的電子郵件" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">主題 📝</label>
-                            <input type="text" id="subject" name="subject" placeholder="這是關於什麼的？" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">訊息 💬</label>
-                            <textarea id="message" name="message" placeholder="我們如何幫助您？" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">發送訊息 💌</button>
-                    </form>
-                </div>
-            </div>
-        </section>
+    <div class="category-filter">
+        <button class="filter-btn active" data-category="all">所有工具 🌈</button>
+        <button class="filter-btn" data-category="convert">轉換器 🎨</button>
     </div>
-    
-    <footer class="footer">
+
+    <div class="tools-grid" id="tools">
+        <div class="tool-card-wrapper">
+            <a href="jpg-to-png.html" class="tool-card" data-category="convert">
+                <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
+                <h3>JPG 轉 PNG 🎨</h3>
+                <p>將 JPG 圖片轉換為 PNG 格式。快速、安全的轉換，支援透明度！✨</p>
+            </a>
+        </div>
+
+        <div class="tool-card-wrapper">
+            <a href="png-to-jpg.html" class="tool-card" data-category="convert">
+                <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
+                <h3>PNG 轉 JPG 🎨</h3>
+                <p>將 PNG 圖片轉換為 JPG 格式。快速、安全的轉換，支援白色背景！✨</p>
+            </a>
+        </div>
+
+        <div class="tool-card-wrapper">
+            <a href="webp-to-png.html" class="tool-card" data-category="convert">
+                <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
+                <h3>WEBP 轉 PNG 🌈</h3>
+                <p>將 WEBP 圖片轉換為 PNG 格式。快速、安全的轉換，支援透明度！✨</p>
+            </a>
+        </div>
+
+        <div class="tool-card-wrapper">
+            <a href="webp-to-jpg.html" class="tool-card" data-category="convert">
+                <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
+                <h3>WEBP 轉 JPG 🌈</h3>
+                <p>將 WEBP 圖片轉換為 JPG 格式。快速、安全的轉換，支援白色背景！✨</p>
+            </a>
+        </div>
+
+        <div class="tool-card-wrapper">
+            <a href="bmp-to-png.html" class="tool-card" data-category="convert">
+                <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
+                <h3>BMP 轉 PNG 🌿</h3>
+                <p>將 BMP 圖片轉換為 PNG 格式。快速、安全的轉換，支援透明度！✨</p>
+            </a>
+        </div>
+
+        <div class="tool-card-wrapper">
+            <a href="bmp-to-jpg.html" class="tool-card" data-category="convert">
+                <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🖼️</div>
+                <h3>BMP 轉 JPG 🌿</h3>
+                <p>將 BMP 圖片轉換為 JPG 格式。快速、安全的轉換，支援白色背景！✨</p>
+            </a>
+        </div>
+
+        <div class="tool-card-wrapper">
+            <a href="svg-to-png.html" class="tool-card" data-category="convert">
+                <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🎨</div>
+                <h3>SVG 轉 PNG 🎨</h3>
+                <p>將 SVG 圖片轉換為 PNG 格式。快速、安全的轉換，支援透明度！✨</p>
+            </a>
+        </div>
+
+        <div class="tool-card-wrapper">
+            <a href="svg-to-jpg.html" class="tool-card" data-category="convert">
+                <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">🎨</div>
+                <h3>SVG 轉 JPG 🎨</h3>
+                <p>將 SVG 圖片轉換為 JPG 格式。快速、安全的轉換，支援白色背景！✨</p>
+            </a>
+        </div>
+
+        <div class="tool-card-wrapper">
+            <a href="pdf-to-jpg.html" class="tool-card" data-category="convert">
+                <div class="tool-icon" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0288d1;">📄</div>
+                <h3>PDF 轉 JPG 📄</h3>
+                <p>將 PDF 文件轉換為 JPG 圖片。立即提取所有頁面為高品質圖片！✨</p>
+            </a>
+        </div>
+    </div>
+
+    <section class="section about-section" id="about">
+        <h2 class="section-title">為什麼選擇 Easy Img Converter？ 🌟</h2>
+        <p class="section-subtitle">我們為所有人提供最可愛的圖片轉換工具！快速、安全、完全免費！🎨</p>
+        
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">💰</div>
+                <h3>100% 免費 🎉</h3>
+                <p>我們的所有工具都完全免費使用，無任何隱藏費用或訂閱要求。永遠都是！✨</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">🔒</div>
+                <h3>安全與隱私 🛡️</h3>
+                <p>您的檔案永遠不會離開您的瀏覽器。所有處理都在您的設備上本地進行，確保最大安全性！🔐</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <h3>快速與簡單 ⚡</h3>
+                <p>無需安裝任何軟體。只需打開瀏覽器，立即以閃電速度開始轉換！🚀</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">📱</div>
+                <h3>處處可用 🌍</h3>
+                <p>與所有設備兼容 - 桌面、平板和手機。無平台限制或下載！📱</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">🎨</div>
+                <h3>專業品質 🌟</h3>
+                <p>高品質輸出，採用先進的轉換演算法，每次都能獲得專業結果！✨</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">♾️</div>
+                <h3>無限使用 🔄</h3>
+                <p>處理檔案數量無限制。隨時轉換您需要的圖片數量！🎨</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section blog-section" id="blog">
+        <h2 class="section-title">最新部落格文章 📚</h2>
+        <p class="section-subtitle">關於圖片轉換和編輯的技巧、教程和更新！🎨</p>
+        
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-image">📊</div>
+                <div class="blog-content">
+                    <h3>10 個完美圖片壓縮技巧 📉</h3>
+                    <p>學習如何在不損失品質的情況下減少檔案大小。專家提示，獲得最佳壓縮效果！✨</p>
+                </div>
+            </div>
+            
+            <div class="blog-card">
+                <div class="blog-image">🎨</div>
+                <div class="blog-content">
+                    <h3>如何像專家一樣轉換圖片 🎨</h3>
+                    <p>透過我們的逐步指南和最佳實踐，掌握圖片轉換藝術！🚀</p>
+                </div>
+            </div>
+            
+            <div class="blog-card">
+                <div class="blog-image">📝</div>
+                <div class="blog-content">
+                    <h3>圖片格式選擇的最佳實踐 🎯</h3>
+                    <p>為您的需求選擇正確的格式。JPG、PNG、WEBP 等全面解析！🌈</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+        <h2 class="section-title">聯絡我們 💌</h2>
+        <p class="section-subtitle">有問題或建議？我們非常期待您的意見！🌈</p>
+        
+        <div class="contact-container">
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">您的姓名 🌟</label>
+                        <input type="text" id="name" name="name" placeholder="輸入您的姓名" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">電子郵件地址 📧</label>
+                        <input type="email" id="email" name="email" placeholder="輸入您的電子郵件" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">主題 📝</label>
+                        <input type="text" id="subject" name="subject" placeholder="這是關於什麼的？" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">訊息 💬</label>
+                        <textarea id="message" name="message" placeholder="我們如何幫助您？" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">發送訊息 💌</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>關於 🌟</h3>
-                <p>Easy Img Converter 為每個人提供強大的圖片轉換工具。快速、安全且完全免費！🎨✨</p>
+                <p>Image Studio 為所有人提供圖片轉換工具。快速、安全、完全免費！🎨✨</p>
             </div>
             
             <div class="footer-section">
@@ -858,14 +1168,13 @@
                     <li><a href="#about">關於我們</a></li>
                     <li><a href="#blog">部落格</a></li>
                     <li><a href="#contact">聯絡</a></li>
-                    <li><a href="../updates.html">更新</a></li>
-                    <li><a href="https://img-ps.top" target="_blank">照片編輯器</a></li>
+                    <li><a href="updates.html">更新</a></li>
                 </ul>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p>© 2025 Easy Img Converter。為您精心製作 🎨 和 ✨！</p>
+            <p>© 2025 Easy Img Converter。為您打造，充滿 🎨 和 ✨！</p>
         </div>
     </footer>
 
@@ -890,13 +1199,6 @@
             });
         });
 
-        document.querySelectorAll('.lang-btn').forEach(button => {
-            button.addEventListener('click', (e) => {
-                const lang = button.getAttribute('data-lang');
-                switchLanguage(lang);
-            });
-        });
-
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('感謝您的訊息！我們會盡快回覆您。');
@@ -914,33 +1216,6 @@
                 }
             });
         });
-
-        function switchLanguage(lang) {
-            const currentPath = window.location.pathname;
-            const currentLang = currentPath.includes('/zh-tw/') ? 'zh-tw' : 'en';
-            
-            if (currentLang === lang) return;
-            
-            let relativePath = currentPath;
-            if (currentPath.includes('/en/')) {
-                relativePath = currentPath.replace('/en/', '/');
-            } else if (currentPath.includes('/zh-tw/')) {
-                relativePath = currentPath.replace('/zh-tw/', '/');
-            }
-            
-            if (relativePath === '') relativePath = '/';
-            if (relativePath === '/') relativePath = '/index.html';
-            
-            let newPath = '';
-            if (lang === 'en') {
-                newPath = '/en' + relativePath;
-            } else {
-                newPath = '/zh-tw' + relativePath;
-            }
-            
-            newPath = newPath.replace(/\/+/g, '/');
-            window.location.href = newPath;
-        }
     </script>
 </body>
 </html>

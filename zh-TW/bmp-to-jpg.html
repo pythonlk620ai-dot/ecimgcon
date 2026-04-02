@@ -1,30 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMP è½‰ JPG è½‰æ›å™¨ - Easy Img Converter</title>
+    <title>BMP 轉 JPG 轉換器 - Easy Img Converter</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="BMP to JPG converter. Convert BMP images to JPG format with lossy compression. Fast, secure, and no file size limits. Perfect for image conversion needs.">
-    <meta name="keywords" content="bmp to jpg converter, online converter, image converter, jpg converter, image tool, photo converter, converter, Easy Img Converter">
+    <meta name="description" content="BMP 轉 JPG 轉換器。將 BMP 圖片轉換為 JPG 格式，使用有損壓縮。快速、安全、無檔案大小限制。完美滿足圖片轉換需求。">
+    <meta name="keywords" content="bmp 轉 jpg 轉換器, 在線轉換器, 圖片轉換器, jpg 轉換器, 圖片工具, 照片轉換器, 轉換器, Easy Img Converter">
     <meta name="author" content="Easy Img Converter">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="http://easyimgconverter.com/zh-tw/bmp-to-jpg.html">
-    <link rel="alternate" hreflang="en" href="http://easyimgconverter.com/en/bmp-to-jpg.html">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://easyimgconverter.com/zh-tw/bmp-to-jpg.html">
-    <meta property="og:title" content="BMP to JPG Converter - Easy Img Converter">
-    <meta property="og:description" content="Convert BMP images to JPG format with lossy compression. Fast, secure, and no file size limits.">
+    <meta property="og:title" content="BMP 轉 JPG 轉換器 - Easy Img Converter">
+    <meta property="og:description" content="將 BMP 圖片轉換為 JPG 格式，使用有損壓縮。快速、安全、無檔案大小限制。">
     <meta property="og:image" content="http://easyimgconverter.com/images/bmp-to-jpg.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="http://easyimgconverter.com/zh-tw/bmp-to-jpg.html">
-    <meta property="twitter:title" content="BMP to JPG Converter - Easy Img Converter">
-    <meta property="twitter:description" content="Convert BMP images to JPG format with lossy compression. Fast, secure, and no file size limits.">
+    <meta property="twitter:title" content="BMP 轉 JPG 轉換器 - Easy Img Converter">
+    <meta property="twitter:description" content="將 BMP 圖片轉換為 JPG 格式，使用有損壓縮。快速、安全、無檔案大小限制。">
     <meta property="twitter:image" content="http://easyimgconverter.com/images/bmp-to-jpg.jpg">
     
     <!-- Schema.org structured data -->
@@ -32,8 +31,8 @@
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "BMP to JPG Converter",
-        "description": "BMP to JPG converter that converts BMP images to JPG format with lossy compression. Fast, secure, and no file size limits.",
+        "name": "BMP 轉 JPG 轉換器",
+        "description": "BMP 轉 JPG 轉換器，可將 BMP 圖片轉換為 JPG 格式並使用有損壓縮。快速、安全、無檔案大小限制。",
         "applicationCategory": "WebApplication",
         "operatingSystem": "Web Browser",
         "offers": {
@@ -45,7 +44,7 @@
             "@type": "Organization",
             "name": "Easy Img Converter"
         },
-        "featureList": "Convert BMP to JPG, Batch conversion, Lossy compression, Smaller file sizes, No file size limits, Secure processing"
+        "featureList": "BMP 轉 JPG, 批次轉換, 有損壓縮, 較小檔案大小, 無檔案大小限制, 安全處理"
     }
     </script>
     
@@ -69,6 +68,139 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #fff;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 2.5em;
+            font-weight: 900;
+            color: #0288d1;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 0px #fff, 3px 3px 0px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite;
+            transition: all 0.3s;
+        }
+        
+        .logo:hover {
+            transform: scale(1.1) rotate(2deg);
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .logo span {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 50%, #4fc3f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #0288d1;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            position: relative;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 4px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            transition: width 0.3s;
+            border-radius: 10px;
+        }
+        
+        .nav-links a:hover {
+            color: #03a9f4;
+            transform: scale(1.1);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .lang-switch {
+            position: relative;
+        }
+        
+        .lang-switch select {
+            padding: 14px 40px 14px 20px;
+            border-radius: 50px;
+            border: 3px solid #0288d1;
+            background: white;
+            color: #0288d1;
+            font-weight: 700;
+            font-size: 1em;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%230288d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+        }
+        
+        .lang-switch select option {
+            background: white;
+            color: #0288d1;
+            padding: 10px;
+            font-weight: 700;
+        }
+        
+        .lang-switch select:hover {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            border-color: transparent;
+        }
+        
+        .lang-switch select:hover option {
+            background: white;
+            color: #0288d1;
         }
         
         header {
@@ -639,32 +771,55 @@
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🔄 Easy Img Converter </a>
+            <div class="nav-links">
+                <a href="#tools">工具</a>
+                <a href="#about">關於</a>
+                <a href="#blog">部落格</a>
+                <a href="#contact">聯絡</a>
+            </div>
+            <div class="nav-buttons">
+                <div class="lang-switch">
+                    <select onchange="window.location.href=this.value">
+                        <option value="../en/index.html">English</option>
+                        <option value="../ko/index.html">한국어</option>
+                        <option value="./index.html" selected>繁體中文</option>
+                        <option value="../zh-CN/index.html">简体中文</option>
+                        <option value="../ja/index.html">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
     <div class="container">
         <header>
-            <h1>BMP TO JPG 🎨</h1>
-            <p class="description">Convert BMP images to JPG format. Fast, secure conversion. JPG provides smaller file sizes for web use! ✨</p>
+            <h1>BMP 轉 JPG 🎨</h1>
+            <p class="description">將 BMP 圖片轉換為 JPG 格式。快速、安全的轉換。JPG 提供更小的檔案大小適合網頁使用！✨</p>
             <p class="supported-formats">
-                Convert BMP to: 
+                轉換 BMP 為：
                 <a href="#">JPG</a>
             </p>
         </header>
         
         <div class="converter-section">
             <div class="upload-area" id="uploadArea">
-                <label for="file-input" class="select-btn">📂 Select BMP files</label>
+                <label for="file-input" class="select-btn">📂 選擇 BMP 檔案</label>
                 <input type="file" id="file-input" accept="image/bmp" multiple>
                 
-                <p class="drop-text">or drop BMP files here 📥</p>
+                <p class="drop-text">或將 BMP 檔案拖曳至此 📥</p>
             </div>
             
             <div class="file-list" id="fileList"></div>
             
             <div class="convert-all-section" id="convertAllSection">
-                <button class="convert-all-btn" id="convertAllBtn">✨ Convert All</button>
+                <button class="convert-all-btn" id="convertAllBtn">✨ 全部轉換</button>
             </div>
             
             <div class="status-container" id="statusContainer">
-                <div class="status-text" id="statusText">Converting... ⏳</div>
+                <div class="status-text" id="statusText">轉換中... ⏳</div>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progressFill"></div>
                 </div>
@@ -673,138 +828,138 @@
             <div class="download-section" id="downloadSection"></div>
         </div>
         
-        <p class="privacy-note">🔒 Your files are processed securely in your browser. No data is sent to our servers!</p>
+        <p class="privacy-note">🔒 您的檔案會在您的瀏覽器中安全處理。不會發送任何資料到我們的伺服器！</p>
         </div>
         
         <section class="info-section">
-            <h2>Understanding BMP and JPG Formats 📚</h2>
+            <h2>了解 BMP 和 JPG 格式 📚</h2>
             
             <div class="info-content">
                 <div class="info-card">
-                    <h3>What is BMP? 🖼️</h3>
-                    <p>BMP (Bitmap Image File) is a <strong>device-independent bitmap</strong> format developed by Microsoft. It stores uncompressed raster images with high fidelity but large file sizes.</p>
+                    <h3>什麼是 BMP？🖼️</h3>
+                    <p>BMP（點陣圖圖像檔案）是一種由微軟開發的<strong>設備無關點陣圖</strong>格式。它儲存未壓縮的點陣圖圖像，具有高保真度但檔案較大。</p>
                     <ul>
-                        <li><strong>Best for:</strong> Windows applications, high-fidelity images, printing</li>
-                        <li><strong>File size:</strong> Very large (uncompressed)</li>
-                        <li><strong>Transparency:</strong> Limited support</li>
-                        <li><strong>Quality:</strong> Lossless - no quality loss</li>
+                        <li><strong>適用於：</strong> Windows 應用程式、高保真度圖片、列印</li>
+                        <li><strong>檔案大小：</strong> 非常大（未壓縮）</li>
+                        <li><strong>透明度：</strong> 有限的支援</li>
+                        <li><strong>品質：</strong> 無損 - 無品質損失</li>
                     </ul>
                 </div>
                 
                 <div class="info-card">
-                    <h3>What is JPG? 📷</h3>
-                    <p>JPG (Joint Photographic Experts Group) uses <strong>lossy compression</strong>, meaning some image data is lost during compression. It's perfect for photographs and complex images with many colors.</p>
+                    <h3>什麼是 JPG？📷</h3>
+                    <p>JPG（聯合圖像專家組）使用<strong>有損壓縮</strong>，意味著壓縮過程中會損失一些圖片資料。它非常適合照片和具有多種顏色的複雜圖片。</p>
                     <ul>
-                        <li><strong>Best for:</strong> Photographs, web images, images with gradients</li>
-                        <li><strong>File size:</strong> Small (lossy compression)</li>
-                        <li><strong>Transparency:</strong> Not supported</li>
-                        <li><strong>Quality:</strong> Adjustable - can be high or low</li>
+                        <li><strong>適用於：</strong> 照片、網頁圖片、具有漸層的圖片</li>
+                        <li><strong>檔案大小：</strong> 小（有損壓縮）</li>
+                        <li><strong>透明度：</strong> 不支援</li>
+                        <li><strong>品質：</strong> 可調整 - 可以是高或低</li>
                     </ul>
                 </div>
             </div>
             
-            <h3>Why Convert BMP to JPG? 🤔</h3>
+            <h3>為什麼要將 BMP 轉換為 JPG？🤔</h3>
             
             <div class="info-text">
-                <p>There are several reasons why you might need to convert BMP images to JPG format:</p>
+                <p>您可能有幾個原因需要將 BMP 圖片轉換為 JPG 格式：</p>
                 
                 <div class="benefit-list">
                     <div class="benefit-item">
                         <span class="benefit-icon">📦</span>
                         <div>
-                            <h4>Smaller File Size</h4>
-                            <p>JPG uses lossy compression, making files 90% smaller than uncompressed BMP while maintaining acceptable quality for most purposes!</p>
+                            <h4>更小的檔案大小</h4>
+                            <p>JPG 使用有損壓縮，使檔案比未壓縮的 BMP 小 90%，同時為大多數用途保持可接受的品質！</p>
                         </div>
                     </div>
                     
                     <div class="benefit-item">
                         <span class="benefit-icon">🌐</span>
                         <div>
-                            <h4>Web Compatibility</h4>
-                            <p>JPG is the most widely supported image format on the web. BMP files are not natively supported by most web browsers.</p>
+                            <h4>網頁相容性</h4>
+                            <p>JPG 是網頁上最廣泛支援的圖片格式。大多數網頁瀏覽器不原生支援 BMP 檔案。</p>
                         </div>
                     </div>
                     
                     <div class="benefit-item">
                         <span class="benefit-icon">⚡</span>
                         <div>
-                            <h4>Faster Loading</h4>
-                            <p>Smaller JPG files load faster on websites and web applications, improving user experience.</p>
+                            <h4>更快的載入速度</h4>
+                            <p>較小的 JPG 檔案在網站和網頁應用程式中載入更快，改善使用者體驗。</p>
                         </div>
                     </div>
                     
                     <div class="benefit-item">
                         <span class="benefit-icon">💾</span>
                         <div>
-                            <h4>Storage Efficiency</h4>
-                            <p>JPG's compression significantly reduces storage space requirements compared to large BMP files.</p>
+                            <h4>儲存效率</h4>
+                            <p>JPG 的壓縮顯著減少了儲存空間需求，相比大型 BMP 檔案。</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <h3>When Should You Use BMP vs JPG? 📊</h3>
+            <h3>何時應該使用 BMP 還是 JPG？📊</h3>
             
             <div class="comparison-table">
                 <div class="comparison-row">
                     <div class="comparison-cell">
-                        <strong>Use BMP when:</strong>
+                        <strong>使用 BMP 時：</strong>
                     </div>
                     <div class="comparison-cell">
-                        <strong>Use JPG when:</strong>
+                        <strong>使用 JPG 時：</strong>
                     </div>
                 </div>
                 
                 <div class="comparison-row">
                     <div class="comparison-cell">
                         <ul>
-                            <li>High-fidelity printing</li>
-                            <li>Windows applications</li>
-                            <li>Editing workflows</li>
-                            <li>Maximum quality needed</li>
+                            <li>高保真度列印</li>
+                            <li>Windows 應用程式</li>
+                            <li>編輯工作流程</li>
+                            <li>需要最大品質</li>
                         </ul>
                     </div>
                     <div class="comparison-cell">
                         <ul>
-                            <li>Photographs and web images</li>
-                            <li>Images with gradients</li>
-                            <li>Storage efficiency needed</li>
-                            <li>Smaller file sizes required</li>
+                            <li>照片和網頁圖片</li>
+                            <li>具有漸層的圖片</li>
+                            <li>需要儲存效率</li>
+                            <li>需要較小的檔案大小</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <h3>How to Convert BMP to JPG? 🛠️</h3>
+            <h3>如何將 BMP 轉換為 JPG？🛠️</h3>
             
             <ol class="steps-list">
-                <li>Click the "Select BMP files" button or drag and drop BMP files into the upload area</li>
-                <li>Wait for files to be uploaded and displayed in the file list</li>
-                <li>Click "Convert All" to convert all BMP files to JPG format</li>
-                <li>Download your converted JPG files individually or all together</li>
+                <li>點擊「選擇 BMP 檔案」按鈕或將 BMP 檔案拖曳到上傳區域</li>
+                <li>等待檔案上傳並顯示在檔案列表中</li>
+                <li>點擊「全部轉換」將所有 BMP 檔案轉換為 JPG 格式</li>
+                <li>單獨下載或一起下載您轉換後的 JPG 檔案</li>
             </ol>
             
             <div class="faq-section">
-                <h3>Frequently Asked Questions ❓</h3>
+                <h3>常見問題 ❓</h3>
                 
                 <div class="faq-item">
-                    <h4>Is BMP to JPG conversion free? 💰</h4>
-                    <p>Yes! Our BMP to JPG converter is completely free to use with no file size limits or hidden fees. Convert as many files as you need!</p>
+                    <h4>BMP 轉 JPG 轉換是免費的嗎？💰</h4>
+                    <p>是的！我們的 BMP 轉 JPG 轉換器完全免費使用，沒有檔案大小限制或隱藏費用。您可以轉換所需的任意數量檔案！</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Does JPG maintain BMP quality? 🎨</h4>
-                    <p>JPG uses lossy compression, so there will be some quality loss compared to the original BMP. However, you can adjust the quality settings to balance file size and image quality.</p>
+                    <h4>JPG 能保持 BMP 品質嗎？🎨</h4>
+                    <p>JPG 使用有損壓縮，因此與原始 BMP 相比會有一些品質損失。然而，您可以調整品質設定以平衡檔案大小和圖片品質。</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Can I convert multiple BMP files at once? ⚡</h4>
-                    <p>Yes! You can upload and convert multiple BMP files simultaneously. Just select all the files you want to convert at once!</p>
+                    <h4>我可以一次轉換多個 BMP 檔案嗎？⚡</h4>
+                    <p>可以！您可以同時上傳並轉換多個 BMP 檔案。只需一次選擇您想要轉換的所有檔案！</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Are my files secure? 🔒</h4>
-                    <p>Yes! All conversions happen in your browser. Your files are never sent to our servers, ensuring complete privacy and security.</p>
+                    <h4>我的檔案安全嗎？🔒</h4>
+                    <p>是的！所有轉換都在您的瀏覽器中進行。您的檔案永遠不會發送到我們的伺服器，確保完全的隱私和安全。</p>
                 </div>
             </div>
         </section>
@@ -852,7 +1007,7 @@
                     }
                 });
             } else {
-                alert('Please select BMP files only! 📸');
+                alert('請僅選擇 BMP 檔案！📸');
             }
         }
         
@@ -871,7 +1026,7 @@
                         </div>
                     </div>
                     <div class="file-actions">
-                        <button class="action-btn remove-btn" onclick="removeFile(${index})">❌ Remove</button>
+                        <button class="action-btn remove-btn" onclick="removeFile(${index})">❌ 移除</button>
                     </div>
                 `;
                 fileList.appendChild(fileItem);
@@ -913,7 +1068,7 @@
                         convertedFiles.push(jpgFile);
                     }
                 } catch (error) {
-                    console.error('Error converting file:', file.name, error);
+                    console.error('轉換檔案時出錯:', file.name, error);
                 }
                 
                 const progress = ((i + 1) / totalFiles) * 100;
@@ -921,7 +1076,7 @@
                 statusText.textContent = `Converting ${i + 1} of ${totalFiles}... ⏳`;
             }
             
-            statusText.textContent = 'Conversion Complete! ✅';
+            statusText.textContent = '轉換完成！✅';
             
             setTimeout(() => {
                 showDownloadOptions(convertedFiles);
@@ -975,14 +1130,14 @@
             
             const downloadAllBtn = document.createElement('button');
             downloadAllBtn.className = 'download-btn';
-            downloadAllBtn.textContent = '📥 Download All';
+            downloadAllBtn.textContent = '📥 下載全部';
             downloadAllBtn.onclick = () => downloadAllFiles(convertedFiles);
             downloadSection.appendChild(downloadAllBtn);
             
             convertedFiles.forEach((file, index) => {
                 const downloadBtn = document.createElement('button');
                 downloadBtn.className = 'download-btn';
-                downloadBtn.textContent = `📥 Download ${file.name}`;
+                downloadBtn.textContent = `📥 下載 ${file.name}`;
                 downloadBtn.style.marginTop = '10px';
                 downloadBtn.onclick = () => downloadFile(file);
                 downloadSection.appendChild(downloadBtn);

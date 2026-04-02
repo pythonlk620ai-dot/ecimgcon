@@ -1,30 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG è½‰ PNG è½‰æ›å™¨ - Easy Img Converter</title>
+    <title>SVG 轉 PNG 轉換器 - Easy Img Converter</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="SVG to PNG converter. Convert SVG images to PNG format with transparency support. Fast, secure, and no file size limits. Perfect for image conversion needs.">
-    <meta name="keywords" content="svg to png converter, online converter, image converter, png converter, image tool, photo converter, converter, Easy Img Converter">
+    <meta name="description" content="SVG 轉 PNG 轉換器。將 SVG 圖片轉換為 PNG 格式，支援透明度。快速、安全、無檔案大小限制。完美滿足圖片轉換需求。">
+    <meta name="keywords" content="svg 轉 png 轉換器, 在線轉換器, 圖片轉換器, png 轉換器, 圖片工具, 照片轉換器, 轉換器, Easy Img Converter">
     <meta name="author" content="Easy Img Converter">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="http://easyimgconverter.com/zh-tw/svg-to-png.html">
-    <link rel="alternate" hreflang="en" href="http://easyimgconverter.com/en/svg-to-png.html">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://easyimgconverter.com/zh-tw/svg-to-png.html">
-    <meta property="og:title" content="SVG to PNG Converter - Easy Img Converter">
-    <meta property="og:description" content="Convert SVG images to PNG format with transparency support. Fast, secure, and no file size limits.">
+    <meta property="og:title" content="SVG 轉 PNG 轉換器 - Easy Img Converter">
+    <meta property="og:description" content="將 SVG 圖片轉換為 PNG 格式，支援透明度。快速、安全、無檔案大小限制。">
     <meta property="og:image" content="http://easyimgconverter.com/images/svg-to-png.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="http://easyimgconverter.com/zh-tw/svg-to-png.html">
-    <meta property="twitter:title" content="SVG to PNG Converter - Easy Img Converter">
-    <meta property="twitter:description" content="Convert SVG images to PNG format with transparency support. Fast, secure, and no file size limits.">
+    <meta property="twitter:title" content="SVG 轉 PNG 轉換器 - Easy Img Converter">
+    <meta property="twitter:description" content="將 SVG 圖片轉換為 PNG 格式，支援透明度。快速、安全、無檔案大小限制。">
     <meta property="twitter:image" content="http://easyimgconverter.com/images/svg-to-png.jpg">
     
     <!-- Schema.org structured data -->
@@ -32,8 +31,8 @@
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "SVG to PNG Converter",
-        "description": "SVG to PNG converter that converts SVG images to PNG format with transparency support. Fast, secure, and no file size limits.",
+        "name": "SVG 轉 PNG 轉換器",
+        "description": "SVG 轉 PNG 轉換器，可將 SVG 圖片轉換為 PNG 格式並支援透明度。快速、安全、無檔案大小限制。",
         "applicationCategory": "WebApplication",
         "operatingSystem": "Web Browser",
         "offers": {
@@ -45,7 +44,7 @@
             "@type": "Organization",
             "name": "Easy Img Converter"
         },
-        "featureList": "Convert SVG to PNG, Batch conversion, Transparency support, Lossless quality, No file size limits, Secure processing"
+        "featureList": "SVG 轉 PNG, 批次轉換, 透明度支援, 無損品質, 無檔案大小限制, 安全處理"
     }
     </script>
     
@@ -69,6 +68,139 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #fff;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 2.5em;
+            font-weight: 900;
+            color: #0288d1;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 0px #fff, 3px 3px 0px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite;
+            transition: all 0.3s;
+        }
+        
+        .logo:hover {
+            transform: scale(1.1) rotate(2deg);
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .logo span {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 50%, #4fc3f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #0288d1;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            position: relative;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 4px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            transition: width 0.3s;
+            border-radius: 10px;
+        }
+        
+        .nav-links a:hover {
+            color: #03a9f4;
+            transform: scale(1.1);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .lang-switch {
+            position: relative;
+        }
+        
+        .lang-switch select {
+            padding: 14px 40px 14px 20px;
+            border-radius: 50px;
+            border: 3px solid #0288d1;
+            background: white;
+            color: #0288d1;
+            font-weight: 700;
+            font-size: 1em;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%230288d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+        }
+        
+        .lang-switch select option {
+            background: white;
+            color: #0288d1;
+            padding: 10px;
+            font-weight: 700;
+        }
+        
+        .lang-switch select:hover {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            border-color: transparent;
+        }
+        
+        .lang-switch select:hover option {
+            background: white;
+            color: #0288d1;
         }
         
         header {
@@ -639,32 +771,55 @@
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🔄 Easy Img Converter </a>
+            <div class="nav-links">
+                <a href="#tools">工具</a>
+                <a href="#about">關於</a>
+                <a href="#blog">部落格</a>
+                <a href="#contact">聯絡</a>
+            </div>
+            <div class="nav-buttons">
+                <div class="lang-switch">
+                    <select onchange="window.location.href=this.value">
+                        <option value="../en/index.html">English</option>
+                        <option value="../ko/index.html">한국어</option>
+                        <option value="./index.html" selected>繁體中文</option>
+                        <option value="../zh-CN/index.html">简体中文</option>
+                        <option value="../ja/index.html">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
     <div class="container">
         <header>
-            <h1>SVG TO PNG 🎨</h1>
-            <p class="description">Convert SVG images to PNG format. Fast, secure conversion. PNG supports transparency and lossless quality! ✨</p>
+            <h1>SVG 轉 PNG 🎨</h1>
+            <p class="description">將 SVG 圖片轉換為 PNG 格式。快速、安全的轉換。PNG 支援透明度和無損品質！✨</p>
             <p class="supported-formats">
-                Convert SVG to: 
+                轉換 SVG 為：
                 <a href="#">PNG</a>
             </p>
         </header>
         
         <div class="converter-section">
             <div class="upload-area" id="uploadArea">
-                <label for="file-input" class="select-btn">📂 Select SVG files</label>
+                <label for="file-input" class="select-btn">📂 選擇 SVG 檔案</label>
                 <input type="file" id="file-input" accept="image/svg+xml" multiple>
                 
-                <p class="drop-text">or drop SVG files here 📥</p>
+                <p class="drop-text">或將 SVG 檔案拖曳至此 📥</p>
             </div>
             
             <div class="file-list" id="fileList"></div>
             
             <div class="convert-all-section" id="convertAllSection">
-                <button class="convert-all-btn" id="convertAllBtn">✨ Convert All</button>
+                <button class="convert-all-btn" id="convertAllBtn">✨ 全部轉換</button>
             </div>
             
             <div class="status-container" id="statusContainer">
-                <div class="status-text" id="statusText">Converting... ⏳</div>
+                <div class="status-text" id="statusText">轉換中... ⏳</div>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progressFill"></div>
                 </div>
@@ -673,138 +828,138 @@
             <div class="download-section" id="downloadSection"></div>
         </div>
         
-        <p class="privacy-note">🔒 Your files are processed securely in your browser. No data is sent to our servers!</p>
+        <p class="privacy-note">🔒 您的檔案會在您的瀏覽器中安全處理。不會發送任何資料到我們的伺服器！</p>
         </div>
         
         <section class="info-section">
-            <h2>Understanding SVG and PNG Formats 📚</h2>
+            <h2>了解 SVG 和 PNG 格式 📚</h2>
             
             <div class="info-content">
                 <div class="info-card">
-                    <h3>What is SVG? 🖼️</h3>
-                    <p>SVG (Scalable Vector Graphics) is an <strong>XML-based vector image format</strong>. It uses mathematical formulas to create images, making it infinitely scalable without quality loss.</p>
+                    <h3>什麼是 SVG？🖼️</h3>
+                    <p>SVG（可縮放向量圖形）是一種<strong>基於 XML 的向量圖片格式</strong>。它使用數學公式創建圖片，使其可以無限縮放而不損失品質。</p>
                     <ul>
-                        <li><strong>Best for:</strong> Logos, icons, illustrations, graphics with text</li>
-                        <li><strong>File size:</strong> Small (text-based XML)</li>
-                        <li><strong>Transparency:</strong> Fully supported</li>
-                        <li><strong>Quality:</strong> Infinitely scalable - no quality loss</li>
+                        <li><strong>適用於：</strong> 標誌、圖示、插圖、帶文字的圖形</li>
+                        <li><strong>檔案大小：</strong> 小（基於文字的 XML）</li>
+                        <li><strong>透明度：</strong> 完全支援</li>
+                        <li><strong>品質：</strong> 可無限縮放 - 無品質損失</li>
                     </ul>
                 </div>
                 
                 <div class="info-card">
-                    <h3>What is PNG? 📷</h3>
-                    <p>PNG (Portable Network Graphics) uses <strong>lossless compression</strong>, meaning no image data is lost during compression. It's perfect for images requiring transparency and sharp graphics.</p>
+                    <h3>什麼是 PNG？📷</h3>
+                    <p>PNG（可攜式網路圖形）使用<strong>無損壓縮</strong>，意味著壓縮過程中不會損失任何圖片資料。它非常適合需要透明度和清晰圖形的圖片。</p>
                     <ul>
-                        <li><strong>Best for:</strong> Logos, icons, graphics with text, images requiring transparency</li>
-                        <li><strong>File size:</strong> Moderate (lossless compression)</li>
-                        <li><strong>Transparency:</strong> Fully supported (alpha channel)</li>
-                        <li><strong>Quality:</strong> Always lossless - no quality loss</li>
+                        <li><strong>適用於：</strong> 標誌、圖示、帶文字的圖形、需要透明度的圖片</li>
+                        <li><strong>檔案大小：</strong> 中等（無損壓縮）</li>
+                        <li><strong>透明度：</strong> 完全支援（alpha 通道）</li>
+                        <li><strong>品質：</strong> 總是無損 - 無品質損失</li>
                     </ul>
                 </div>
             </div>
             
-            <h3>Why Convert SVG to PNG? 🤔</h3>
+            <h3>為什麼要將 SVG 轉換為 PNG？🤔</h3>
             
             <div class="info-text">
-                <p>There are several reasons why you might need to convert SVG images to PNG format:</p>
+                <p>您可能有幾個原因需要將 SVG 圖片轉換為 PNG 格式：</p>
                 
                 <div class="benefit-list">
                     <div class="benefit-item">
                         <span class="benefit-icon">🖼️</span>
                         <div>
-                            <h4>Wider Compatibility</h4>
-                            <p>PNG is supported by virtually all applications, social media platforms, and devices. SVG requires specific software or web browsers to display properly.</p>
+                            <h4>更廣泛的相容性</h4>
+                            <p>PNG 幾乎被所有應用程式、社群媒體平台和裝置支援。SVG 需要特定的軟體或網頁瀏覽器才能正確顯示。</p>
                         </div>
                     </div>
                     
                     <div class="benefit-item">
                         <span class="benefit-icon">📱</span>
                         <div>
-                            <h4>Mobile Device Support</h4>
-                            <p>PNG works perfectly on all mobile devices and apps. Some mobile applications don't support SVG format.</p>
+                            <h4>行動裝置支援</h4>
+                            <p>PNG 在所有行動裝置和應用程式中都能完美運作。一些行動應用程式不支援 SVG 格式。</p>
                         </div>
                     </div>
                     
                     <div class="benefit-item">
                         <span class="benefit-icon">🔒</span>
                         <div>
-                            <h4>Non-Editable Format</h4>
-                            <p>PNG makes your graphics non-editable, protecting your designs from being easily modified or reused without permission.</p>
+                            <h4>不可編輯的格式</h4>
+                            <p>PNG 使您的圖形不可編輯，保護您的設計不被輕易修改或未經授權重用。</p>
                         </div>
                     </div>
                     
                     <div class="benefit-item">
                         <span class="benefit-icon">📊</span>
                         <div>
-                            <h4>Pixel-Perfect Output</h4>
-                            <p>PNG provides exact pixel dimensions, making it perfect for web use where specific sizes are required.</p>
+                            <h4>像素完美輸出</h4>
+                            <p>PNG 提供精確的像素尺寸，使其非常適合需要特定尺寸的網頁使用。</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <h3>When Should You Use SVG vs PNG? 📊</h3>
+            <h3>何時應該使用 SVG 還是 PNG？📊</h3>
             
             <div class="comparison-table">
                 <div class="comparison-row">
                     <div class="comparison-cell">
-                        <strong>Use SVG when:</strong>
+                        <strong>使用 SVG 時：</strong>
                     </div>
                     <div class="comparison-cell">
-                        <strong>Use PNG when:</strong>
+                        <strong>使用 PNG 時：</strong>
                     </div>
                 </div>
                 
                 <div class="comparison-row">
                     <div class="comparison-cell">
                         <ul>
-                            <li>Logos and icons</li>
-                            <li>Graphics with text</li>
-                            <li>Infinitely scalable needed</li>
-                            <li>Editable graphics</li>
+                            <li>標誌和圖示</li>
+                            <li>帶文字的圖形</li>
+                            <li>需要無限縮放</li>
+                            <li>可編輯的圖形</li>
                         </ul>
                     </div>
                     <div class="comparison-cell">
                         <ul>
-                            <li>Web graphics and photos</li>
-                            <li>Images with transparency</li>
-                            <li>Pixel-perfect output needed</li>
-                            <li>Mobile compatibility</li>
+                            <li>網頁圖形和照片</li>
+                            <li>帶有透明度的圖片</li>
+                            <li>需要像素完美輸出</li>
+                            <li>行動裝置相容性</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <h3>How to Convert SVG to PNG? 🛠️</h3>
+            <h3>如何將 SVG 轉換為 PNG？🛠️</h3>
             
             <ol class="steps-list">
-                <li>Click the "Select SVG files" button or drag and drop SVG files into the upload area</li>
-                <li>Wait for files to be uploaded and displayed in the file list</li>
-                <li>Click "Convert All" to convert all SVG files to PNG format</li>
-                <li>Download your converted PNG files individually or all together</li>
+                <li>點擊「選擇 SVG 檔案」按鈕或將 SVG 檔案拖曳到上傳區域</li>
+                <li>等待檔案上傳並顯示在檔案列表中</li>
+                <li>點擊「全部轉換」將所有 SVG 檔案轉換為 PNG 格式</li>
+                <li>單獨下載或一起下載您轉換後的 PNG 檔案</li>
             </ol>
             
             <div class="faq-section">
-                <h3>Frequently Asked Questions ❓</h3>
+                <h3>常見問題 ❓</h3>
                 
                 <div class="faq-item">
-                    <h4>Is SVG to PNG conversion free? 💰</h4>
-                    <p>Yes! Our SVG to PNG converter is completely free to use with no file size limits or hidden fees. Convert as many files as you need!</p>
+                    <h4>SVG 轉 PNG 轉換是免費的嗎？💰</h4>
+                    <p>是的！我們的 SVG 轉 PNG 轉換器完全免費使用，沒有檔案大小限制或隱藏費用。您可以轉換所需的任意數量檔案！</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Does PNG maintain SVG quality? 🎨</h4>
-                    <p>PNG uses lossless compression, so your images maintain the same quality as the original SVG files. However, vector graphics become raster images in PNG format.</p>
+                    <h4>PNG 能保持 SVG 品質嗎？🎨</h4>
+                    <p>PNG 使用無損壓縮，因此您的圖片會保持與原始 SVG 檔案相同的品質。然而，向量圖形會變成 PNG 格式的點陣圖。</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Can I convert multiple SVG files at once? ⚡</h4>
-                    <p>Yes! You can upload and convert multiple SVG files simultaneously. Just select all the files you want to convert at once!</p>
+                    <h4>我可以一次轉換多個 SVG 檔案嗎？⚡</h4>
+                    <p>可以！您可以同時上傳並轉換多個 SVG 檔案。只需一次選擇您想要轉換的所有檔案！</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Are my files secure? 🔒</h4>
-                    <p>Yes! All conversions happen in your browser. Your files are never sent to our servers, ensuring complete privacy and security.</p>
+                    <h4>我的檔案安全嗎？🔒</h4>
+                    <p>是的！所有轉換都在您的瀏覽器中進行。您的檔案永遠不會發送到我們的伺服器，確保完全的隱私和安全。</p>
                 </div>
             </div>
         </section>
@@ -853,7 +1008,7 @@
                     }
                 });
             } else {
-                alert('Please select SVG files only! 🎨');
+                alert('請僅選擇 SVG 檔案！🎨');
             }
         }
         
@@ -872,7 +1027,7 @@
                         </div>
                     </div>
                     <div class="file-actions">
-                        <button class="action-btn remove-btn" onclick="removeFile(${index})">❌ Remove</button>
+                        <button class="action-btn remove-btn" onclick="removeFile(${index})">❌ 移除</button>
                     </div>
                 `;
                 fileList.appendChild(fileItem);
@@ -926,7 +1081,7 @@
                     
                     img.src = url;
                 } catch (error) {
-                    console.error('Error converting file:', file.name, error);
+                    console.error('轉換檔案時出錯:', file.name, error);
                 }
                 
                 const progress = ((i + 1) / totalFiles) * 100;
@@ -934,7 +1089,7 @@
                 statusText.textContent = `Converting ${i + 1} of ${totalFiles}... ⏳`;
             }
             
-            statusText.textContent = 'Conversion Complete! ✅';
+            statusText.textContent = '轉換完成！✅';
             
             setTimeout(() => {
                 showDownloadOptions(convertedFiles);
@@ -946,14 +1101,14 @@
             
             const downloadAllBtn = document.createElement('button');
             downloadAllBtn.className = 'download-btn';
-            downloadAllBtn.textContent = '📥 Download All';
+            downloadAllBtn.textContent = '📥 下載全部';
             downloadAllBtn.onclick = () => downloadAllFiles(convertedFiles);
             downloadSection.appendChild(downloadAllBtn);
             
             convertedFiles.forEach((file, index) => {
                 const downloadBtn = document.createElement('button');
                 downloadBtn.className = 'download-btn';
-                downloadBtn.textContent = `📥 Download ${file.name}`;
+                downloadBtn.textContent = `📥 下載 ${file.name}`;
                 downloadBtn.style.marginTop = '10px';
                 downloadBtn.onclick = () => downloadFile(file);
                 downloadSection.appendChild(downloadBtn);

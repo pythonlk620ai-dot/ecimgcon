@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画像変換ツール - Easy Img Converter</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="画像変換ツール。JPG、PNG、PDF、SVG、BMP、WEBPなど、さまざまな形式に画像を変換します。高速、安全、ファイルサイズ制限なし。すべての画像変換ニーズに完璧に対応します。">
+    <meta name="keywords" content="画像変換ツール, オンライン変換ツール, 画像フォーマット変換, 画像ツール, 写真変換ツール, 変換ツール, 画像変換ツール, Easy Img Converter">
+    <meta name="author" content="Easy Img Converter">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://easyimgconverter.com/ja/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://easyimgconverter.com/ja/">
+    <meta property="og:title" content="画像変換ツール - Easy Img Converter">
+    <meta property="og:description" content="JPG、PNG、PDF、SVG、BMP、WEBPなど、さまざまな形式に画像を変換します。高速、安全、ファイルサイズ制限なし。">
+    <meta property="og:image" content="http://easyimgconverter.com/images/landing.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://easyimgconverter.com/ja/">
+    <meta property="twitter:title" content="無料のオンライン画像変換ツール - Easy Img Converter">
+    <meta property="twitter:description" content="JPG、PNG、PDF、SVG、BMP、WEBPなど、さまざまな形式に画像を変換します。高速、安全、ファイルサイズ制限なし。">
+    <meta property="twitter:image" content="http://easyimgconverter.com/images/landing.jpg">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Easy Img Converter - 画像変換ツール",
+        "description": "無料のオンライン画像変換ツールで、画像をJPG、PNG、PDF、SVG、BMP、WEBPなどさまざまな形式に変換できます。高速、安全、ファイルサイズ制限なし。",
+        "applicationCategory": "WebApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "Easy Img Converter"
+        },
+        "featureList": "オンライン画像変換, 一括変換, 多形式サポート, 損失なし品質, ファイルサイズ制限なし, 安全な処理, ZIPダウンロード"
+    }
+    </script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔄</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Arial Rounded MT Bold', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* Animated background shapes */
+        .bg-shape {
+            position: fixed;
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .shape-1 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #b3e5fc 0%, #81d4fa 100%);
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+        
+        .shape-2 {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #81d4fa 0%, #4fc3f7 100%);
+            top: 20%;
+            right: 10%;
+            animation-delay: 5s;
+        }
+        
+        .shape-3 {
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(135deg, #80cbc4 0%, #4db6ac 100%);
+            bottom: 15%;
+            left: 15%;
+            animation-delay: 10s;
+        }
+        
+        .shape-4 {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #b2dfdb 0%, #80cbc4 100%);
+            bottom: 20%;
+            right: 5%;
+            animation-delay: 15s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-30px) rotate(10deg);
+            }
+            50% {
+                transform: translateY(20px) rotate(-5deg);
+            }
+            75% {
+                transform: translateY(-15px) rotate(5deg);
+            }
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #fff;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 2.5em;
+            font-weight: 900;
+            color: #0288d1;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 0px #fff, 3px 3px 0px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite;
+            transition: all 0.3s;
+        }
+        
+        .logo:hover {
+            transform: scale(1.1) rotate(2deg);
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .logo span {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 50%, #4fc3f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #0288d1;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            position: relative;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 4px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            transition: width 0.3s;
+            border-radius: 10px;
+        }
+        
+        .nav-links a:hover {
+            color: #03a9f4;
+            transform: scale(1.1);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .lang-switch {
+            position: relative;
+        }
+        
+        .lang-switch select {
+            padding: 14px 40px 14px 20px;
+            border-radius: 50px;
+            border: 3px solid #0288d1;
+            background: white;
+            color: #0288d1;
+            font-weight: 700;
+            font-size: 1em;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%230288d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+        }
+        
+        .lang-switch select option {
+            background: white;
+            color: #0288d1;
+            padding: 10px;
+            font-weight: 700;
+        }
+        
+        .lang-switch select:hover {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            border-color: transparent;
+        }
+        
+        .lang-switch select:hover option {
+            background: white;
+            color: #0288d1;
+        }
+        
+        .btn {
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1em;
+            border: 3px solid transparent;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 3px solid #0288d1;
+            color: #0288d1;
+        }
+        
+        .btn-outline:hover {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(2, 136, 209, 0.4);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(2, 136, 209, 0.5);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
+            color: #01579b;
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '✨';
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            font-size: 5em;
+            animation: sparkle 2s infinite;
+        }
+        
+        .hero::after {
+            content: '🎨';
+            position: absolute;
+            bottom: 10%;
+            right: 10%;
+            font-size: 6em;
+            animation: sparkle 2.5s infinite reverse;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            50% { transform: scale(1.2) rotate(10deg); opacity: 1; }
+        }
+        
+        .hero h1 {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 4em;
+            margin-bottom: 30px;
+            line-height: 1.2;
+            font-weight: 900;
+            color: #01579b;
+            text-shadow: 3px 3px 0px rgba(255,255,255,0.5), 5px 5px 20px rgba(0,0,0,0.2);
+            animation: bounce 2s infinite;
+        }
+        
+        .hero p {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1.5em;
+            max-width: 900px;
+            margin: 0 auto 70px;
+            opacity: 0.95;
+            line-height: 1.7;
+            font-weight: 600;
+            color: #0277bd;
+            text-shadow: 2px 2px 0px rgba(255,255,255,0.3);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero .btn {
+            padding: 16px 35px;
+            font-size: 1.1em;
+        }
+        
+        .category-filter {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 14px 30px;
+            border: 3px solid #81d4fa;
+            border-radius: 50px;
+            background: white;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1em;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .filter-btn:hover {
+            border-color: #03a9f4;
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(3, 169, 244, 0.3);
+        }
+        
+        .filter-btn.active {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 8px 20px rgba(2, 136, 209, 0.4);
+        }
+        
+        .tools-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 35px;
+        }
+        
+        .tool-card {
+            background: white;
+            border-radius: 25px;
+            padding: 45px 35px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #fff;
+        }
+        
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(2, 136, 209, 0.2);
+            border-color: #81d4fa;
+        }
+        
+        .tool-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .tool-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            font-size: 3em;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+        }
+        
+        .tool-card h3 {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1.7em;
+            margin-bottom: 18px;
+            color: #0288d1;
+            font-weight: 800;
+        }
+        
+        .tool-card p {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+        
+        .new-badge {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.85em;
+            font-weight: 800;
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            box-shadow: 0 4px 12px rgba(2, 136, 209, 0.4);
+            animation: bounce 2s infinite;
+        }
+        
+        .tool-card-wrapper {
+            position: relative;
+        }
+        
+        .section {
+            padding: 100px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 3.5em;
+            margin-bottom: 25px;
+            color: #0288d1;
+            font-weight: 900;
+            position: relative;
+            display: inline-block;
+            text-shadow: 3px 3px 0px rgba(255,255,255,0.5);
+        }
+        
+        .section-title::after {
+            content: '✨';
+            display: block;
+            font-size: 2em;
+            margin: 25px auto 0;
+            animation: sparkle 2s infinite;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1.3em;
+            max-width: 900px;
+            margin: 0 auto 70px;
+            line-height: 1.8;
+            font-weight: 600;
+        }
+        
+        .about-section {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+        }
+        
+        .features-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 50px 35px;
+            background: white;
+            border-radius: 25px;
+            transition: all 0.4s;
+            border: 3px solid #fff;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 40px rgba(2, 136, 209, 0.2);
+            border-color: #81d4fa;
+        }
+        
+        .feature-icon {
+            font-size: 4em;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: bounce 2s infinite;
+        }
+        
+        .feature-item h3 {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            color: #0288d1;
+            font-weight: 800;
+        }
+        
+        .feature-item p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        
+        .stats-section {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            padding: 100px 20px;
+            position: relative;
+        }
+        
+        .stats-section::before {
+            content: '🎨';
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            font-size: 8em;
+            opacity: 0.1;
+            animation: sparkle 3s infinite;
+        }
+        
+        .stats-section::after {
+            content: '✨';
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            font-size: 8em;
+            opacity: 0.1;
+            animation: sparkle 2.5s infinite reverse;
+        }
+        
+        .stats-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 45px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 35px 25px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-number {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 4em;
+            font-weight: 900;
+            margin-bottom: 12px;
+            display: block;
+            color: white;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+        }
+        
+        .stat-label {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .blog-section {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+        }
+        
+        .blog-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 25px;
+            padding: 35px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 3px solid #fff;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(2, 136, 209, 0.2);
+            border-color: #81d4fa;
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5em;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+        }
+        
+        .blog-card h3 {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #0288d1;
+            font-weight: 800;
+        }
+        
+        .blog-card p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1em;
+            font-weight: 500;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+        }
+        
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: #01579b;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 3px solid #e0f7fa;
+            border-radius: 15px;
+            font-size: 1em;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            transition: all 0.3s;
+            box-sizing: border-box;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #0288d1;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(2, 136, 209, 0.1);
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 700;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 6px 15px rgba(2, 136, 209, 0.3);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(2, 136, 209, 0.4);
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            padding: 60px 20px 30px;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 800;
+        }
+        
+        .footer-section p {
+            line-height: 1.8;
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .footer-section ul li a:hover {
+            opacity: 0.8;
+            transform: translateX(5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .footer-bottom p {
+            opacity: 0.9;
+            font-size: 1em;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .hero p {
+                font-size: 1.2em;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🔄 Easy Img Converter </a>
+            <div class="nav-links">
+                <a href="#tools">ツール</a>
+                <a href="#about">について</a>
+                <a href="#blog">ブログ</a>
+                <a href="#contact">お問い合わせ</a>
+            </div>
+            <div class="nav-buttons">
+                <div class="lang-switch">
+                    <select onchange="window.location.href=this.value">
+                        <option value="../en/index.html">English</option>
+                        <option value="../zh-TW/index.html">繁體中文</option>
+                        <option value="../zh-CN/index.html">简体中文</option>
+                        <option value="../ko/index.html">한국어</option>
+                        <option value="./index.html" selected>日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <h1>必要なすべてのツール<br>一括画像変換 🎨</h1>
+        <p>あなたのオンライン画像変換ツールが準備完了！永久無料！✨<br>高速、安全、超かわいい！ 🌈</p>
+        <div class="hero-buttons">
+            <a href="#tools" class="btn btn-primary">変換を開始 🚀</a>
+            <a href="#about" class="btn btn-outline">詳細を見る 💡</a>
+        </div>
+    </section>
+    
+    <section class="section tools-section" id="tools">
+        <h2 class="section-title">利用可能なツール 🛠️</h2>
+        <p class="section-subtitle">9つの異なる画像変換ツールで、すべてのニーズに対応！✨</p>
+        
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">すべて 🌟</button>
+            <button class="filter-btn" data-category="common">一般的 🎨</button>
+            <button class="filter-btn" data-category="web">ウェブ 🌐</button>
+            <button class="filter-btn" data-category="documents">ドキュメント 📄</button>
+        </div>
+        
+        <div class="tools-grid">
+            <div class="tool-card-wrapper">
+                <a href="jpg-to-png.html" class="tool-card" data-category="common">
+                    <div class="tool-icon">📸</div>
+                    <h3>JPG to PNG 🖼️</h3>
+                    <p>JPG画像をPNG形式に変換。透明度と無損失品質をサポート！✨</p>
+                    <span class="new-badge">人気 🔥</span>
+                </a>
+            </div>
+            
+            <div class="tool-card-wrapper">
+                <a href="png-to-jpg.html" class="tool-card" data-category="common">
+                    <div class="tool-icon">🎨</div>
+                    <h3>PNG to JPG 🖼️</h3>
+                    <p>PNG画像をJPG形式に変換。より小さいファイルサイズでウェブに最適！📦</p>
+                    <span class="new-badge">人気 🔥</span>
+                </a>
+            </div>
+            
+            <div class="tool-card-wrapper">
+                <a href="webp-to-jpg.html" class="tool-card" data-category="web">
+                    <div class="tool-icon">🌐</div>
+                    <h3>WEBP to JPG 🖼️</h3>
+                    <p>WEBP画像をJPG形式に変換。広範なブラウザ互換性を確保！🔥</p>
+                </a>
+            </div>
+            
+            <div class="tool-card-wrapper">
+                <a href="webp-to-png.html" class="tool-card" data-category="web">
+                    <div class="tool-icon">🌐</div>
+                    <h3>WEBP to PNG 🖼️</h3>
+                    <p>WEBP画像をPNG形式に変換。透明度とブラウザ互換性を維持！✨</p>
+                </a>
+            </div>
+            
+            <div class="tool-card-wrapper">
+                <a href="bmp-to-jpg.html" class="tool-card" data-category="common">
+                    <div class="tool-icon">🖼️</div>
+                    <h3>BMP to JPG 🖼️</h3>
+                    <p>BMP画像をJPG形式に変換。有効な圧縮でファイルサイズを大幅削減！📊</p>
+                </a>
+            </div>
+            
+            <div class="tool-card-wrapper">
+                <a href="bmp-to-png.html" class="tool-card" data-category="common">
+                    <div class="tool-icon">🖼️</div>
+                    <h3>BMP to PNG 🖼️</h3>
+                    <p>BMP画像をPNG形式に変換。透明度サポートで無損失品質！🎨</p>
+                </a>
+            </div>
+            
+            <div class="tool-card-wrapper">
+                <a href="svg-to-jpg.html" class="tool-card" data-category="web">
+                    <div class="tool-icon">✏️</div>
+                    <h3>SVG to JPG 🖼️</h3>
+                    <p>SVGベクター画像をJPGラスタ画像に変換。ウェブと印刷に最適！✨</p>
+                </a>
+            </div>
+            
+            <div class="tool-card-wrapper">
+                <a href="svg-to-png.html" class="tool-card" data-category="web">
+                    <div class="tool-icon">✏️</div>
+                    <h3>SVG to PNG 🖼️</h3>
+                    <p>SVGベクター画像をPNGラスタ画像に変換。透明度サポート！🎨</p>
+                </a>
+            </div>
+            
+            <div class="tool-card-wrapper">
+                <a href="pdf-to-jpg.html" class="tool-card" data-category="documents">
+                    <div class="tool-icon">📄</div>
+                    <h3>PDF to JPG 🖼️</h3>
+                    <p>PDFドキュメントをJPG画像に変換。各ページを高品質画像に抽出！✨</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section about-section" id="about">
+        <h2 class="section-title">なぜEasy Img Converter？ 🤔</h2>
+        <p class="section-subtitle">画像変換のための最良の選択肢！✨</p>
+        
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <h3>高速変換 🚀</h3>
+                <p>最先端の技術で、画像を即座に変換します。待つ時間はゼロ！</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">🔒</div>
+                <h3>完全に安全 🔒</h3>
+                <p>すべての変換はブラウザ内で行われます。ファイルはサーバーにアップロードされません！</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">🆓</div>
+                <h3>完全に無料 🆓</h3>
+                <p>機能制限なしで、永久に無料！高品質の変換を楽しんでください！</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">🔄</div>
+                <h3>多形式サポート 🔄</h3>
+                <p>JPG、PNG、WEBP、BMP、SVG、PDFなど、9種類以上の形式をサポート！</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">📊</div>
+                <h3>一括変換 📊</h3>
+                <p>一度に複数の画像を変換。大量の画像をすばやく処理！</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">📱</div>
+                <h3>モバイル対応 📱</h3>
+                <p>スマートフォンやタブレットでも完璧に動作。どこでも変換！</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">9+ 🎨</span>
+                <span class="stat-label">変換ツール</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100K+ 📁</span>
+                <span class="stat-label">処理されたファイル</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100% 🆓</span>
+                <span class="stat-label">無料利用</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">24/7 🌟</span>
+                <span class="stat-label">いつでも利用可能</span>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section blog-section" id="blog">
+        <h2 class="section-title">最新のブログ 📝</h2>
+        <p class="section-subtitle">画像変換に関するヒント、トリック、ベストプラクティス！✨</p>
+        
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-image">📉</div>
+                <h3>10の完璧な画像圧縮テクニック 📉</h3>
+                <p>品質を損なわずにファイルサイズを減らす方法。プロのヒントで最適な圧縮を実現！✨</p>
+            </div>
+            
+            <div class="blog-card">
+                <div class="blog-image">🎨</div>
+                <h3>プロのように画像を変換する方法 🎨</h3>
+                <p>私たちのステップバイステップガイドとベストプラクティスで、画像変換の芸術をマスター！🚀</p>
+            </div>
+            
+            <div class="blog-card">
+                <div class="blog-image">🎯</div>
+                <h3>画像形式選択のベストプラクティス 🎯</h3>
+                <p>あなたのニーズに最適な形式を選択。JPG、PNG、WEBPの包括的な解析！🌈</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section contact-section" id="contact">
+        <h2 class="section-title">お問い合わせ 💌</h2>
+        <p class="section-subtitle">質問や提案がありますか？私たちはあなたの意見を待ちています！🌈</p>
+        
+        <div class="contact-container">
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">お名前 🌟</label>
+                        <input type="text" id="name" name="name" placeholder="お名前を入力" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">メールアドレス 📧</label>
+                        <input type="email" id="email" name="email" placeholder="メールアドレスを入力" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">件名 📝</label>
+                        <input type="text" id="subject" name="subject" placeholder="何についてですか？" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">メッセージ 💬</label>
+                        <textarea id="message" name="message" placeholder="どのようにお手伝いできますか？" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">メッセージを送信 💌</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>について 🌟</h3>
+                <p>Image Studioはすべての人に画像変換ツールを提供します。高速、安全、完全に無料！🎨✨</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>クイックリンク</h3>
+                <ul>
+                    <li><a href="#about">私たちについて</a></li>
+                    <li><a href="#blog">ブログ</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                    <li><a href="updates.html">更新情報</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 Easy Img Converter。あなたのために、🎨 と ✨ を込めて作成！</p>
+        </div>
+    </footer>
+    
+    <script>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const toolCards = document.querySelectorAll('.tool-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const category = btn.dataset.category;
+                
+                toolCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.parentElement.style.display = 'block';
+                    } else {
+                        card.parentElement.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('メッセージありがとうございます！すぐにご連絡いたします。');
+            this.reset();
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

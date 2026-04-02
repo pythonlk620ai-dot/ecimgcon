@@ -1,30 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PNG è½‰ JPG è½‰æ›å™¨ - Easy Img Converter</title>
+    <title>PNG 轉 JPG 轉換器 - Easy Img Converter</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="PNG to JPG converter. Convert PNG images to JPG format with transparency support. Fast, secure, and no file size limits. Perfect for image conversion needs.">
-    <meta name="keywords" content="png to jpg converter, online converter, image converter, jpg converter, image tool, photo converter, converter, Easy Img Converter">
+    <meta name="description" content="PNG 轉 JPG 轉換器。將 PNG 圖片轉換為 JPG 格式。快速、安全、無檔案大小限制。完美滿足圖片轉換需求。">
+    <meta name="keywords" content="png 轉 jpg 轉換器, 在線轉換器, 圖片轉換器, jpg 轉換器, 圖片工具, 照片轉換器, 轉換器, Easy Img Converter">
     <meta name="author" content="Easy Img Converter">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="http://easyimgconverter.com/zh-tw/png-to-jpg.html">
-    <link rel="alternate" hreflang="en" href="http://easyimgconverter.com/en/png-to-jpg.html">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://easyimgconverter.com/zh-tw/png-to-jpg.html">
-    <meta property="og:title" content="PNG to JPG Converter - Easy Img Converter">
-    <meta property="og:description" content="Convert PNG images to JPG format with transparency support. Fast, secure, and no file size limits.">
+    <meta property="og:title" content="PNG 轉 JPG 轉換器 - Easy Img Converter">
+    <meta property="og:description" content="將 PNG 圖片轉換為 JPG 格式。快速、安全、無檔案大小限制。">
     <meta property="og:image" content="http://easyimgconverter.com/images/png-to-jpg.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="http://easyimgconverter.com/zh-tw/png-to-jpg.html">
-    <meta property="twitter:title" content="PNG to JPG Converter - Easy Img Converter">
-    <meta property="twitter:description" content="Convert PNG images to JPG format with transparency support. Fast, secure, and no file size limits.">
+    <meta property="twitter:title" content="PNG 轉 JPG 轉換器 - Easy Img Converter">
+    <meta property="twitter:description" content="將 PNG 圖片轉換為 JPG 格式。快速、安全、無檔案大小限制。">
     <meta property="twitter:image" content="http://easyimgconverter.com/images/png-to-jpg.jpg">
     
     <!-- Schema.org structured data -->
@@ -32,8 +31,8 @@
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "PNG to JPG Converter",
-        "description": "PNG to JPG converter that converts PNG images to JPG format with transparency support. Fast, secure, and no file size limits.",
+        "name": "PNG 轉 JPG 轉換器",
+        "description": "PNG 轉 JPG 轉換器，可將 PNG 圖片轉換為 JPG 格式。快速、安全、無檔案大小限制。",
         "applicationCategory": "WebApplication",
         "operatingSystem": "Web Browser",
         "offers": {
@@ -45,7 +44,7 @@
             "@type": "Organization",
             "name": "Easy Img Converter"
         },
-        "featureList": "Convert PNG to JPG, Batch conversion, Transparency support, Lossless quality, No file size limits, Secure processing"
+        "featureList": "PNG 轉 JPG, 批次轉換, 無損品質, 無檔案大小限制, 安全處理"
     }
     </script>
     <style>
@@ -67,6 +66,139 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #fff;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 2.5em;
+            font-weight: 900;
+            color: #0288d1;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 0px #fff, 3px 3px 0px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite;
+            transition: all 0.3s;
+        }
+        
+        .logo:hover {
+            transform: scale(1.1) rotate(2deg);
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .logo span {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 50%, #4fc3f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #0288d1;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            position: relative;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 4px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            transition: width 0.3s;
+            border-radius: 10px;
+        }
+        
+        .nav-links a:hover {
+            color: #03a9f4;
+            transform: scale(1.1);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .lang-switch {
+            position: relative;
+        }
+        
+        .lang-switch select {
+            padding: 14px 40px 14px 20px;
+            border-radius: 50px;
+            border: 3px solid #0288d1;
+            background: white;
+            color: #0288d1;
+            font-weight: 700;
+            font-size: 1em;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%230288d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+        }
+        
+        .lang-switch select option {
+            background: white;
+            color: #0288d1;
+            padding: 10px;
+            font-weight: 700;
+        }
+        
+        .lang-switch select:hover {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            border-color: transparent;
+        }
+        
+        .lang-switch select:hover option {
+            background: white;
+            color: #0288d1;
         }
         
         header {
@@ -363,32 +495,55 @@
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🔄 Easy Img Converter </a>
+            <div class="nav-links">
+                <a href="#tools">工具</a>
+                <a href="#about">關於</a>
+                <a href="#blog">部落格</a>
+                <a href="#contact">聯絡</a>
+            </div>
+            <div class="nav-buttons">
+                <div class="lang-switch">
+                    <select onchange="window.location.href=this.value">
+                        <option value="../en/index.html">English</option>
+                        <option value="../ko/index.html">한국어</option>
+                        <option value="./index.html" selected>繁體中文</option>
+                        <option value="../zh-CN/index.html">简体中文</option>
+                        <option value="../ja/index.html">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
     <div class="container">
         <header>
-            <h1>PNG TO JPG</h1>
-            <p class="description">Convert PNG images to JPG format. Fast, secure conversion. JPG provides smaller file sizes for web use.</p>
+            <h1>PNG 轉 JPG</h1>
+            <p class="description">將 PNG 圖片轉換為 JPG 格式。快速、安全的轉換。JPG 提供更小的檔案大小適合網頁使用。</p>
             <p class="supported-formats">
-                Convert PNG to: 
+                轉換 PNG 為：
                 <a href="#">JPG</a>
             </p>
         </header>
         
         <div class="converter-section">
             <div class="upload-area" id="uploadArea">
-                <label for="file-input" class="select-btn">Select PNG files</label>
+                <label for="file-input" class="select-btn">📂 選擇 PNG 檔案</label>
                 <input type="file" id="file-input" accept="image/png" multiple>
                 
-                <p class="drop-text">or drop PNG files here</p>
+                <p class="drop-text">或將 PNG 檔案拖曳至此</p>
             </div>
             
             <div class="file-list" id="fileList"></div>
             
             <div class="convert-all-section" id="convertAllSection">
-                <button class="convert-all-btn" id="convertAllBtn">Convert All</button>
+                <button class="convert-all-btn" id="convertAllBtn">✨ 全部轉換</button>
             </div>
             
             <div class="status-container" id="statusContainer">
-                <div class="status-text" id="statusText">Converting...</div>
+                <div class="status-text" id="statusText">轉換中...</div>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progressFill"></div>
                 </div>
@@ -397,149 +552,149 @@
             <div class="download-section" id="downloadSection"></div>
         </div>
         
-        <p class="privacy-note">Your files are processed securely in your browser. No data is sent to our servers.</p>
+        <p class="privacy-note">🔒 您的檔案會在您的瀏覽器中安全處理。不會發送任何資料到我們的伺服器。</p>
         </div>
         
         <section class="info-section">
-            <h2>Understanding PNG and JPG Formats</h2>
+            <h2>了解 PNG 和 JPG 格式</h2>
             
             <div class="info-content">
                 <div class="info-card">
-                    <h3>What is PNG?</h3>
-                    <p>PNG (Portable Network Graphics) uses <strong>lossless compression</strong>, meaning no image data is lost during compression. It's perfect for images requiring transparency and sharp graphics.</p>
+                    <h3>什麼是 PNG？</h3>
+                    <p>PNG（可攜式網路圖形）使用<strong>無損壓縮</strong>，意味著壓縮過程中不會損失任何圖片資料。它非常適合需要透明度和清晰圖形的圖片。</p>
                     <ul>
-                        <li><strong>Best for:</strong> Logos, icons, graphics with text, images requiring transparency</li>
-                        <li><strong>File size:</strong> Larger than JPG (no lossy compression)</li>
-                        <li><strong>Transparency:</strong> Fully supported (alpha channel)</li>
-                        <li><strong>Quality:</strong> Always lossless - no quality loss</li>
+                        <li><strong>適用於：</strong> 標誌、圖示、帶文字的圖形、需要透明度的圖片</li>
+                        <li><strong>檔案大小：</strong> 比 JPG 大（無有損壓縮）</li>
+                        <li><strong>透明度：</strong> 完全支援（alpha 通道）</li>
+                        <li><strong>品質：</strong> 總是無損 - 無品質損失</li>
                     </ul>
                 </div>
                 
                 <div class="info-card">
-                    <h3>What is JPG?</h3>
-                    <p>JPG (or JPEG) is a widely used image format that uses <strong>lossy compression</strong>. This means some image data is discarded to reduce file size, making it ideal for photographs and complex images with many colors.</p>
+                    <h3>什麼是 JPG？</h3>
+                    <p>JPG（或 JPEG）是一種廣泛使用的圖片格式，使用<strong>有損壓縮</strong>。這意味著一些圖片資料會被捨棄以減少檔案大小，使其非常適合照片和具有多種顏色的複雜圖片。</p>
                     <ul>
-                        <li><strong>Best for:</strong> Photographs, web images, email attachments</li>
-                        <li><strong>File size:</strong> Smaller due to compression</li>
-                        <li><strong>Transparency:</strong> Not supported</li>
-                        <li><strong>Quality:</strong> Can be adjusted (typically 60-90% for optimal balance)</li>
+                        <li><strong>適用於：</strong> 照片、網頁圖片、電子郵件附件</li>
+                        <li><strong>檔案大小：</strong> 較小（由於壓縮）</li>
+                        <li><strong>透明度：</strong> 不支援</li>
+                        <li><strong>品質：</strong> 可調整（通常 60-90% 為最佳平衡）</li>
                     </ul>
                 </div>
             </div>
             
-            <h3>Why Convert PNG to JPG?</h3>
+            <h3>為什麼要將 PNG 轉換為 JPG？</h3>
             
             <div class="info-text">
-                <p>There are several reasons why you might need to convert PNG images to JPG format:</p>
+                <p>您可能有幾個原因需要將 PNG 圖片轉換為 JPG 格式：</p>
                 
                 <div class="benefit-list">
                     <div class="benefit-item">
                         <span class="benefit-icon">📦</span>
                         <div>
-                            <h4>Smaller File Size</h4>
-                            <p>JPG files are typically much smaller than PNG files due to lossy compression, making them ideal for web use and faster loading.</p>
+                            <h4>更小的檔案大小</h4>
+                            <p>JPG 檔案通常比 PNG 檔案小得多，由於有損壓縮，使其非常適合網頁使用和更快的載入。</p>
                         </div>
                     </div>
                     
                     <div class="benefit-item">
                         <span class="benefit-icon">📸</span>
                         <div>
-                            <h4>Photograph Quality</h4>
-                            <p>JPG is the standard format for photographs and images with many colors. It handles gradients and complex colors better.</p>
+                            <h4>照片品質</h4>
+                            <p>JPG 是照片和具有多種顏色的圖片的標準格式。它能更好地處理漸層和複雜顏色。</p>
                         </div>
                     </div>
                     
                     <div class="benefit-item">
                         <span class="benefit-icon">🌐</span>
                         <div>
-                            <h4>Web Optimization</h4>
-                            <p>Smaller JPG files load faster on websites, improving user experience and SEO rankings.</p>
+                            <h4>網頁最佳化</h4>
+                            <p>較小的 JPG 檔案在網站上載入更快，改善使用者體驗和 SEO 排名。</p>
                         </div>
                     </div>
                     
                     <div class="benefit-item">
                         <span class="benefit-icon">📧</span>
                         <div>
-                            <h4>Email Attachments</h4>
-                            <p>JPG files are smaller and more universally supported, making them ideal for email attachments.</p>
+                            <h4>電子郵件附件</h4>
+                            <p>JPG 檔案更小且更普遍支援，使其非常適合電子郵件附件。</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <h3>When Should You Use PNG vs JPG?</h3>
+            <h3>何時應該使用 PNG 還是 JPG？</h3>
             
             <div class="comparison-table">
                 <div class="comparison-row">
                     <div class="comparison-cell">
-                        <strong>Use PNG when:</strong>
+                        <strong>使用 PNG 時：</strong>
                     </div>
                     <div class="comparison-cell">
                         <ul>
-                            <li>Transparency is required</li>
-                            <li>Graphics with text or sharp edges</li>
-                            <li>Logo or icon design</li>
-                            <li>Maximum quality is essential</li>
+                            <li>需要透明度</li>
+                            <li>帶文字或清晰邊緣的圖形</li>
+                            <li>標誌或圖示設計</li>
+                            <li>需要最大品質</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="comparison-row">
                     <div class="comparison-cell">
-                        <strong>Use JPG when:</strong>
+                        <strong>使用 JPG 時：</strong>
                     </div>
                     <div class="comparison-cell">
                         <ul>
-                            <li>Photographs with many colors</li>
-                            <li>File size is important</li>
-                            <li>No transparency needed</li>
-                            <li>Web optimization is key</li>
+                            <li>具有多種顏色的照片</li>
+                            <li>檔案大小很重要</li>
+                            <li>不需要透明度</li>
+                            <li>網頁最佳化是關鍵</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <h3>How Our PNG to JPG Converter Works</h3>
+            <h3>我們的 PNG 轉 JPG 轉換器如何運作</h3>
             
             <div class="info-text">
-                <p>Our converter uses advanced HTML5 Canvas technology to convert your images directly in your browser. Here's what happens:</p>
+                <p>我們的轉換器使用先進的 HTML5 Canvas 技術直接在您的瀏覽器中轉換您的圖片。以下是運作過程：</p>
                 
                 <ol class="steps-list">
-                    <li><strong>Upload:</strong> You select PNG files from your device</li>
-                    <li><strong>Processing:</strong> The image is loaded into a canvas element</li>
-                    <li><strong>Conversion:</strong> The canvas is exported as JPG format with 90% quality</li>
-                    <li><strong>Download:</strong> The converted JPG is ready for download</li>
+                    <li><strong>上傳：</strong> 您從您的設備選擇 PNG 檔案</li>
+                    <li><strong>處理：</strong> 圖片被載入到 canvas 元素中</li>
+                    <li><strong>轉換：</strong> 將 canvas 匯出為 JPG 格式，品質為 90%</li>
+                    <li><strong>下載：</strong> 轉換後的 JPG 已準備好下載</li>
                 </ol>
                 
-                <p><strong>Privacy guaranteed:</strong> All processing happens locally on your device. Your images are never uploaded to any server, ensuring complete privacy and security.</p>
+                <p><strong>隱私保障：</strong> 所有處理都在您的設備上本地進行。您的圖片永遠不會上傳到任何伺服器，確保完全的隱私和安全。</p>
             </div>
             
-            <h3>Common Questions</h3>
+            <h3>常見問題</h3>
             
             <div class="faq-section">
                 <div class="faq-item">
-                    <h4>Does converting PNG to JPG reduce image quality?</h4>
-                    <p>Yes, JPG uses lossy compression, so some quality is lost during conversion. However, we use 90% quality setting to minimize visible quality loss while achieving smaller file sizes.</p>
+                    <h4>將 PNG 轉換為 JPG 會降低圖片品質嗎？</h4>
+                    <p>是的，JPG 使用有損壓縮，因此轉換過程中會損失一些品質。然而，我們使用 90% 的品質設定，以在最小化可見品質損失的同時實現較小的檔案大小。</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>What happens to transparency?</h4>
-                    <p>PNG supports transparency, but JPG doesn't. When converting, transparent areas become white by default to maintain image integrity.</p>
+                    <h4>透明度會發生什麼變化？</h4>
+                    <p>PNG 支援透明度，但 JPG 不支援。轉換時，透明區域會預設變為白色，以保持圖片完整性。</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Can I convert multiple PNG files at once?</h4>
-                    <p>Absolutely! Our converter supports batch processing, so you can convert multiple PNG files to JPG in one go.</p>
+                    <h4>我可以一次轉換多個 PNG 檔案嗎？</h4>
+                    <p>當然可以！我們的轉換器支援批次處理，所以您可以一次將多個 PNG 檔案轉換為 JPG。</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Is there a file size limit?</h4>
-                    <p>There's no strict file size limit. However, very large images (over 50MB) may take longer to process depending on your device's memory.</p>
+                    <h4>有檔案大小限制嗎？</h4>
+                    <p>沒有嚴格的檔案大小限制。但是，非常大的圖片（超過 50MB）可能會根據您裝置的記憶體需要更長的處理時間。</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Are my images stored on your servers?</h4>
-                    <p>No! All conversion happens in your browser using client-side processing. Your images never leave your device.</p>
+                    <h4>我的圖片會儲存在您的伺服器上嗎？</h4>
+                    <p>不會！所有轉換都在您的瀏覽器中使用用戶端處理進行。您的圖片永遠不會離開您的裝置。</p>
                 </div>
             </div>
         </section>
@@ -833,7 +988,7 @@
             );
             
             if (pngFiles.length === 0) {
-                alert('Please select PNG files only');
+                alert('請僅選擇 PNG 檔案');
                 return;
             }
             
@@ -874,9 +1029,9 @@
                     </div>
                     <div class="file-actions">
                         ${item.converted ? `
-                            <button class="action-btn convert-btn" onclick="downloadFile(${item.id})">Download</button>
+                            <button class="action-btn convert-btn" onclick="downloadFile(${item.id})">下載</button>
                         ` : ''}
-                        <button class="action-btn remove-btn" onclick="removeFile(${item.id})">Remove</button>
+                        <button class="action-btn remove-btn" onclick="removeFile(${item.id})">移除</button>
                     </div>
                 </div>
             `).join('');
@@ -926,13 +1081,13 @@
                             
                             URL.revokeObjectURL(blobUrl);
                         } else {
-                            reject(new Error('Conversion failed'));
+                            reject(new Error('轉換失敗'));
                         }
                     }, 'image/jpeg', 0.9);
                 };
                 
                 img.onerror = function() {
-                    alert('Error loading image');
+                    alert('載入圖片時出錯');
                     statusContainer.style.display = 'none';
                     URL.revokeObjectURL(blobUrl);
                 };
@@ -941,7 +1096,7 @@
                 
             } catch (error) {
                 console.error('Conversion error:', error);
-                alert('Error converting file. Please try again.');
+                alert('轉換檔案時出錯。請再試一次。');
                 statusContainer.style.display = 'none';
                 URL.revokeObjectURL(blobUrl);
             }
@@ -1000,7 +1155,7 @@
                                 fileItem.convertedBlob = blob;
                                 
                                 if (i === totalFiles - 1) {
-                                    statusText.textContent = 'All files converted!';
+                                    statusText.textContent = '所有檔案已轉換！';
                                     progressFill.style.width = '100%';
                                     setTimeout(() => {
                                         statusContainer.style.display = 'none';
@@ -1015,7 +1170,7 @@
                     };
                     
                     img.onerror = function() {
-                        console.error('Error loading image:', fileItem.file.name);
+                        console.error('載入圖片時出錯:', fileItem.file.name);
                     };
                     
                     img.src = blobUrl;

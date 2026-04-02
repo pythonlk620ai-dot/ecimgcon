@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF から JPG への変換ツール - Easy Img Converter</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="PDF から JPG への変換ツール。PDF ファイルを JPG 画像に変換します。高速、安全、ファイルサイズ制限なし。PDF の各ページを個別の JPG 画像に変換します。">
+    <meta name="keywords" content="pdf から jpg 変換ツール, オンライン変換ツール, 画像変換ツール, jpg 変換ツール, 画像ツール, 写真変換ツール, 変換ツール, Easy Img Converter">
+    <meta name="author" content="Easy Img Converter">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://easyimgconverter.com/ja/pdf-to-jpg.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://easyimgconverter.com/ja/pdf-to-jpg.html">
+    <meta property="og:title" content="PDF から JPG への変換ツール - Easy Img Converter">
+    <meta property="og:description" content="PDF ファイルを JPG 形式に変換します。高速、安全、ファイルサイズ制限なし。PDF の各ページを個別の JPG 画像に変換します。">
+    <meta property="og:image" content="http://easyimgconverter.com/images/pdf-to-jpg.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://easyimgconverter.com/ja/pdf-to-jpg.html">
+    <meta property="twitter:title" content="PDF から JPG への変換ツール - Easy Img Converter">
+    <meta property="twitter:description" content="PDF ファイルを JPG 形式に変換します。高速、安全、ファイルサイズ制限なし。PDF の各ページを個別の JPG 画像に変換します。">
+    <meta property="twitter:image" content="http://easyimgconverter.com/images/pdf-to-jpg.jpg">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "PDF から JPG への変換ツール",
+        "description": "PDF から JPG への変換ツールで、PDF ファイルを JPG 形式に変換します。高速、安全、ファイルサイズ制限なし。",
+        "applicationCategory": "WebApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "Easy Img Converter"
+        },
+        "featureList": "PDF から JPG 変換, 一括変換, PDF ページ分割, ラスターアイメージ, ファイルサイズ制限なし, 安全な処理"
+    }
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Arial Rounded MT Bold', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
+            min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #fff;
+        }
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-size: 2.5em;
+            font-weight: 900;
+            color: #0288d1;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 0px #fff, 3px 3px 0px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite;
+            transition: all 0.3s;
+        }
+        .logo:hover { transform: scale(1.1) rotate(2deg); }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+        .logo span {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 50%, #4fc3f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a {
+            color: #0288d1;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            position: relative;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 4px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            transition: width 0.3s;
+            border-radius: 10px;
+        }
+        .nav-links a:hover { color: #03a9f4; transform: scale(1.1); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-buttons { display: flex; gap: 15px; align-items: center; }
+        .lang-switch { position: relative; }
+        .lang-switch select {
+            padding: 14px 40px 14px 20px;
+            border-radius: 50px;
+            border: 3px solid #0288d1;
+            background: white;
+            color: #0288d1;
+            font-weight: 700;
+            font-size: 1em;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%230288d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+        }
+        .lang-switch select option { background: white; color: #0288d1; padding: 10px; font-weight: 700; }
+        .lang-switch select:hover {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            border-color: transparent;
+        }
+        .lang-switch select:hover option { background: white; color: #0288d1; }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 { color: #0288d1; font-size: 3em; margin-bottom: 20px; font-weight: 900; text-shadow: 2px 2px 0px rgba(0,0,0,0.1); animation: bounce 2s infinite; }
+        .description { font-size: 1.3em; max-width: 800px; margin: 0 auto 25px; color: #0277bd; font-weight: 600; }
+        .supported-formats { margin: 20px 0; font-size: 1.1em; color: #01579b; }
+        .supported-formats a {
+            color: #0288d1;
+            text-decoration: none;
+            font-weight: 700;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+        .supported-formats a:hover { transform: scale(1.05); box-shadow: 0 4px 12px rgba(2, 136, 209, 0.3); }
+        .converter-section {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .upload-area {
+            border: 4px dashed #0288d1;
+            border-radius: 25px;
+            padding: 50px;
+            text-align: center;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-bottom: 25px;
+        }
+        .upload-area.dragover { background: linear-gradient(135deg, #b3e5fc 0%, #81d4fa 100%); border-color: #01579b; transform: scale(1.02); }
+        .upload-area:hover { background: linear-gradient(135deg, #b3e5fc 0%, #81d4fa 100%); transform: translateY(-5px); box-shadow: 0 8px 20px rgba(2, 136, 209, 0.2); }
+        .select-btn {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            padding: 18px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 700;
+            box-shadow: 0 6px 15px rgba(2, 136, 209, 0.3);
+        }
+        .select-btn:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 10px 25px rgba(2, 136, 209, 0.4); }
+        .drop-text { color: #0277bd; font-size: 1.1em; font-weight: 600; }
+        .file-list { margin-top: 25px; }
+        .file-item {
+            background: white;
+            border: 3px solid #e0f7fa;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s;
+        }
+        .file-item:hover { border-color: #0288d1; transform: translateX(5px); box-shadow: 0 5px 15px rgba(2, 136, 209, 0.15); }
+        .file-info { display: flex; align-items: center; flex: 1; }
+        .file-icon { font-size: 2.5em; margin-right: 20px; }
+        .file-name { font-weight: 700; color: #0277bd; font-size: 1.1em; }
+        .file-size { color: #01579b; font-size: 1em; margin-left: 15px; font-weight: 600; }
+        .file-actions { display: flex; gap: 12px; }
+        .action-btn { padding: 10px 20px; border: none; border-radius: 30px; cursor: pointer; font-size: 1em; transition: all 0.3s; font-weight: 700; font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; }
+        .remove-btn { background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%); color: white; box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3); }
+        .remove-btn:hover { transform: scale(1.05); box-shadow: 0 6px 18px rgba(255, 107, 107, 0.4); }
+        .convert-btn { background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%); color: white; box-shadow: 0 4px 12px rgba(2, 136, 209, 0.3); }
+        .convert-btn:hover { transform: scale(1.05); box-shadow: 0 6px 18px rgba(2, 136, 209, 0.4); }
+        .convert-all-section { margin-top: 30px; text-align: center; }
+        .convert-all-section button {
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            font-weight: 700;
+            box-shadow: 0 6px 15px rgba(2, 136, 209, 0.3);
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        .convert-all-section button:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 10px 25px rgba(2, 136, 209, 0.4); }
+        .convert-all-section button:disabled { background: #ccc; cursor: not-allowed; transform: none; box-shadow: none; }
+        .status-container {
+            margin-top: 30px;
+            padding: 30px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            display: none;
+            border: 3px solid #e0f7fa;
+        }
+        .status-text { font-weight: 700; color: #0277bd; margin-bottom: 15px; font-size: 1.2em; }
+        .progress-bar { width: 100%; height: 25px; background-color: #e0f7fa; border-radius: 50px; overflow: hidden; border: 2px solid #b3e5fc; }
+        .progress-fill { height: 100%; background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%); width: 0%; transition: width 0.4s ease; border-radius: 50px; }
+        .download-section { margin-top: 30px; text-align: center; }
+        .download-btn {
+            background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-weight: 700;
+            box-shadow: 0 6px 15px rgba(2, 136, 209, 0.3);
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+        .download-btn:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 10px 25px rgba(2, 136, 209, 0.4); }
+        .privacy-note { color: #01579b; text-align: center; font-size: 1em; font-weight: 600; margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.5); border-radius: 20px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🔄 Easy Img Converter </a>
+            <div class="nav-links">
+                <a href="#tools">ツール</a>
+                <a href="#about">について</a>
+                <a href="#blog">ブログ</a>
+                <a href="#contact">お問い合わせ</a>
+            </div>
+            <div class="nav-buttons">
+                <div class="lang-switch">
+                    <select onchange="window.location.href=this.value">
+                        <option value="../en/index.html">English</option>
+                        <option value="../zh-TW/index.html">繁體中文</option>
+                        <option value="../zh-CN/index.html">简体中文</option>
+                        <option value="../ko/index.html">한국어</option>
+                        <option value="./index.html" selected>日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header>
+            <h1>PDF から JPG へ</h1>
+            <p class="description">PDF ファイルを JPG 形式に変換します。高速、安全な変換。PDF の各ページを個別の JPG 画像に変換します。</p>
+            <p class="supported-formats">
+                PDF を変換: 
+                <a href="#">JPG</a>
+            </p>
+        </header>
+        
+        <div class="converter-section">
+            <div class="upload-area" id="uploadArea">
+                <label for="file-input" class="select-btn">PDF ファイルを選択</label>
+                <input type="file" id="file-input" accept="application/pdf" multiple>
+                
+                <p class="drop-text">または PDF ファイルをここにドラッグ</p>
+            </div>
+            
+            <div class="file-list" id="fileList"></div>
+            
+            <div class="convert-all-section" id="convertAllSection">
+                <button class="convert-all-btn" id="convertAllBtn">すべて変換</button>
+            </div>
+            
+            <div class="status-container" id="statusContainer">
+                <div class="status-text" id="statusText">変換中...</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+            
+            <div class="download-section" id="downloadSection"></div>
+        </div>
+        
+        <p class="privacy-note">あなたのファイルはブラウザ内で安全に処理されます。データはサーバーに送信されません。</p>
+        </div>
+        
+        <section class="info-section">
+            <h2>PDF と JPG 形式の説明</h2>
+            
+            <div class="info-content">
+                <div class="info-card">
+                    <h3>PDF とは？</h3>
+                    <p>PDF（Portable Document Format）は Adobe が開発した<strong>ドキュメント形式</strong>です。これは、ドキュメントの書式設定、フォント、画像、レイアウトをすべて保持することを意味し、どのデバイスでも同じように表示されます。</p>
+                    <ul>
+                        <li><strong>最適：</strong> ドキュメント、レポート、フォーム、印刷物、共有ファイル</li>
+                        <li><strong>ファイルサイズ：</strong> 小〜中（内容による）</li>
+                        <li><strong>透明度：</strong> サポートされています</li>
+                        <li><strong>品質：</strong> 高品質 - ドキュメントの完全な保持</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3>JPG とは？</h3>
+                    <p>JPG（または JPEG）は広く使われている画像形式で、<strong>可逆圧縮</strong>を使用します。これは、ファイルサイズを小さくするために一部の画像データを破棄することを意味し、写真や多くの色を持つ複雑な画像に非常に適しています。</p>
+                    <ul>
+                        <li><strong>最適：</strong> 写真、ウェブ画像、メールの添付ファイル</li>
+                        <li><strong>ファイルサイズ：</strong> 圧縮により小さくなります</li>
+                        <li><strong>透明度：</strong> サポートされていません</li>
+                        <li><strong>品質：</strong> 調整可能（通常は 60-90% で最適なバランス）</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>なぜ PDF を JPG に変換するのですか？</h3>
+            
+            <div class="info-text">
+                <p>PDF ファイルを JPG 形式に変換する必要がある理由はたくさんあります：</p>
+                
+                <div class="benefit-list">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">📸</span>
+                        <div>
+                            <h4>写真に最適</h4>
+                            <p>JPG は写真や多くの色を持つ複雑な画像に最適です。JPG の圧縮アルゴリズムは自然な色のグラデーションをより効率的に処理します。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🌐</span>
+                        <div>
+                            <h4>広範な互換性</h4>
+                            <p>JPG はすべてのウェブブラウザ、画像ビューア、およびデバイスでサポートされています。PDF よりも広範な互換性があります。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🖼️</span>
+                        <div>
+                            <h4>画像として編集</h4>
+                            <p>JPG は画像編集ソフトウェアで簡単に編集でき、PDF よりも柔軟性があります。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="info-section">
+            <h2>よくある質問</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>PDF の各ページを個別の JPG に変換できますか？</h3>
+                    <p>はい、このツールは PDF の各ページを個別の JPG 画像に変換します。PDF に 10 ページある場合、10 個の JPG ファイルが生成されます。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>PDF を JPG に変換すると品質は低下しますか？</h3>
+                    <p>PDF がラスタライズされるため、JPG に変換すると品質が固定されます。ただし、適切な解像度（300 DPI 以上）を使用すれば、高品質の JPG を得られます。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>複数の PDF ファイルを一度に変換できますか？</h3>
+                    <p>はい、このツールは一度に複数の PDF ファイルを変換できます。すべてのファイルを選択して「すべて変換」ボタンをクリックするだけです。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>変換は安全ですか？</h3>
+                    <p>はい、完全に安全です。すべての変換はブラウザ内で行われ、ファイルはサーバーにアップロードされません。あなたのプライバシーは完全に保護されます。</p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="converter-section" style="text-align: center; margin-top: 40px;">
+            <h2 style="color: #0288d1; margin-bottom: 20px;">今すぐ無料で PDF を JPG に変換！</h2>
+            <p style="color: #666; margin-bottom: 30px;">ファイルサイズ制限なし、登録不要！</p>
+            <a href="#uploadArea" class="select-btn">開始 🚀</a>
+        </div>
+    </div>
+    
+    <style>
+        .info-section {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .info-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #0056b3;
+            margin-bottom: 40px;
+        }
+        
+        .info-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .info-card h3 {
+            color: #0056b3;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 15px;
+        }
+        
+        .info-card p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .info-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .info-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #666;
+        }
+        
+        .info-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .info-text {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .info-text h3, .info-text h4 {
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+        
+        .info-text p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .info-text ul, .info-text ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .info-text li {
+            margin-bottom: 10px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .benefit-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+        
+        .benefit-icon {
+            font-size: 2em;
+        }
+        
+        .benefit-item h4 {
+            color: #0056b3;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .benefit-item p {
+            color: #666;
+            margin: 0;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        
+        .faq-container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .faq-item h3 {
+            color: #0056b3;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .faq-item p {
+            color: #666;
+            line-height: 1.7;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .info-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefit-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-section h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+    
+    <script>
+        let filesToConvert = [];
+        let convertedFiles = [];
+        
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('file-input');
+        const fileList = document.getElementById('fileList');
+        const convertAllSection = document.getElementById('convertAllSection');
+        const convertAllBtn = document.getElementById('convertAllBtn');
+        const statusContainer = document.getElementById('statusContainer');
+        const statusText = document.getElementById('statusText');
+        const progressFill = document.getElementById('progressFill');
+        const downloadSection = document.getElementById('downloadSection');
+        
+        uploadArea.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+        
+        uploadArea.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+        });
+        
+        uploadArea.addEventListener('drop', function(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            
+            const droppedFiles = Array.from(e.dataTransfer.files);
+            handleFiles(droppedFiles);
+        });
+        
+        fileInput.addEventListener('change', function(e) {
+            const selectedFiles = Array.from(e.target.files);
+            handleFiles(selectedFiles);
+        });
+        
+        function handleFiles(files) {
+            const pdfFiles = files.filter(file => 
+                file.type === 'application/pdf' || 
+                file.name.toLowerCase().endsWith('.pdf')
+            );
+            
+            if (pdfFiles.length === 0) {
+                alert('PDF ファイルのみ選択してください');
+                return;
+            }
+            
+            filesToConvert = filesToConvert.concat(pdfFiles.map(file => ({
+                file: file,
+                id: Date.now() + Math.random(),
+                converted: false,
+                convertedBlob: null
+            })));
+            
+            renderFileList();
+            convertAllSection.style.display = 'block';
+        }
+        
+        function formatFileSize(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
+        }
+        
+        function renderFileList() {
+            if (filesToConvert.length === 0) {
+                fileList.style.display = 'none';
+                convertAllSection.style.display = 'none';
+                return;
+            }
+            
+            fileList.style.display = 'block';
+            
+            fileList.innerHTML = filesToConvert.map(item => `
+                <div class="file-item" data-id="${item.id}">
+                    <div class="file-info">
+                        <div class="file-icon">📄</div>
+                        <div>
+                            <div class="file-name">${item.converted ? item.file.name.replace(/\.pdf$/i, '.jpg') : item.file.name}</div>
+                            <div class="file-size">${item.converted ? 'JPG' : formatFileSize(item.file.size)}</div>
+                        </div>
+                    </div>
+                    <div class="file-actions">
+                        ${item.converted ? `
+                            <button class="action-btn convert-btn" onclick="downloadFile(${item.id})">ダウンロード</button>
+                        ` : ''}
+                        <button class="action-btn remove-btn" onclick="removeFile(${item.id})">削除</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        window.removeFile = function(id) {
+            filesToConvert = filesToConvert.filter(item => item.id !== id);
+            renderFileList();
+        };
+        
+        window.convertFile = async function(id) {
+            const fileItem = filesToConvert.find(item => item.id === id);
+            if (!fileItem || fileItem.converted) return;
+            
+            statusContainer.style.display = 'block';
+            statusText.textContent = `${fileItem.file.name} を変換中...`;
+            progressFill.style.width = '0%';
+            
+            try {
+                const pdfData = await fileItem.file.arrayBuffer();
+                const loadingTask = pdfjsLib.getDocument({data: pdfData});
+                const pdf = await loadingTask.promise;
+                
+                const page = await pdf.getPage(1);
+                const viewport = page.getViewport({scale: 2.0});
+                
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                canvas.width = viewport.width;
+                canvas.height = viewport.height;
+                
+                const renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+                
+                await page.render(renderContext).promise;
+                
+                canvas.toBlob(function(blob) {
+                    if (blob) {
+                        fileItem.converted = true;
+                        fileItem.convertedBlob = blob;
+                        
+                        statusText.textContent = `${fileItem.file.name} を変換しました!`;
+                        progressFill.style.width = '100%';
+                        
+                        setTimeout(() => {
+                            statusContainer.style.display = 'none';
+                            renderFileList();
+                        }, 500);
+                    } else {
+                        alert('変換に失敗しました');
+                        statusContainer.style.display = 'none';
+                    }
+                }, 'image/jpeg', 0.9);
+                
+            } catch (error) {
+                console.error('Conversion error:', error);
+                alert('ファイルの変換中にエラーが発生しました。もう一度お試しください。');
+                statusContainer.style.display = 'none';
+            }
+        };
+        
+        window.downloadFile = function(id) {
+            const fileItem = filesToConvert.find(item => item.id === id);
+            if (!fileItem || !fileItem.convertedBlob) return;
+            
+            const url = URL.createObjectURL(fileItem.convertedBlob);
+            const a = document.createElement('a');
+            const originalName = fileItem.file.name;
+            const newName = originalName.replace(/\.pdf$/i, '.jpg');
+            a.href = url;
+            a.download = newName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        };
+        
+        convertAllBtn.addEventListener('click', async function() {
+            const uncompressedFiles = filesToConvert.filter(f => !f.converted);
+            
+            if (uncompressedFiles.length === 0) return;
+            
+            convertAllBtn.disabled = true;
+            statusContainer.style.display = 'block';
+            
+            const totalFiles = uncompressedFiles.length;
+            
+            for (let i = 0; i < totalFiles; i++) {
+                const fileItem = uncompressedFiles[i];
+                statusText.textContent = `${fileItem.file.name} を変換中... (${i + 1}/${totalFiles})`;
+                progressFill.style.width = `${((i + 1) / totalFiles) * 100}%`;
+                
+                try {
+                    const pdfData = await fileItem.file.arrayBuffer();
+                    const loadingTask = pdfjsLib.getDocument({data: pdfData});
+                    const pdf = await loadingTask.promise;
+                    
+                    const page = await pdf.getPage(1);
+                    const viewport = page.getViewport({scale: 2.0});
+                    
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    canvas.width = viewport.width;
+                    canvas.height = viewport.height;
+                    
+                    const renderContext = {
+                        canvasContext: ctx,
+                        viewport: viewport
+                    };
+                    
+                    await page.render(renderContext).promise;
+                    
+                    canvas.toBlob(function(blob) {
+                        if (blob) {
+                            fileItem.converted = true;
+                            fileItem.convertedBlob = blob;
+                            
+                            if (i === totalFiles - 1) {
+                                statusText.textContent = 'すべてのファイルが変換されました!';
+                                progressFill.style.width = '100%';
+                                setTimeout(() => {
+                                    statusContainer.style.display = 'none';
+                                    convertAllBtn.disabled = false;
+                                    renderFileList();
+                                }, 1000);
+                            }
+                        }
+                    }, 'image/jpeg', 0.9);
+                    
+                } catch (error) {
+                    console.error('Conversion error:', error);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
